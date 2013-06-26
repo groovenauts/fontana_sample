@@ -14,7 +14,8 @@ start_time_of_day: "04:00"
 login_url: "/api/1.0.0/actions.html"
 
 # ログイン後の署名の検証に使用されるOAuthのコンシューマシークレット
-consumer_secret: "cpqomf5gs4ob6prd5w5zd52yg9du7150"
+# このコンシューマシークレットは、このサンプルアプリのためだけに生成されたものです。
+consumer_secret: "4cb5b62cb95e52a1d523ca832e590d94"
 
 # ログインの際に呼び出されるフック名
 # login_hook_stored_script_name: "RubyStoredScript.provide_login_bonus"
