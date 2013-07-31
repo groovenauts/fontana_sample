@@ -26,8 +26,8 @@
 
 ```
 {
-    "http_url_base": "http://api.game_title1.groovenauts.jp/",
-    "https_url_base": "https://api.game_title1.groovenauts.jp/",
+    "http_url_base": "http://api.game_title1.groovenauts.jp",
+    "https_url_base": "https://api.game_title1.groovenauts.jp",
 }
 ```
 
@@ -43,3 +43,18 @@
 ```
 
 このファイルは実際のリリース時には削除してください。
+
+
+
+
+## /maintenanceファイル
+
+通信ライブラリは、APIサーバが503を返す場合に、メンテナンスの情報を得るために、configサーバの /maintenance を取得します。
+
+このファイルにはレスポンスのメッセージが平文で記述されていることを前提とします。
+
+例
+
+```
+XXXのため、メンテナンス中です。（8/1 AM2:00 〜 8/1 AM8:00）
+```
