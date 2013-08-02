@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Item",
+        "version": "2.2",
+        "diff_content": {
+            "added_documents": []
+            "updated_documents": [
+                {
+                    "item_cd": "20003",
+                    "name": "ポーションX",
+                    "type": "ステータス回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": false,
+                        "value": 0
+                    },
+                    "image": "assets/item/20013.png"
+                },
+                {
+                    "item_cd": "20004",
+                    "name": "ポーションXX",
+                    "type": "ステータス回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": false,
+                        "value": 0
+                    },
+                    "image": "assets/item/20013.png"
+                }
+            ]
+            "deleted_documents": []
+        }
+    }
+]
