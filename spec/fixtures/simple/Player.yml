@@ -170,3 +170,22 @@
   banned: 
   created_at: 2013-06-26 11:54:12.860000000 Z
   updated_at: 2013-06-26 11:54:12.860000000 Z
+- !ruby/hash:Moped::BSON::Document
+  player_id: 1000010
+  nickname: juubee
+  level: 5
+  authentication_token: 
+  signature_key: 
+  pf_player_id: '150010'
+  pf_player_info: {}
+  first_login_at: 2012-08-01 01:20:00.000000000 Z
+  current_login_at: 2012-08-14 07:20:00.000000000 Z
+  last_login_at: 2012-08-14 07:20:00.000000000 Z
+  first_paid_at: 
+  last_paid_at: 
+  login_days: 1
+  login_count_this_day: 0
+  continuous_login_days: 0
+  banned: 
+  created_at: 2013-06-26 11:54:12.860000000 Z
+  updated_at: 2013-06-26 11:54:12.860000000 Z
