@@ -5,21 +5,21 @@
 ローカル環境で最初の実装を行う。
 
 ### 1-0. AppSeedによる初期登録 ###
-branch: tests/basic_senario00
+branch: tests/basic\_senario00
 
-fontana_sampleをSCMとして登録し、そのデータを取り込むことで初期登録とする。
+fontana\_sampleをSCMとして登録し、そのデータを取り込むことで初期登録とする。
 
 
 
 ### 1-1. SCMのdownloadable\_masterの構造変更 ###
-branch: tests/basic_senario01
+branch: tests/basic\_senario01
 
 * アイテムマスタに対して"種別(type)"というカラムを追加。
 * データにも初期値を追加
 
 
 ### 1-2. SCMのdownloadable\_masterのドキュメント追加 ###
-branch: tests/basic_senario02
+branch: tests/basic\_senario02
 
 * アイテムマスタに3件のデータを追加。
   - 20013: 聖水
@@ -28,7 +28,7 @@ branch: tests/basic_senario02
 
 
 ### 1-3. SCMのdownloadable\_masterのドキュメント変更 ###
-branch: tests/basic_senario03
+branch: tests/basic\_senario03
 
 * アイテムマスタの2件のデータを変更。
   - 20002:ポーションA -> 20002:ポーションS
@@ -36,14 +36,14 @@ branch: tests/basic_senario03
 
 
 ### 1-4. SCMのdownloadable\_masterのドキュメント削除 ###
-branch: tests/basic_senario04
+branch: tests/basic\_senario04
 
 * アイテムマスタから1件のデータを削除
   - 20015: 毒消し草 (削除予定のデータ)
 
 
 ### 1-5. SCMのserverside\_masterの構造変更 ###
-branch: tests/basic_senario05
+branch: tests/basic\_senario05
 
 * ステータスマスタを05_status.xlsxとして新規で追加
   - フィールド
@@ -56,7 +56,7 @@ branch: tests/basic_senario05
 
 
 ### 1-6. SCMのserverside\_masterのドキュメント追加 ###
-branch: tests/basic_senario06
+branch: tests/basic\_senario06
 
 * ステータスマスタに3件のデータを追加。
   - 1004: 攻撃力低下
@@ -65,7 +65,7 @@ branch: tests/basic_senario06
 
 
 ### 1-7. SCMのserverside\_masterのドキュメント変更 ###
-branch: tests/basic_senario07
+branch: tests/basic\_senario07
 
 * ステータスマスタの2件のデータを変更。
   - 1004:攻撃力低下 -> 1004:攻撃力ダウン
@@ -73,7 +73,7 @@ branch: tests/basic_senario07
 
 
 ### 1-8. SCMのserverside\_masterのドキュメント削除 ###
-branch: tests/basic_senario08
+branch: tests/basic\_senario08
 
 * スタータスマスタから1件のデータを削除
   - 1006:石化
@@ -81,7 +81,7 @@ branch: tests/basic_senario08
 
 
 ### 1-9. SCMのdownloadable\_masterをserverside\_masterに変更 ###
-branch: tests/basic_senario09
+branch: tests/basic\_senario09
 
 この状態をテストするにはデータが足りないので、まずはダウンロード可能なマスタを作成する。
 その後、そのマスタをダウンロード不可にする。
@@ -100,17 +100,17 @@ branch: tests/basic_senario09
 
 
 ### 1-10. SCMのserverside\_masterをdownloadable\_masterに変更 ###
-branch: tests/basic_senario10
+branch: tests/basic\_senario10
 
 * 05_status.xlsxに記載されているステータスマスタをダウンロード可能なマスタにする。
   * コレクション定義に「ダウンロード」というフィールドを追加して「可能」という値を埋め込む。
 
 
 ### 1-11. SCMのストアドスクリプトを変更 ###
-branch: tests/basic_senario11
+branch: tests/basic\_senario11
 
 ゲームデータのcontentでstatusという項目を扱うストアドスクリプトを実装する。
-status_ruby_stored_script.rbというファイルに対して以下のメソッドを実装する。
+status\_ruby\_stored\_script.rbというファイルに対して以下のメソッドを実装する。
 
 * StatusRubyStoredScript
   - apply_status
@@ -122,8 +122,22 @@ status_ruby_stored_script.rbというファイルに対して以下のメソッ�
     + メッセージとして「Recovery a #{status} state」が返ってくる
 * 01_item.xlsx
   - アイテムマスタ
-    + 20014:毒消し草を使用したときにStatusRubyStoredScript#recovery_statusが実行できるようにする。
+    + 20014:毒消し草を使用したときにStatusRubyStoredScript#recovery\_statusが実行できるようにする。
 
+運営ツール上での確認
+* ステータス付与処理の確認
+  - 開発ツール > 同期APIから以下のスクリプトを実行する。
+    ```
+    {"inputs": [{"action":"execute", "name":"StatusRubyStoredScript", "key":"apply_status", "args":{"status_cd":"1001"}}]}
+    ```
+  - 指定したプレイヤーIDのゲームデータのコンテンツに"status:['1001']"が付与されているか確認。
+* ステータス解除の確認
+  - 任意のプレイヤーのゲームデータ(GameData)のアイテムに"item\_cd:20014"を任意の数分付与する。
+  - 開発ツール > 同期APIから以下のスクリプトを実行する。
+    ```
+    {"inputs":[{"action":"execute", "name":"ItemRubyStoredScript", "key":"use_item", "args":{"item_cd":"20014"}}]}
+    ```
+  - ゲームデータから1001ステータスが消えていることを確認。
 
 ### 1-12. 設定を変更 ###
 branch: tests/basic_senario12
@@ -140,6 +154,14 @@ branch: tests/basic_senario12
 ローカルで編集したSCMをお客様開発環境に登録
 
 ### 2-2. SCMのdownloadable\_masterのドキュメント追加 ###
+branch: tests/basic_senario13
+
+* 装備マスタにデータを追加。
+  - 10021: さびたナイフ
+  - 10022: さびた剣
+  - 10023: さびた鎧
+
+  
 ### 2-3. SCMのdownloadable\_masterのドキュメント変更 ###
 ### 2-4. SCMのdownloadable\_masterのドキュメント削除 ###
 ### 2-5. SCMのserverside\_masterのドキュメント追加 ###
