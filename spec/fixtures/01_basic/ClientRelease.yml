@@ -1,0 +1,15 @@
+---
+- _id: 51fa6b76c239cd2a4a00000b
+  created_at: 1375366006
+  device_type_id: 51fa666ec239cd2beb000002
+  updated_at: 1375366006
+  url: https://itunes.apple.com/jp/app/xxxxxxxxxx/id123456789?mt=9
+  version: '2013073101'
+- _id: 51fa6696c239cdcd5c000004
+  created_at: 1375364758
+  device_type_id: 51fa666ec239cd2beb000002
+  updated_at: 1375364758
+  url: https://itunes.apple.com/jp/app/xxxxxxxxxx/id123456789?mt=8
+  version: '2013080201'
+  version_set_ids:
+  - 51fa84ccc239cd1352000002
