@@ -95,3 +95,19 @@
   stored_script_name: ItemRubyStoredScript.torch
   stored_script_args: 
   image: assets/item/20012.png
+- !ruby/hash:Moped::BSON::Document
+  item_cd: 20013
+  name: 聖水
+  stored_script_name: ItemRubyStoredScript.recovery
+  stored_script_args: 
+    target: hp
+    percent: false
+    value: 0
+  image: assets/item/20013.png
+- !ruby/hash:Moped::BSON::Document
+  item_cd: 20014
+  name: 毒消し草
+  stored_script_name: StatusRubyStoredScript.recovery_status
+  stored_script_args: 
+    status_cd: 1001
+  image: assets/item/20014.png

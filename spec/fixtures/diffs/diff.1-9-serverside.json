@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Attribute",
+        "version": "3.0",
+        "diff_content": {
+            "added_documents": [],
+            "updated_documents": []
+            "deleted_documents": [
+                {
+                    "attribute_cd": "1001",
+                },
+                {
+                    "attribute_cd": "1002",
+                },
+                {
+                    "attribute_cd": "1003",
+                },
+                {
+                    "attribute_cd": "1004",
+                }
+            ]
+        }
+    }
+]

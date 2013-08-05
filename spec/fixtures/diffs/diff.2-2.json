@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Armor",
+        "version": "5.1",
+        "diff_content": {
+            "added_documents": [
+                {
+                    "armor_cd": "10021",
+                    "name": "さびたナイフ",
+                    "offence_pt": 100,
+                    "deffence_pt": 0,
+                    "image": "assets/armor/10021.png"
+                },
+                {
+                    "armor_cd": "10022",
+                    "name": "さびた剣",
+                    "offence_pt": 120,
+                    "deffence_pt": 0,
+                    "image": "assets/armor/10022.png"
+                },
+                {
+                    "armor_cd": "10023",
+                    "name": "さびた鎧",
+                    "offence_pt": 0,
+                    "deffence_pt": 100,
+                    "image": "assets/armor/10023.png"
+                }
+            ]
+            "updated_documents": []
+            "deleted_documents": []
+        }
+    }
+]

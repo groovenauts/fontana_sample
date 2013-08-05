@@ -229,3 +229,29 @@
   read_notifications: []
   created_at: 2013-06-26 11:54:12.870000000 Z
   updated_at: 2013-06-26 11:54:12.870000000 Z
+- !ruby/hash:Moped::BSON::Document
+  player_id: 1000010
+  content:
+    hp: 45
+    max_hp: 45
+    mp: 15
+    max_mp: 15
+    exp: 300
+    money: 600
+    items:
+      '20001': 3
+      '20005': 1
+      '20014': 5
+    equipments:
+      head: 10018
+      body: 10012
+      right_hand: 10001
+      left_hand:
+    status: [1001, 1002]
+  greeting_points: 20
+  login_bonus: 
+  invitation_code: abcdABCD42
+  invite_player: 
+  read_notifications: []
+  created_at: 2013-06-26 11:54:12.870000000 Z
+  updated_at: 2013-06-26 11:54:12.870000000 Z

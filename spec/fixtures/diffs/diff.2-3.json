@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Armor",
+        "version": "5.2",
+        "diff_content": {
+            "added_documents": []
+            "updated_documents": [
+                {
+                    "armor_cd": "10022",
+                    "name": "さびたつるぎ",
+                    "offence_pt": 120,
+                    "deffence_pt": 0,
+                    "image": "assets/armor/10022.png"
+                },
+                {
+                    "armor_cd": "10023",
+                    "name": "さびたよろい",
+                    "offence_pt": 0,
+                    "deffence_pt": 100,
+                    "image": "assets/armor/10023.png"
+                }
+            ]
+            "deleted_documents": []
+        }
+    }
+]
