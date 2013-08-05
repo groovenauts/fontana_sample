@@ -103,6 +103,7 @@ branch: tests/basic_senario09
 branch: tests/basic_senario10
 
 * 05_status.xlsxに記載されているステータスマスタをダウンロード可能なマスタにする。
+  * コレクション定義に「ダウンロード」というフィールドを追加して「可能」という値を埋め込む。
 
 
 ### 1-11. SCMのストアドスクリプトを変更 ###
