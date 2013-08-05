@@ -1,0 +1,48 @@
+[
+    {
+        "name": "Item",
+        "version": "2.1",
+        "diff_content": {
+            "added_documents": [
+                {
+                    "item_cd": "20013",
+                    "name": "聖水",
+                    "type": "ステータス回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": false,
+                        "value": 0
+                    },
+                    "image": "assets/item/20013.png"
+                },
+                {
+                    "item_cd": "20014",
+                    "name": "毒消し草",
+                    "type": "ステータス回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": false,
+                        "value": 0
+                    },
+                    "image": "assets/item/20014.png"
+                },
+                {
+                    "item_cd": "20015",
+                    "name": "毒消し草X",
+                    "type": "ステータス回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": false,
+                        "value": 0
+                    },
+                    "image": "assets/item/20015.png"
+                },
+            ]
+            "updated_documents": []
+            "deleted_documents": []
+        }
+    }
+]
