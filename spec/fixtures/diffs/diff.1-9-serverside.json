@@ -3,26 +3,22 @@
         "name": "Attribute",
         "version": "3.0",
         "diff_content": {
-            "added_documents": [
+            "added_documents": [],
+            "updated_documents": []
+            "deleted_documents": [
                 {
                     "attribute_cd": "1001",
-                    "name": "火",
                 },
                 {
                     "attribute_cd": "1002",
-                    "name": "水",
                 },
                 {
                     "attribute_cd": "1003",
-                    "name": "土",
                 },
                 {
                     "attribute_cd": "1004",
-                    "name": "風",
-                },
-            ],
-            "updated_documents": []
-            "deleted_documents": []
+                }
+            ]
         }
     }
 ]
