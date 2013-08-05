@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Attribute",
+        "version": "3.0",
+        "diff_content": {
+            "added_documents": [
+                {
+                    "status_cd": "1001",
+                    "name": "火",
+                },
+                {
+                    "status_cd": "1002",
+                    "name": "水",
+                },
+                {
+                    "status_cd": "1003",
+                    "name": "土",
+                },
+                {
+                    "status_cd": "1004",
+                    "name": "風",
+                },
+            ],
+            "updated_documents": []
+            "deleted_documents": []
+        }
+    }
+]
