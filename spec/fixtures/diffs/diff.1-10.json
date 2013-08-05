@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Status",
+        "version": "4.1",
+        "diff_content": {
+            "added_documents": [
+                {
+                    "status_cd": "1001",
+                    "name": "毒",
+                },
+                {
+                    "status_cd": "1002",
+                    "name": "暗闇",
+                },
+                {
+                    "status_cd": "1003",
+                    "name": "無敵",
+                },
+                {
+                    "status_cd": "1004",
+                    "name": "攻撃力ダウン",
+                },
+                {
+                    "status_cd": "1005",
+                    "name": "防御力ダウン",
+                }
+            ],
+            "updated_documents": []
+            "deleted_documents": []
+        }
+    }
+]
