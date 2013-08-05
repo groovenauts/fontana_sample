@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Armor",
+        "version": "5.1",
+        "diff_content": {
+            "added_documents": []
+            "updated_documents": []
+            "deleted_documents": [
+                {
+                    "armor_cd": "10023",
+                }
+            ]
+        }
+    }
+]
