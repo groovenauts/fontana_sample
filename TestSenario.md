@@ -5,21 +5,24 @@
 ローカル環境で最初の実装を行う。
 
 ### 1-0. AppSeedによる初期登録 ###
-branch: tests/basic\_senario00
+* tag: tests/basic\_senario00
+* commit: 697c05d
 
 fontana\_sampleをSCMとして登録し、そのデータを取り込むことで初期登録とする。
 
 
 
 ### 1-1. SCMのdownloadable\_masterの構造変更 ###
-branch: tests/basic\_senario01
+* tag: tests/basic\_senario01
+* commit: 3b57858
 
 * アイテムマスタに対して"種別(type)"というカラムを追加。
 * データにも初期値を追加
 
 
 ### 1-2. SCMのdownloadable\_masterのドキュメント追加 ###
-branch: tests/basic\_senario02
+* tag: tests/basic\_senario02
+* commit: 1a2d28b
 
 * アイテムマスタに3件のデータを追加。
   - 20013: 聖水
@@ -28,7 +31,8 @@ branch: tests/basic\_senario02
 
 
 ### 1-3. SCMのdownloadable\_masterのドキュメント変更 ###
-branch: tests/basic\_senario03
+* tag: tests/basic\_senario03
+* commit: 304267b
 
 * アイテムマスタの2件のデータを変更。
   - 20002:ポーションA -> 20002:ポーションS
@@ -36,14 +40,16 @@ branch: tests/basic\_senario03
 
 
 ### 1-4. SCMのdownloadable\_masterのドキュメント削除 ###
-branch: tests/basic\_senario04
+* tag: tests/basic\_senario04
+* commit: e877be4
 
 * アイテムマスタから1件のデータを削除
   - 20015: 毒消し草 (削除予定のデータ)
 
 
 ### 1-5. SCMのserverside\_masterの構造変更 ###
-branch: tests/basic\_senario05
+* tag: tests/basic\_senario05
+* commit: adaa4c0
 
 * ステータスマスタを05_status.xlsxとして新規で追加
   - フィールド
@@ -56,7 +62,8 @@ branch: tests/basic\_senario05
 
 
 ### 1-6. SCMのserverside\_masterのドキュメント追加 ###
-branch: tests/basic\_senario06
+* tag: tests/basic\_senario06
+* commit: 6042a18
 
 * ステータスマスタに3件のデータを追加。
   - 1004: 攻撃力低下
@@ -65,7 +72,8 @@ branch: tests/basic\_senario06
 
 
 ### 1-7. SCMのserverside\_masterのドキュメント変更 ###
-branch: tests/basic\_senario07
+* tag: tests/basic\_senario07
+* commit: 034ec19
 
 * ステータスマスタの2件のデータを変更。
   - 1004:攻撃力低下 -> 1004:攻撃力ダウン
@@ -73,7 +81,8 @@ branch: tests/basic\_senario07
 
 
 ### 1-8. SCMのserverside\_masterのドキュメント削除 ###
-branch: tests/basic\_senario08
+* tag: tests/basic\_senario08
+* commit: 79d44be
 
 * スタータスマスタから1件のデータを削除
   - 1006:石化
@@ -81,7 +90,8 @@ branch: tests/basic\_senario08
 
 
 ### 1-9. SCMのdownloadable\_masterをserverside\_masterに変更 ###
-branch: tests/basic\_senario09
+* tag: tests/basic\_senario09
+* commit: 7049694
 
 この状態をテストするにはデータが足りないので、まずはダウンロード可能なマスタを作成する。
 その後、そのマスタをダウンロード不可にする。
@@ -100,14 +110,16 @@ branch: tests/basic\_senario09
 
 
 ### 1-10. SCMのserverside\_masterをdownloadable\_masterに変更 ###
-branch: tests/basic\_senario10
+* tag: tests/basic\_senario10
+* commit: 2228d65
 
 * 05_status.xlsxに記載されているステータスマスタをダウンロード可能なマスタにする。
   * コレクション定義に「ダウンロード」というフィールドを追加して「可能」という値を埋め込む。
 
 
 ### 1-11. SCMのストアドスクリプトを変更 ###
-branch: tests/basic\_senario11
+* tag: tests/basic\_senario11
+* commit: 917d4ef
 
 ゲームデータのcontentでstatusという項目を扱うストアドスクリプトを実装する。
 status\_ruby\_stored\_script.rbというファイルに対して以下のメソッドを実装する。
@@ -140,7 +152,8 @@ status\_ruby\_stored\_script.rbというファイルに対して以下のメソ�
   - ゲームデータから1001ステータスが消えていることを確認。
 
 ### 1-12. 設定を変更 ###
-branch: tests/basic_senario12
+* tag: tests/basic_senario12
+* commit: bb387aa
 
 * app_garden.ymlの"player_id_gen.prefix.pid_mask"の値を変更。
 
@@ -154,7 +167,8 @@ branch: tests/basic_senario12
 ローカルで編集したSCMをお客様開発環境に登録
 
 ### 2-2. SCMのdownloadable\_masterのドキュメント追加 ###
-branch: tests/basic_senario13
+* tag: tests/basic_senario13
+* commit: 3a7d9ce
 
 * 装備マスタにデータを追加。
   - 10021: さびたナイフ
@@ -163,14 +177,16 @@ branch: tests/basic_senario13
 
   
 ### 2-3. SCMのdownloadable\_masterのドキュメント変更 ###
-branch: tests/basic_senario14
+* tag: tests/basic_senario14
+* commit: 3dcb285
 
 * 装備マスタのデータを変更。
   - 10022: さびた剣 > 10022: さびたつるぎ
   - 10023: さびた鎧 > 10023: さびたよろい
 
 ### 2-4. SCMのdownloadable\_masterのドキュメント削除 ###
-branch: tests/basic_senario15
+* tag: tests/basic_senario15
+* commit: bfa16bd
 
 * 装備マスタのデータを削除。
   - 10023: さびた鎧 > 10023: さびたよろい
