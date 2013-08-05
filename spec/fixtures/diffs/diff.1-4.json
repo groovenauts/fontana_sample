@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Item",
+        "version": "2.3",
+        "diff_content": {
+            "added_documents": []
+            "updated_documents": []
+            "deleted_documents": [
+                {
+                    "item_cd": "20015",
+                }
+            ]
+        }
+    }
+]
