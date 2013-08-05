@@ -1,0 +1,140 @@
+[
+    {
+        "name": "Item",
+        "version": "2.0",
+        "diff_content": {
+            "added_documents": [
+                {
+                    "item_cd": "20001",
+                    "name": "ポーション",
+                    "type": "HP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": false,
+                        "value": 30
+                    },
+                    "image": "assets/item/20001.png"
+                },
+                {
+                    "item_cd": "20002",
+                    "name": "ポーションA",
+                    "type": "HP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": false,
+                        "value": 100
+                    },
+                    "image": "assets/item/20002.png"
+                },
+                {
+                    "item_cd": "20003",
+                    "name": "ポーションX",
+                    "type": "HP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": true,
+                        "value": 70
+                    },
+                    "image": "assets/item/20003.png"
+                },
+                {
+                    "item_cd": "20004",
+                    "name": "ポーションXXX",
+                    "type": "HP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "hp",
+                        "percent": true,
+                        "value": 100
+                    },
+                    "image": "assets/item/20004.png"
+                },
+                {
+                    "item_cd": "20005",
+                    "name": "エーテル",
+                    "type": "MP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "mp",
+                        "percent": false,
+                        "value": 30
+                    },
+                    "image": "assets/item/20005.png"
+                },
+                {
+                    "item_cd": "20006",
+                    "name": "エーテルW",
+                    "type": "MP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "mp",
+                        "percent": false,
+                        "value": 60
+                    },
+                    "image": "assets/item/20006.png"
+                },
+                {
+                    "item_cd": "20007",
+                    "name": "エーテルZ",
+                    "type": "MP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "mp",
+                        "percent": true,
+                        "value": 60
+                    },
+                    "image": "assets/item/20007.png"
+                },
+                {
+                    "item_cd": "20008",
+                    "name": "エーテルZZ",
+                    "type": "MP回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery",
+                    "stored_script_args": {
+                        "target": "mp",
+                        "percent": true,
+                        "value": 100
+                    },
+                    "image": "assets/item/20008.png"
+                },
+                {
+                    "item_cd": "20009",
+                    "name": "エリクサー",
+                    "type": "回復",
+                    "stored_script_name": "ItemRubyStoredScript.recovery_all",
+                    "stored_script_args": null,
+                    "image": "assets/item/20009.png"
+                },
+                {
+                    "item_cd": "20010",
+                    "name": "恋の秘薬",
+                    "type": "キーアイテム",
+                    "stored_script_name": "ItemRubyStoredScript.love_portion",
+                    "stored_script_args": null,
+                    "image": "assets/item/20010.png"
+                },
+                {
+                    "item_cd": "20011",
+                    "name": "賢者の石",
+                    "type": "キーアイテム",
+                    "stored_script_name": "ItemRubyStoredScript.philosophers_store",
+                    "stored_script_args": null,
+                    "image": "assets/item/20011.png"
+                },
+                {
+                    "item_cd": "20012",
+                    "name": "たいまつ",
+                    "type": "消耗品",
+                    "stored_script_name": "ItemRubyStoredScript.torch",
+                    "stored_script_args": null,
+                    "image": "assets/item/20012.png"
+                }
+            ]
+            "updated_documents": []
+            "deleted_documents": []
+        }
+    }
+]
