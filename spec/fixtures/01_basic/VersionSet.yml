@@ -1,0 +1,17 @@
+---
+- _id: 51fa84ccc239cd1352000002
+  branch_index: 0
+  child_depth: 0
+  child_index: 0
+  client_releases:
+    '1': 
+      version: "2013080201"
+      url: "https://itunes.apple.com/jp/app/xxxxxxxxxx/id123456789?mt=8"
+  commit_key: ''
+  created_at: 1375372492
+  created_by: 
+  'no': 2
+  prev_id: 
+  status_cd: 7
+  updated_at: 1375372492
+  updated_by: 
