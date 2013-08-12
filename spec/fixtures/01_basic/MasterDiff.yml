@@ -1,0 +1,107 @@
+---
+- _id: 52024a065427dbc00e000005
+  diff_content:
+    added_documents:
+    - greeting_cd: 1
+      message: おはようございます！
+    - greeting_cd: 2
+      message: こんにちは！
+    - greeting_cd: 3
+      message: こんばんは！
+    - greeting_cd: 4
+      message: Zzzzz
+    updated_documents: []
+    deleted_documents: []
+  name: GreetingTemplate
+  origin_version: 
+  version: '1.0'
+- _id: 52024a065427dbc00e000006
+  diff_content:
+    added_documents:
+    - greeting_cd: 1
+      message: おはようございまーす！
+    - greeting_cd: 2
+      message: こんにちはー！
+    - greeting_cd: 3
+      message: こんばんはー！
+    - greeting_cd: 4
+      message: Zzzzz
+    updated_documents: []
+    deleted_documents: []
+  name: GreetingTemplate
+  origin_version: 
+  version: '2.0'
+- _id: 52024a065427dbc00e000007
+  diff_content:
+    added_documents: []
+    updated_documents:
+    - greeting_cd: 1
+      message: おはようございます ^ ^
+    deleted_documents: 
+    - greeting_cd: 4
+  name: GreetingTemplate
+  origin_version: '2.0'
+  version: '2.1'
+- _id: 52024a065427dbc00e000008
+  diff_content:
+    added_documents:
+    - greeting_cd: 5
+      message: いただきます
+    - greeting_cd: 6
+      message: ごちそうさま
+    updated_documents:
+    - greeting_cd: 1
+      message: おはようございます ^ ^
+    deleted_documents: 
+    - greeting_cd: 4
+  name: GreetingTemplate
+  origin_version: '2.0'
+  version: '2.2'
+- _id: 52024a065427dbc00e000009
+  diff_content:
+    added_documents:
+    - greeting_cd: 5
+      message: いただきます
+    - greeting_cd: 6
+      message: ごちそうさま
+    updated_documents: []
+    deleted_documents: []
+  name: GreetingTemplate
+  origin_version: '2.1'
+  version: '2.2'
+- _id: 52024a065427dbc00e000010
+  diff_content:
+    added_documents:
+    - greeting_cd: 1
+      message: おはようございます ^ ^
+    - greeting_cd: 2
+      message: こんにちはー！
+    - greeting_cd: 3
+      message: こんばんはー！
+    - greeting_cd: 5
+      message: いただきます
+    - greeting_cd: 6
+      message: ごちそうさま
+    updated_documents: []
+    deleted_documents: []
+  name: GreetingTemplate
+  origin_version: '1.0'
+  version: '2.2'
+- _id: 52024a065427dbc00e000011
+  diff_content:
+    added_documents:
+    - greeting_cd: 1
+      message: おはようございます ^ ^
+    - greeting_cd: 2
+      message: こんにちはー！
+    - greeting_cd: 3
+      message: こんばんはー！
+    - greeting_cd: 5
+      message: いただきます
+    - greeting_cd: 6
+      message: ごちそうさま
+    updated_documents: []
+    deleted_documents: []
+  name: GreetingTemplate
+  origin_version:
+  version: '2.2'
