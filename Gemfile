@@ -5,6 +5,6 @@ group :test do
   gem "rspec"
 
   gem 'fontana_client_support', '~> 0.5.0'
-  gem 'libgss', '~> 0.4.0'
+  gem 'libgss', '~> 0.5.0'
   gem "tengine_support", '~> 1.2.0'
 end
