@@ -1,4 +1,4 @@
 {
-    "http_url_base": "http://localhost:3000",
-    "https_url_base": "https://localhost:3001"
+    "http_url_base": "http://api.sandbox01.sample.groovenauts.jp:3000",
+    "https_url_base": "https://api.sandbox01.sample.groovenauts.jp:3001"
 }
