@@ -5,7 +5,13 @@ describe "master_diffs" do
 
   # このテストは spec/fixtures/version_sets.yml.erb の状態 (dm: 2.2) を前提としています。
   # 実行の際は以下のように環境変数を設定してください。
-  # export GSS_VERSION_SET_FIXTURE_FILEPATH=spec/fixtures/version_sets.yml.erb
+  # export GSS_VERSION_SET_FIXTURE_FILEPATH=<fontana_sample/spec/fixtures/version_sets.yml.erb への絶対パス>
+
+  before(:all) do
+    unless ENV['GSS_VERSION_SET_FIXTURE_FILEPATH']
+      $stderr.puts "$GSS_VERSION_SET_FIXTURE_FILEPATH is not set. It seems not to specify the version set to run spec. See also comment in #{__FILE__}"
+    end
+  end
 
   let(:network){ new_network.tap{|n| n.login.should == true } }
   let(:request){ network.new_action_request }
@@ -23,6 +29,7 @@ describe "master_diffs" do
             "name" => "GreetingTemplate",
             "origin_version" => nil,
             "version" => "2.2",
+            "clean_required" => true,
             "diff_content" => {
               "added_documents" => [
                 { "greeting_cd" => 1, "message" => "おはようございます ^ ^"},
@@ -50,6 +57,7 @@ describe "master_diffs" do
             "name" => "GreetingTemplate",
             "origin_version" => "2.0",
             "version" => "2.2",
+            "clean_required" => false,
             "diff_content" => {
               "added_documents" => [
                   { "greeting_cd" => 5, "message" => "いただきます"},
