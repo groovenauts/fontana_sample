@@ -1,0 +1,13 @@
+---
+- device_type_cd: 1
+  version: '2013073101'
+  status_cd: 3
+  url: https://itunes.apple.com/jp/app/xxxxxxxxxx/id123456789?mt=8
+  created_at: 1375364758
+  updated_at: 1375364758
+- device_type_cd: 1
+  version: '2013080201'
+  status_cd: 2
+  url: https://itunes.apple.com/jp/app/xxxxxxxxxx/id123456789?mt=8
+  created_at: 1375564758
+  updated_at: 1375564758

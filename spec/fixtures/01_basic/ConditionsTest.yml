@@ -1,0 +1,32 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  data_id: 1
+  value1: 1
+  value2:
+  - aa
+  - bb
+  - cc
+- !ruby/hash:Moped::BSON::Document
+  data_id: 2
+  value1: aaa
+  value2:
+  - aa
+  - bb
+  - dd
+- !ruby/hash:Moped::BSON::Document
+  data_id: 3
+  value1: 123
+  value2:
+  - aa
+  - bb
+  - cc
+  - dd
+- !ruby/hash:Moped::BSON::Document
+  data_id: 4
+  value1: 
+  value2:
+  - aa
+  - bb
+  - cc
+  - dd
+  - ee
