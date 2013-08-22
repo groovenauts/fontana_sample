@@ -5,7 +5,7 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: fontana_sample_development
+      database: fontana_sample_<%= Fontana.app_mode %>
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
@@ -61,7 +61,7 @@ development:
 test:
   sessions:
     default:
-      database: fontana_sample_<%= Fontana.mode %>_test
+      database: fontana_sample_test2
       hosts:
         - localhost:27017
         # - localhost:27021
