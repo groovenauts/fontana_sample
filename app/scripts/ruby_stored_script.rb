@@ -39,7 +39,7 @@ module RubyStoredScript
   #   :item    : アイテムコード、アイテムコードの配列、アイテムコードをキー、個数を値とするHashのいずれか。
   #   :route_cd: 取得方法CD
   def item_incoming(argh)
-    item_hash = execute(name: "RubyStoredScript", key: "to_item_hash", args: {source: argh[:item]})
+    item_hash = to_item_hash( source: argh[:item] )
     content = game_data["content"]
 
     items = content["items"] ||= {}
@@ -57,7 +57,7 @@ module RubyStoredScript
   #   :item    : アイテムコード、アイテムコードの配列、アイテムコードをキー、個数を値とするHashのいずれか。
   #   :route_cd: 消費方法CD
   def item_outgoing(argh)
-    item_hash = execute(name: "RubyStoredScript", key: "to_item_hash", args: {source: argh[:item]})
+    item_hash = to_item_hash( source: argh[:item] )
     content = game_data["content"]
 
     items = content["items"] ||= {}
