@@ -2,6 +2,9 @@
 require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new(:spec)
 
+# master_diffs のテストは spec/fixtures/version_sets.yml.erb の状態 (dm: 2.2) を前提としているので、フィクスチャを指定しています。
+ENV['GSS_VERSION_SET_FIXTURE_FILEPATH'] = File.expand_path("../spec/fixtures/version_sets.yml.erb", __FILE__)
+
 require 'fontana_client_support'
 FontanaClientSupport.configure do |c|
   c.root_dir = File.expand_path("..", __FILE__)
