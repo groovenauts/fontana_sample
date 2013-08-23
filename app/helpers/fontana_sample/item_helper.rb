@@ -14,7 +14,7 @@ module FontanaSample
     def in_or_out(argh, k)
       log_name = ITEM_LOG_NAMES[k] or raise ArgumentError, "Invalid k: #{k} must be 1 or -1"
 
-      item_hash = to_item_hash( source: argh[:item] )
+      item_hash = ItemSet.to_hash(argh[:item])
       content = game_data["content"]
 
       items = content["items"] ||= {}

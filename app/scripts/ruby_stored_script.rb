@@ -527,7 +527,7 @@ module RubyStoredScript
   # argh: Hash
   #   :item    : アイテムコード、アイテムコードの配列、アイテムコードをキー、個数を値とするHashのいずれか。
   def purchase_item_incoming(argh)
-    item_hash = to_item_hash({source: argh[:item]})
+    item_hash = FontanaSample::ItemSet.to_hash(argh[:item])
     content = game_data["content"]
 
     items = content["purchase_items"] ||= {}
