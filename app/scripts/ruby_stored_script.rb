@@ -3,6 +3,8 @@
 require 'net/http'
 
 module RubyStoredScript
+  include FontanaSample::ItemHelper
+
   # 説明
   #   動作確認用のメソッドです。
   #
@@ -39,17 +41,7 @@ module RubyStoredScript
   #   :item    : アイテムコード、アイテムコードの配列、アイテムコードをキー、個数を値とするHashのいずれか。
   #   :route_cd: 取得方法CD
   def item_incoming(argh)
-    item_hash = to_item_hash( source: argh[:item] )
-    content = game_data["content"]
-
-    items = content["items"] ||= {}
-    item_hash.each do |item_code, amount|
-      items[item_code.to_s] ||= 0
-      items[item_code.to_s] += amount
-      create(name: "ItemIncomingLog", attrs: { "player_id" => player.player_id, "created_at" => server_time, "level" => player.level, "item_cd" => item_code, "incoming_route_cd" => argh[:route_cd], "amount" => amount })
-    end
-
-    "OK"
+    in_or_out(argh, 1)
   end
 
 
@@ -57,17 +49,7 @@ module RubyStoredScript
   #   :item    : アイテムコード、アイテムコードの配列、アイテムコードをキー、個数を値とするHashのいずれか。
   #   :route_cd: 消費方法CD
   def item_outgoing(argh)
-    item_hash = to_item_hash( source: argh[:item] )
-    content = game_data["content"]
-
-    items = content["items"] ||= {}
-    item_hash.each do |item_code, amount|
-      items[item_code.to_s] ||= 0
-      items[item_code.to_s] -= amount
-      create(name: "ItemOutgoingLog", attrs: { "player_id" => player.player_id, "created_at" => server_time, "level" => player.level, "item_cd" => item_code, "outgoing_route_cd" => argh[:route_cd], "amount" => amount })
-    end
-
-    "OK"
+    in_or_out(argh, -1)
   end
 
 
