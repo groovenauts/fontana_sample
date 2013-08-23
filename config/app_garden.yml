@@ -39,3 +39,7 @@ platform:
 
   AppStore:
     url: "https://sandbox.itunes.apple.com"
+
+backend:
+  auth_users:
+    fontana: "password"
