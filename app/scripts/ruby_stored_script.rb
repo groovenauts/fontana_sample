@@ -5,7 +5,7 @@ require 'net/http'
 module RubyStoredScript
   include FontanaSample::ItemHelper
 
-  def login_fook(argh)
+  def login_hook(argh)
     Rails.logger.info(argh.inspect)
     if game_data.blank?
       # GameDataにplayer_id以外に必須フィールドが設定されている場合、
