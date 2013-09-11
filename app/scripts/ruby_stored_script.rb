@@ -6,21 +6,20 @@ module RubyStoredScript
   include FontanaSample::ItemHelper
 
   def login_hook(argh)
-    Rails.logger.info(argh.inspect)
     if game_data.blank?
-      # GameDataにplayer_id以外に必須フィールドが設定されている場合、
+      # GameDataにplayer_id以外の必須フィールドが設定されている場合、
       # 事前にGameDataを作成することができないため、ログインフックの中で作成する必要がある。
-      player = argh[:player]
       return false unless player
+
       pf_player_info = (player.pf_player_info || {}).with_indifferent_access
 
       attrs = {
-        player_id: player.player_id,
-        content: {},
         require_field: (pf_player_info[:require_field] || "null"),
       }
       create(name: 'GameData', attrs: attrs)
     end
+
+    Rails.logger.debug(game_data.inspect)
 
     return true
   end
