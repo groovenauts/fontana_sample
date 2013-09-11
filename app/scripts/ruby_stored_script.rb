@@ -5,6 +5,22 @@ require 'net/http'
 module RubyStoredScript
   include FontanaSample::ItemHelper
 
+  def login_fook(argh)
+    Rails.logger.info(argh.inspect)
+    if game_data.blank?
+      # GameDataにplayer_id以外に必須フィールドが設定されている場合、
+      # 事前にGameDataを作成することができないため、ログインフックの中で作成する必要がある。
+      attrs = {
+        player_id: player.player_id,
+        content: {},
+        require_field: (argh[:require_field] || "null"),
+      }
+      create(name: 'GameData', attrs: attrs)
+    end
+
+    return true
+  end
+
   # 説明
   #   動作確認用のメソッドです。
   #
