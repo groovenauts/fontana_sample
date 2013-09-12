@@ -18,8 +18,7 @@ login_url: "/api/1.0.0/actions.html"
 consumer_secret: "4cb5b62cb95e52a1d523ca832e590d94"
 
 # ログインの際に呼び出されるフック名
-# login_hook_stored_script_name: "RubyStoredScript.provide_login_bonus"
-login_hook_stored_script_name: "RubyStoredScript.login_hook"
+login_hook_stored_script_name: "LoginRubyStoredScript.login_hook"
 
 # 商品購入の際に呼び出されるフック名
 # purchase_stored_script_name: "RubyStoredScript.buy"

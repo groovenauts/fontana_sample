@@ -3,27 +3,6 @@
 require 'net/http'
 
 module RubyStoredScript
-  include FontanaSample::ItemHelper
-
-  def login_hook(argh)
-    if game_data.blank?
-      # GameDataにplayer_id以外の必須フィールドが設定されている場合、
-      # 事前にGameDataを作成することができないため、ログインフックの中で作成する必要がある。
-      return false unless player
-
-      pf_player_info = (player.pf_player_info || {}).with_indifferent_access
-
-      attrs = {
-        require_field: (pf_player_info[:require_field] || "null"),
-      }
-      create(name: 'GameData', attrs: attrs)
-    end
-
-    Rails.logger.debug(game_data.inspect)
-
-    return true
-  end
-
   # 説明
   #   動作確認用のメソッドです。
   #
@@ -71,6 +50,26 @@ module RubyStoredScript
     in_or_out(argh, -1)
   end
 
+  # argh: Hash
+  #   :item    : アイテムコード、アイテムコードの配列、アイテムコードをキー、個数を値とするHashのいずれか。
+  #   :route_cd: 消費方法CD
+  # amount: Integer
+  def in_or_out(argh, come_or_out=0)
+    items = game_data["content"]["items"]
+    amount = (argh[:amount] || 0).to_i
+    item_count = items[argh[:item]] || 0
+    if come_or_out < 0
+      item_count = item_count - amount
+      if item_count < 0
+        return "You don't have enough item"
+      end
+    else
+      item_count = item_count + amount
+    end
+
+    game_data["content"]["items"][argh[:item]] = item_count
+    return item_count
+  end
 
 
 
