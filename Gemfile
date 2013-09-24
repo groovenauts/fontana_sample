@@ -12,3 +12,8 @@ group :test do
   gem "mongoid", "~> 3.1.4"
   gem "factory_girl"
 end
+
+group :test, :development do
+  gem "pry"
+  gem "pry-debugger"
+end
