@@ -14,7 +14,7 @@ FactoryGirl.define do
     player_id             "1000001"
     nickname              "ichiro"
     pf_player_id          "150001"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-07-15T21:50:00+09:00")
     current_login_at      Time.zone.parse("2012-08-15T18:50:00+09:00")
     last_login_at         Time.zone.parse("2012-08-15T18:50:00+09:00")
@@ -30,7 +30,7 @@ FactoryGirl.define do
     nickname              "jiro"
     level                 2
     pf_player_id          "150002"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-07-21T10:00:00+09:00")
     current_login_at      Time.zone.parse("2012-08-15T10:00:00+09:00")
     last_login_at         Time.zone.parse("2012-08-15T10:00:00+09:00")
@@ -47,7 +47,7 @@ FactoryGirl.define do
     nickname              "subrow"
     level                 3
     pf_player_id          "150003"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-07-26T22:10:00+09:00")
     current_login_at      Time.zone.parse("2012-08-15T01:10:00+09:00")
     last_login_at         Time.zone.parse("2012-08-15T01:10:00+09:00")
@@ -65,7 +65,7 @@ FactoryGirl.define do
     nickname              "shirow"
     level                 4
     pf_player_id          "150004"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-08-01T10:20:00+09:00")
     current_login_at      Time.zone.parse("2012-08-14T16:20:00+09:00")
     last_login_at         Time.zone.parse("2012-08-14T16:20:00+09:00")
@@ -78,7 +78,7 @@ FactoryGirl.define do
     player_id             "1000005"
     nickname              "gorow"
     pf_player_id          "150005"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-07-15T21:50:00+09:00")
     current_login_at      Time.zone.parse("2012-08-15T18:50:00+09:00")
     last_login_at         Time.zone.parse("2012-08-15T18:50:00+09:00")
@@ -94,7 +94,7 @@ FactoryGirl.define do
     nickname              "rockrow"
     level                 2
     pf_player_id          "150006"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-07-21T10:00:00+09:00")
     current_login_at      Time.zone.parse("2012-08-15T10:00:00+09:00")
     last_login_at         Time.zone.parse("2012-08-15T10:00:00+09:00")
@@ -111,7 +111,7 @@ FactoryGirl.define do
     nickname              "nanarow"
     level                 3
     pf_player_id          "150007"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-07-26T22:10:00+09:00")
     current_login_at      Time.zone.parse("2012-08-15T01:10:00+09:00")
     last_login_at         Time.zone.parse("2012-08-15T01:10:00+09:00")
@@ -129,7 +129,7 @@ FactoryGirl.define do
     nickname              "hachi"
     level                 4
     pf_player_id          "150008"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-08-01T10:20:00+09:00")
     current_login_at      Time.zone.parse("2012-08-14T16:20:00+09:00")
     last_login_at         Time.zone.parse("2012-08-14T16:20:00+09:00")
@@ -143,7 +143,7 @@ FactoryGirl.define do
     nickname              "kurow"
     level                 5
     pf_player_id          "150009"
-    pf_player_info        {}
+    pf_player_info        ({})
     first_login_at        Time.zone.parse("2012-08-01T10:20:00+09:00")
     current_login_at      Time.zone.parse("2012-08-14T16:20:00+09:00")
     last_login_at         Time.zone.parse("2012-08-14T16:20:00+09:00")

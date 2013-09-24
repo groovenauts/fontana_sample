@@ -10,6 +10,8 @@
 class Player
   include Mongoid::Document
 
+  include Mongoid::Timestamps::Created
+  include Mongoid::Timestamps::Updated
   field :player_id, type: String, label: "プレイヤーID", default: nil
   field :nickname, type: String, label: "ニックネーム", default: nil
   field :level, type: Integer, label: "レベル", default: 1.0
@@ -26,12 +28,10 @@ class Player
   field :login_count_this_day, type: Integer, label: "当日ログイン回数", default: 0.0
   field :continuous_login_days, type: Integer, label: "連続ログイン日数", default: 0.0
   field :banned, type: Boolean, label: "アカウント停止フラグ", default: nil
-  include Mongoid::Timestamps::Created
   field :created_at, type: ActiveSupport::TimeWithZone, label: "登録日時", default: nil
-  include Mongoid::Timestamps::Updated
   field :updated_at, type: ActiveSupport::TimeWithZone, label: "更新日時", default: nil
   validates(:player_id, presence: true)
-  index {"player_id"=>1}, :name => "主キー"
-  index {"authentication_token"=>1}, :name => "idx_auth"
-  index {"pf_player_id"=>1}, :name => "idx_switch_login"
+  index({"player_id"=>1}, :name => "主キー")
+  index({"authentication_token"=>1}, :name => "idx_auth")
+  index({"pf_player_id"=>1}, :name => "idx_switch_login")
 end
