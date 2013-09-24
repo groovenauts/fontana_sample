@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+require 'fileutils'
 
 if ENV['SYNC_DIRECTLY'] =~ /yes|on|true/i
   unless system("rake deploy:sync:update")
@@ -12,7 +13,16 @@ require 'libgss'
 require 'fontana_client_support'
 
 require 'mongoid'
-Mongoid.load!(File.expand_path("../../config/fontana_mongoid.yml", __FILE__), :test)
+
+Mongoid.logger.level = 0
+log_path = File.expand_path("../../tmp/test.log", __FILE__)
+FileUtils.mkdir_p(File.dirname(log_path))
+logger = Logger.new(log_path)
+logger.level = Logger::DEBUG
+Mongoid.logger = logger
+
+
+Mongoid.load!(File.expand_path("../../config/fontana_mongoid.yml", __FILE__), :development)
 
 require 'active_support/dependencies'
 
@@ -41,3 +51,5 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
 end
+
+
