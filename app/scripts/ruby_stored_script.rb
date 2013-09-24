@@ -23,7 +23,8 @@ module RubyStoredScript
   # 戻り値:
   #   "OK"
   def sleep(argh)
-    sleep(argh[:time].to_i)
+    Rails.logger.info("argh: #{argh.inspect}")
+    Kernel.sleep(argh[:time].to_i)
     "OK"
   end
 
