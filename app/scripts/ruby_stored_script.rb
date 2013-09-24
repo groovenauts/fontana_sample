@@ -14,6 +14,19 @@ module RubyStoredScript
     {echo: argh}
   end
 
+  # 説明
+  #   テスト用に指定された秒数だけ処理を停止するメソッドです。
+  #
+  # argh: Hash
+  #   :time    : sleepする秒数
+  #
+  # 戻り値:
+  #   "OK"
+  def sleep(argh)
+    sleep(argh[:time].to_i)
+    "OK"
+  end
+
 
   # 説明:
   #   アイテムセット用のオブジェクトの整形を行います。
