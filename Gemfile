@@ -8,5 +8,7 @@ group :test do
   gem 'libgss', '~> 0.7.0'
   gem "tengine_support", '~> 1.2.0'
 
+  gem "activesupport", "~> 3.2.0"
+  gem "mongoid", "~> 3.1.4"
   gem "factory_girl"
 end

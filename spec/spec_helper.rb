@@ -1,8 +1,21 @@
 # -*- coding: utf-8 -*-
+
+if ENV['SYNC_DIRECTLY'] =~ /yes|on|true/i
+  unless system("rake deploy:sync:update")
+    raise "rake deploy:sync:update ERROR!"
+  end
+end
 require 'libgss'
+require 'mongoid'
+
 require 'fontana_client_support'
 
+Mongoid.load!(File.expand_path("../../config/fontana_mongoid.yml", __FILE__), :test)
+
 Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
+
+require 'factory_girl'
+FactoryGirl.find_definitions
 
 RSpec.configure do |config|
 
@@ -15,4 +28,5 @@ RSpec.configure do |config|
   require 'openssl'
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
+  config.include FactoryGirl::Syntax::Methods
 end
