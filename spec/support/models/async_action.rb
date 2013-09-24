@@ -16,6 +16,7 @@ class AsyncAction
   validates_presence_of :request
   validates_uniqueness_of :action_id, scope: :player_id
 
+  Player # in order to find with ActiveSupport::Dependency
   if defined? ::Player
     belongs_to :player # for Rails Admin
     class ::Player; has_many :async_actions end

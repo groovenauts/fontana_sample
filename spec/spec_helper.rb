@@ -12,7 +12,14 @@ require 'fontana_client_support'
 
 Mongoid.load!(File.expand_path("../../config/fontana_mongoid.yml", __FILE__), :test)
 
-Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
+Dir[File.expand_path("../support/auto/**/*.rb", __FILE__)].each {|f| require f}
+
+require 'active_support/dependencies'
+
+d = File.expand_path("../support/models", __FILE__)
+"Directory not found: #{d.inspect}" unless Dir.exist?(d)
+ActiveSupport::Dependencies.autoload_paths << d
+
 
 require 'factory_girl'
 FactoryGirl.find_definitions
