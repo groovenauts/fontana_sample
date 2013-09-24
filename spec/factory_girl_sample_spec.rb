@@ -21,8 +21,8 @@ describe "factory_girl sample" do
       end
       it do
         r = network.new_async_action_request
-        r.instance_variable_set(:@ids, [1.to_s])
-        r.async_status.should == [{id: 1, status: "executing" }]
+        r.instance_variable_set(:@ids, [1])
+        r.async_status.to_a.should == [{"id" => "1", "status" => "executing" }]
       end
     end
 
@@ -37,7 +37,7 @@ describe "factory_girl sample" do
       it do
         r = network.new_async_action_request
         r.instance_variable_set(:@ids, [2])
-        r.async_status.should == [{"result"=>1379990870, "id"=>2}]
+        r.async_status.to_a.should == [{"result"=>1379990870, "id"=>2}]
       end
     end
 
