@@ -6,19 +6,23 @@ if ENV['SYNC_DIRECTLY'] =~ /yes|on|true/i
   end
 end
 require 'libgss'
-require 'mongoid'
 
+# Mongoidの設定ファイル内にFontanaなどの定数が定義されるので、設定ファイルをロードする前に
+# fontana_client_supportを読む必要があります。
 require 'fontana_client_support'
 
+require 'mongoid'
 Mongoid.load!(File.expand_path("../../config/fontana_mongoid.yml", __FILE__), :test)
 
-Dir[File.expand_path("../support/auto/**/*.rb", __FILE__)].each {|f| require f}
-
 require 'active_support/dependencies'
+
+Time.zone = ActiveSupport::TimeZone.zones_map["Tokyo"]
 
 d = File.expand_path("../support/models", __FILE__)
 "Directory not found: #{d.inspect}" unless Dir.exist?(d)
 ActiveSupport::Dependencies.autoload_paths << d
+
+Dir[File.expand_path("../support/auto/**/*.rb", __FILE__)].each {|f| require f}
 
 
 require 'factory_girl'
