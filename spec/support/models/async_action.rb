@@ -2,7 +2,7 @@ class AsyncAction
   include Mongoid::Document
 
   field :player_id, type: Moped::BSON::ObjectId
-  field :action_id , type: String
+  field :action_id , type: Object
   field :request_url, type: String
   field :request    # anything
   field :response   # anything, can be null
