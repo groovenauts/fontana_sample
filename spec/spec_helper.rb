@@ -1,8 +1,42 @@
 # -*- coding: utf-8 -*-
+require 'fileutils'
+
+if ENV['SYNC_DIRECTLY'] =~ /yes|on|true/i
+  unless system("rake deploy:sync:update")
+    raise "rake deploy:sync:update ERROR!"
+  end
+end
 require 'libgss'
+
+# Mongoidの設定ファイル内にFontanaなどの定数が定義されるので、設定ファイルをロードする前に
+# fontana_client_supportを読む必要があります。
 require 'fontana_client_support'
 
-Dir[File.expand_path("../support/**/*.rb", __FILE__)].each {|f| require f}
+require 'mongoid'
+
+Mongoid.logger.level = 0
+log_path = File.expand_path("../../tmp/test.log", __FILE__)
+FileUtils.mkdir_p(File.dirname(log_path))
+logger = Logger.new(log_path)
+logger.level = Logger::DEBUG
+Mongoid.logger = logger
+
+
+Mongoid.load!(File.expand_path("../../config/fontana_mongoid.yml", __FILE__), :development)
+
+require 'active_support/dependencies'
+
+Time.zone = ActiveSupport::TimeZone.zones_map["Tokyo"]
+
+d = File.expand_path("../support/models", __FILE__)
+"Directory not found: #{d.inspect}" unless Dir.exist?(d)
+ActiveSupport::Dependencies.autoload_paths << d
+
+Dir[File.expand_path("../support/auto/**/*.rb", __FILE__)].each {|f| require f}
+
+
+require 'factory_girl'
+FactoryGirl.find_definitions
 
 RSpec.configure do |config|
 
@@ -15,4 +49,7 @@ RSpec.configure do |config|
   require 'openssl'
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
+  config.include FactoryGirl::Syntax::Methods
 end
+
+

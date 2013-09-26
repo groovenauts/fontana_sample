@@ -2,7 +2,7 @@ require 'yaml'
 require 'tengine/support/yaml_with_erb'
 
 module AppGarden
-  CONFIG_PATH = File.expand_path("../../../config/app_garden.yml", __FILE__)
+  CONFIG_PATH = File.expand_path("../../../../config/app_garden.yml", __FILE__)
 
   module_function
 
