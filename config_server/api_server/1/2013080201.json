@@ -1,4 +1,4 @@
 {
-    "http_url_base": "http://example.com",
+    "http_url_base": "http://localhost:4000",
     "https_url_base":  ""
 }
