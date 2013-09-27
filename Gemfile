@@ -4,8 +4,8 @@ group :test do
   gem "rake"
   gem "rspec"
 
-  gem 'fontana_client_support', '~> 0.8.1'
-  gem 'libgss', '~> 0.8.0'
+  gem 'fontana_client_support', '~> 0.8.2'
+  gem 'libgss', '~> 0.8.1'
   gem "tengine_support", '~> 1.2.0'
 
   gem "activesupport", "~> 3.2.0"
