@@ -31,24 +31,31 @@ describe "Dictionary with Array Input" do
     ["M01A01DM01",40000100,1]            , '["M01A01DM01",40000100,1]',
     ["M01A01DM01","40000100","2"]        , '["M01A01DM01","40000100","2"]',
     ["M01A01DM01",  "40000100",  "3"]    , '["M01A01DM01",  "40000100",  "3"]',
-    ['M01A01DM01',40000100,4]            , "['M01A01DM01',40000100,4]",
-    ['M01A01DM01','40000100','5']        , "['M01A01DM01','40000100','5']",
-    ['M01A01DM01',    '40000100',    '6'], "['M01A01DM01',    '40000100',    '6']",
+
+    # シングルクォーテーションはJSONで文字列として認識されないので、文字列として登録されていまいます。
+    ['M01A01DM01',40000100,4]            , nil,
+    ['M01A01DM01','40000100','5']        , nil,
+    ['M01A01DM01',    '40000100',    '6'], nil,
+    "['M01A01DM01',40000100,4]"            , ["['M01A01DM01',40000100,4]"            , nil],
+    "['M01A01DM01','40000100','5']"        , ["['M01A01DM01','40000100','5']"        , nil],
+    "['M01A01DM01',    '40000100',    '6']", ["['M01A01DM01',    '40000100',    '6']", nil],
   ]
 
   Hash[*inputs].each do |input, expect|
+    raw_expect, str_expect = *(expect.is_a?(Array) ? expect : [expect, expect])
+
     it("raw #{input.inspect}") do
       request.execute("AppSeedTestScript", "get_dictionary_with_array_input1", input: input)
       request.send_request
       request.outputs.length.should == 1
-      request.outputs.first["result"].should == "output for #{expect}"
+      request.outputs.first["result"].should == (raw_expect ? "output for #{raw_expect}" : nil)
     end
 
     it("string #{input.inspect}") do
       request.execute("AppSeedTestScript", "get_dictionary_with_array_input1", input: input.to_json)
       request.send_request
       request.outputs.length.should == 1
-      request.outputs.first["result"].should == "output for #{expect}"
+      request.outputs.first["result"].should == (str_expect ? "output for #{str_expect}" : nil)
     end
   end
 
