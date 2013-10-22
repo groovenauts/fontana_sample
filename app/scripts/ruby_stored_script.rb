@@ -28,6 +28,12 @@ module RubyStoredScript
     "OK"
   end
 
+  # 説明
+  #   テスト用に、サーバ側で自由にスクリプトを実行するメソッドです。
+  #   本番では絶対にこんなスクリプト書いてはいけません。
+  def eval_script(argh)
+    eval(argh[:script])
+  end
 
   # 説明:
   #   アイテムセット用のオブジェクトの整形を行います。
