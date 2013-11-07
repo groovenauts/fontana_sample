@@ -17,3 +17,7 @@ group :test, :development do
   gem "pry"
   gem "pry-debugger"
 end
+
+group :deploy do
+  gem 'capistrano'
+end

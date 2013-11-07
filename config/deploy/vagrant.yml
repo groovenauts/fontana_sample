@@ -1,0 +1,115 @@
+<%
+proj = ENV['FONTANA_SAMPLE_PROJECT_NAME'] || "HardCoreGame"
+proj_disk_dir = "/#{proj}DISK/#{proj}"
+proj_nfs_dir  = "/#{proj}NFS/#{proj}"
+%>
+# ローカルPCから管理用サーバへデプロイするときの設定
+manage:
+  user: 'vagrant'
+  # 管理用サーバのFQDN
+  server: '192.168.55.100'
+  # ローカルPCから管理用サーバへ、ApiSrv でデプロイするときの設定
+  apisrv: &manage_apisrv_dirs
+    # デプロイ先
+    deploy_to: '<%= proj_disk_dir %>/fontana'
+  # ローカルPCから管理用サーバへ、GOTool でデプロイするときの設定
+  gotool: &manage_gotool_dirs
+    # デプロイ先
+    deploy_to:  '<%= proj_disk_dir %>/gotool'
+
+# 管理用サーバからAPIサーバ群へデプロイするときの設定
+apisrv:
+  user: 'gnop'
+  # APIサーバ群のリスト(管理用サーバから API サーバを参照するときのホスト名)
+  # aやbは任意のサーバのグループ名
+  servers:
+    apisrv01:
+      group: a
+    apisrv02:
+      group: a
+    apisrv03:
+      group: a
+  # APIサーバ群でのデプロイ先、サービスを動かす際のfontanaを配置するディレクトリは、管理用サーバでのディレクトリと同じ
+  <<: *manage_apisrv_dirs
+  # config/project.yml.erb 用
+  workspaces:
+    scm: '<%= proj_disk_dir %>/workspaces/scm'
+    # APIサーバでは各タイトルアプリがデプロイされたディレクトリを参照する
+    runtime: '<%= proj_disk_dir %>/title_app/current'
+
+# 管理用サーバから運営ツールのサーバへデプロイするときの設定
+gotool:
+  user: 'gnop'
+  # 運営ツールのサーバのリスト(管理用サーバから運営ツールのサーバを参照するときのホスト名)
+  servers:
+    gotool01:
+      primary_db: true
+    gotool02:
+      {}
+  # 運営ツールのサーバでのデプロイ先、サービスを動かす際のfontanaを配置するディレクトリは、管理用サーバでのディレクトリと同じ
+  <<: *manage_gotool_dirs
+  workspaces:
+    scm: '<%= proj_nfs_dir %>/workspaces/scm'
+    runtime: '<%= proj_nfs_dir %>/workspaces/runtime'
+
+## Configサーバ
+config_server:
+  # user: 'gnop' # APIサーバと一緒にデプロイされるはずで@apisrvが指定されるはずなのでユーザの指定は不要
+  ## タイトルアプリの配置先ディレクトリ
+  path: "<%= proj_disk_dir %>/configsrv"
+  ## タイトルアプリのリポジトリURL
+  repository: "git@github.com:groovenauts/fontana_sample.git"
+  ## Configサーバ用のブランチ名 (config_serverディレクトリが含まれている)
+  ## 実際は app_releases/環境名 というブランチ。環境に応じて適宜選択する
+  branch: "app_releases/api.fontana_sample.groovenauts.jp"
+
+
+# アセットサーバ
+asset:
+  user: 'gnop'
+  # /a などにAliasされているディレクトリ
+  deploy_to: "<%= proj_disk_dir %>/fontana-assets"
+  servers:
+    asset01:
+      {}
+
+# MongoDBサーバ
+mongo:
+  server_base: &mongo_base
+    dbpath: "/var/lib/mongo"
+  servers:
+    mongo01:
+      <<: *mongo_base
+    mongo02:
+      <<: *mongo_base
+    mongo03:
+      <<: *mongo_base
+  replicasets:
+    rs1:
+      primary: mongo01
+      port: 27021
+      members:
+      - "mongo01:27021"
+      - "mongo02:27021"
+      - "mongo03:27021"
+    rs2:
+      primary: mongo02
+      port: 27022
+      members:
+      - "mongo01:27022"
+      - "mongo02:27022"
+      - "mongo03:27022"
+    rs3:
+      primary: mongo03
+      port: 27023
+      members:
+      - "mongo01:27023"
+      - "mongo02:27023"
+      - "mongo03:27023"
+  sharding:
+    workspace_host: "mongo01"
+    name: "fontana_production"
+    shards:
+      shard1: "rs1/mongo01:27021,mongo02:27021,mongo03:27021"
+      shard2: "rs2/mongo01:27022,mongo02:27022,mongo03:27022"
+      shard3: "rs3/mongo01:27023,mongo02:27023,mongo03:27023"
