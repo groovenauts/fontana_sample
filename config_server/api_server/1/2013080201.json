@@ -1,0 +1,5 @@
+{
+    "http_url_base": "http://example.com",
+    "https_url_base":  "",
+    "public_asset_url_base": "http://example.com/a/"
+}
