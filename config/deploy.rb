@@ -53,7 +53,7 @@ after  "deploy:setup", "deploy:disable_sudo"
 # see https://github.com/javan/whenever
 #     https://github.com/javan/whenever/blob/master/lib/whenever/capistrano/recipes.rb
 #
-set(:whenever_roles)        { :app }
+set(:whenever_roles)        { :gotool }
 set(:whenever_options)      { {:roles => fetch(:whenever_roles)} }
 set(:whenever_command)      { "whenever" }
 set(:whenever_identifier)   { fetch :application }
