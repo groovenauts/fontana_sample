@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
@@ -19,3 +20,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
+every "*/10 * * * *" do # 10分おき
+  runner "app/batches/calc_player_count_per_item_and_its_count.rb"
+end
