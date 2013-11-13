@@ -20,4 +20,5 @@ end
 
 group :deploy do
   gem 'capistrano'
+  gem 'whenever', :require => false
 end
