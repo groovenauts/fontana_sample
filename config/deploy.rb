@@ -62,4 +62,39 @@ set(:whenever_variables)    { "environment=#{fetch :whenever_environment}" }
 set(:whenever_update_flags) { "--update-crontab #{fetch :whenever_identifier} --set #{fetch :whenever_variables}" }
 set(:whenever_clear_flags)  { "--clear-crontab #{fetch :whenever_identifier}" }
 
-require "whenever/capistrano/recipes"
+# このレシピは普通のrailsアプリをデプロイした前提で作られているので、変更が必要です。
+# require "whenever/capistrano/recipes"
+
+  namespace :whenever do
+    desc "Update application's crontab entries using Whenever"
+    task :update_crontab do
+      args = {
+        :command => fetch(:whenever_command),
+        :flags   => fetch(:whenever_update_flags),
+        :path    => fetch(:latest_release)
+      }
+
+      if whenever_servers.any?
+        args = whenever_prepare_for_rollback(args) if task_call_frames[0].task.fully_qualified_name == 'deploy:rollback'
+        whenever_run_commands(args)
+
+        on_rollback do
+          args = whenever_prepare_for_rollback(args)
+          whenever_run_commands(args)
+        end
+      end
+    end
+
+    desc "Clear application's crontab entries using Whenever"
+    task :clear_crontab do
+      if whenever_servers.any?
+        args = {
+          :command => fetch(:whenever_command),
+          :flags   => fetch(:whenever_clear_flags),
+          :path    => fetch(:latest_release)
+        }
+
+        whenever_run_commands(args)
+      end
+    end
+  end
