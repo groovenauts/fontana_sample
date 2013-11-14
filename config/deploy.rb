@@ -55,7 +55,7 @@ after  "deploy:setup", "deploy:disable_sudo"
 #
 set(:whenever_roles)        { :gotool }
 set(:whenever_options)      { {:roles => fetch(:whenever_roles)} }
-set(:whenever_command)      { "whenever" }
+set(:whenever_command)      { "bundle exec whenever" }
 set(:whenever_identifier)   { fetch :application }
 set(:whenever_environment)  { fetch :rails_env, "production" }
 set(:whenever_variables)    { "environment=#{fetch :whenever_environment}" }

@@ -82,7 +82,10 @@ end
 ## [運営ツール->運営ツール] 運営ツールにデプロイするための設定のうち共通部分
 task :"@gotool/common" do
   set :user,       deploy_config['gotool']['user']
+  set :deploy_via,     :copy
   # set :deploy_to,  deploy_config['gotool']['workspaces']['runtime'].sub(%r{/current\Z}, '')
+  set :deploy_to ,  "/tmp/gotool_for_whenever"
+  set :copy_dir  ,  "/tmp/copy_dir"
   ## gotool 以外と混ざらないようにする
   set_deploy_target :"@gotool"
 end
