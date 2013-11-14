@@ -71,7 +71,7 @@ set(:whenever_clear_flags)  { "--clear-crontab #{fetch :whenever_identifier}" }
       args = {
         :command => fetch(:whenever_command),
         :flags   => fetch(:whenever_update_flags),
-        :path    => fetch(:latest_release)
+        :path    => fetch(:batch_dir) || fetch(:latest_release)
       }
 
       if whenever_servers.any?
@@ -91,7 +91,7 @@ set(:whenever_clear_flags)  { "--clear-crontab #{fetch :whenever_identifier}" }
         args = {
           :command => fetch(:whenever_command),
           :flags   => fetch(:whenever_clear_flags),
-          :path    => fetch(:latest_release)
+          :path    => fetch(:batch_dir) || fetch(:latest_release)
         }
 
         whenever_run_commands(args)
