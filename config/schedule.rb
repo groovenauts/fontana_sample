@@ -20,6 +20,12 @@
 
 # Learn more: http://github.com/javan/whenever
 
+require 'tengine/support/yaml_with_erb'
+runtime_config = YAML.load_file_with_erb(File.expand_path("../runtime.yml", __FILE__))
+
+# set :path, Whenever.path
+set :path, runtime_config["gotool"]["path"]
+
 every "*/10 * * * *" do # 10分おき
   runner "app/batches/calc_player_count_per_item_and_its_count.rb"
 end
