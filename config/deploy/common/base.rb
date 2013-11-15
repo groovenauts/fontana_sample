@@ -87,7 +87,7 @@ task :"@gotool/common" do
   set :deploy_to ,  "/tmp/gotool_for_whenever"
   set :copy_dir  ,  "/tmp/copy_dir"
 
-  set :batch_dir,   deploy_config['workspaces']['runtime']
+  set :batch_dir,   fetch(:deploy_to)
 
   ## gotool 以外と混ざらないようにする
   set_deploy_target :"@gotool"

@@ -65,6 +65,11 @@ set(:whenever_clear_flags)  { "--clear-crontab #{fetch :whenever_identifier}" }
 # このレシピは普通のrailsアプリをデプロイした前提で作られているので、変更が必要です。
 # require "whenever/capistrano/recipes"
 
+require 'whenever/capistrano/support'
+
+# Capistrano::Configuration.instance(:must_exist).load do
+  Whenever::CapistranoSupport.load_into(self)
+
   namespace :whenever do
     desc "Update application's crontab entries using Whenever"
     task :update_crontab do
@@ -98,3 +103,5 @@ set(:whenever_clear_flags)  { "--clear-crontab #{fetch :whenever_identifier}" }
       end
     end
   end
+
+# end

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 load 'deploy'
 # Uncomment if you are using Rails' asset pipeline
-    # load 'deploy/assets'
+# load 'deploy/assets'
 load 'config/deploy' # remove this line to skip loading any of the default tasks
 
 # 直接bundle installする必要はないので、bundler/capistranoも不要です
