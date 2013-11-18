@@ -29,20 +29,11 @@ open("/tmp/config_schedule.log", "a") do |f|
   f.puts("\n  " << caller.join("\n  "))
 end
 
-# set :path, Whenever.path
+# set :path instead of Whenever.path
 set :path, RUNTIME_CONFIG["gotool"]["path"]
 
-module ::Whenever
-  def self.path
-    # Dir.pwd
-    open("/tmp/config_schedule.log", "a") do |f|
-      f.puts("#{__FILE__}##{__LINE__}")
-      f.puts("Dir.pwd: " << Dir.pwd.inspect)
-      f.puts("\n  " << caller.join("\n  "))
-    end
-    RUNTIME_CONFIG["gotool"]["path"]
-  end
-end
+# set runner template instead of default template using runner_for_app
+job_type :runner, "cd :path && script/rails runner -e :environment ':task' :output"
 
 every "*/10 * * * *" do # 10分おき
   runner "app/batches/calc_player_count_per_item_and_its_count.rb"
