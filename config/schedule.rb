@@ -33,7 +33,7 @@ end
 set :path, RUNTIME_CONFIG["gotool"]["path"]
 
 # set runner template instead of default template using runner_for_app
-job_type :runner, "cd :path && script/rails runner -e :environment ':task' :output"
+job_type :runner, "cd :path && script/rails runner -e :environment :task :output"
 
 every "*/10 * * * *" do # 10分おき
   runner "app/batches/calc_player_count_per_item_and_its_count.rb"
