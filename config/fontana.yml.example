@@ -3,3 +3,6 @@
 
 gotool:
   path: "vendor/fontana"
+workspaces:
+  scm: "workspaces/scm"
+  runtime: "workspaces/runtime"
