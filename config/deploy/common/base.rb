@@ -88,7 +88,7 @@ task :"@gotool/common" do
   set :copy_dir  ,  "/tmp/copy_dir"
 
   after :"deploy:update_code" do
-    put IO.read("config/runtime.yml"), "#{release_path}/config/runtime.yml"
+    put IO.read("config/fontana.yml"), "#{release_path}/config/fontana.yml"
   end
 
   ## gotool 以外と混ざらないようにする
