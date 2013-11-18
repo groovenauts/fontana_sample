@@ -29,7 +29,18 @@ set :path, RUNTIME_CONFIG["gotool"]["path"]
 set :app_dir, RUNTIME_CONFIG["workspaces"]["runtime"]
 
 # set runner template instead of default template using runner_for_app
-job_type :runner, "cd :path && script/rails runner -e :environment :app_dir/:task :output"
+job_type :runner, "export EXECUTION_KEY=`date +'%Y-%m-%dT%H:%M:00%z'` APP_DIR=:app_dir && cd :path && bundle exec rails runner -e :environment 'Fontana::Batch.run(\":task\", ENV[\"EXECUTION_KEY\"], app_dir: ENV[\"APP_DIR\"])' :output"
+
+# ローカルで実行する際には以下のように実行してください
+# $ cd path/to/project
+# $ export export APP_DIR=$PWD
+# $ cd vendor/fontana && bundle exec rails runner $APP_DIR/app/batches/calc_player_count_per_item_and_its_count.rb && cd -
+#
+# より本番に近い動作をさせる場合には以下のようにしてください。
+# $ cd path/to/project
+# $ export export APP_DIR=$PWD
+# $ cd vendor/fontana && bundle exec rails runner 'Fontana::Batch.run("app/batches/calc_player_count_per_item_and_its_count.rb")' && cd -
+
 
 every "*/10 * * * *" do # 10分おき
   runner "app/batches/calc_player_count_per_item_and_its_count.rb"
