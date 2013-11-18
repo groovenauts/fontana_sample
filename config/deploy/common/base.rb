@@ -87,12 +87,13 @@ task :"@gotool/common" do
   set :deploy_to ,  "/tmp/gotool_for_whenever"
   set :copy_dir  ,  "/tmp/copy_dir"
 
+  after :"deploy:update_code" do
+    put IO.read("config/runtime.yml"), "#{release_path}/config/runtime.yml"
+  end
+
   ## gotool 以外と混ざらないようにする
   set_deploy_target :"@gotool"
 end
-
-
-
 
 
 ## デプロイ先サーバ・ディレクトリ選択時に異なる種類のデプロイ対象を選択できないようにする
