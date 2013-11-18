@@ -23,12 +23,23 @@
 require 'tengine/support/yaml_with_erb'
 RUNTIME_CONFIG = YAML.load_file_with_erb(File.expand_path("../runtime.yml", __FILE__))
 
+open("/tmp/config_schedule.log", "a") do |f|
+  f.puts("#{__FILE__}##{__LINE__}")
+  f.puts("Dir.pwd: " << Dir.pwd.inspect)
+  f.puts("\n  " << caller.join("\n  "))
+end
+
 # set :path, Whenever.path
 set :path, RUNTIME_CONFIG["gotool"]["path"]
 
-module Whenever
+module ::Whenever
   def self.path
     # Dir.pwd
+    open("/tmp/config_schedule.log", "a") do |f|
+      f.puts("#{__FILE__}##{__LINE__}")
+      f.puts("Dir.pwd: " << Dir.pwd.inspect)
+      f.puts("\n  " << caller.join("\n  "))
+    end
     RUNTIME_CONFIG["gotool"]["path"]
   end
 end
