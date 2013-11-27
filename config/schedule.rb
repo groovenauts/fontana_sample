@@ -41,7 +41,10 @@ job_type :runner, "export EXECUTION_KEY=`date +'%Y-%m-%dT%H:%M:00%z'` APP_DIR=:a
 # $ export export APP_DIR=$PWD
 # $ cd vendor/fontana && bundle exec rails runner 'Fontana::Batch.run("app/batches/calc_player_count_per_item_and_its_count.rb")' && cd -
 
-
 every "*/10 * * * *" do # 10分おき
   runner "app/batches/calc_player_count_per_item_and_its_count.rb"
+end
+
+every "*/10 * * * *" do # 10分おきに有効化予約の確認と実行
+  rake "version_set:activate_planned"
 end
