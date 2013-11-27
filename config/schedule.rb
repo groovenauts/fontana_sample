@@ -46,5 +46,5 @@ every "*/10 * * * *" do # 10分おき
 end
 
 every "*/10 * * * *" do # 10分おきに有効化予約の確認と実行
-  rake "version_set:activate_planned"
+  runner "VersionSet.activate_planned"
 end
