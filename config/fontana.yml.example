@@ -1,0 +1,8 @@
+# このファイルはFONTANA_ENVがPRODUCTION, STAGING, SANDBOXの環境については
+# 自動で生成されるファイルですので、コミットしないように .gitignore に追加してください。
+
+gotool:
+  path: "vendor/fontana"
+workspaces:
+  scm: "workspaces/scm"
+  runtime: "workspaces/runtime"

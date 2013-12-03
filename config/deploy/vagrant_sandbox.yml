@@ -1,0 +1,19 @@
+# デプロイを実行するユーザ
+user: 'gnop'
+# デプロイ先
+host: "192.168.55.99"
+deploy_to: '/mnt/resource/title_app'
+
+workspaces:
+  scm: '/mnt/resource/fontana/workspaces/scm'
+  runtime: '/mnt/resource/fontana/workspaces/runtime'
+
+## Configサーバ
+config_server:
+  ## タイトルアプリの配置先ディレクトリ
+  path: "/mnt/resource/configsrv"
+  ## タイトルアプリのリポジトリURL
+  repository: "git@github.com:/fontana_sample.git"
+  ## Configサーバ用のブランチ名 (config_serverディレクトリが含まれている)
+  ## 実際は app_releases/環境名 というブランチ。環境に応じて適宜選択する
+  branch: "app_releases"

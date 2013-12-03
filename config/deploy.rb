@@ -46,3 +46,20 @@ end
 before "deploy:setup", "deploy:enable_sudo"
 after  "deploy:setup", "deploy:fix_permissions"
 after  "deploy:setup", "deploy:disable_sudo"
+
+#
+# whenever defines crontab
+#
+# see https://github.com/javan/whenever
+#     https://github.com/javan/whenever/blob/master/lib/whenever/capistrano/recipes.rb
+#
+set(:whenever_roles)        { :gotool }
+set(:whenever_options)      { {:roles => fetch(:whenever_roles)} }
+set(:whenever_command)      { "bundle install --path vendor/bundle --without development test && bundle exec whenever" }
+set(:whenever_identifier)   { fetch :application }
+set(:whenever_environment)  { fetch :rails_env, "production" }
+set(:whenever_variables)    { "environment=#{fetch :whenever_environment}" }
+set(:whenever_update_flags) { "--update-crontab #{fetch :whenever_identifier} --set #{fetch :whenever_variables}" }
+set(:whenever_clear_flags)  { "--clear-crontab #{fetch :whenever_identifier}" }
+
+require "whenever/capistrano/recipes"

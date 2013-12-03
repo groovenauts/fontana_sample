@@ -6,7 +6,6 @@ group :test do
 
   gem 'fontana_client_support', '~> 0.8.4'
   gem 'libgss', '~> 0.9.0'
-  gem "tengine_support", '~> 1.2.0'
 
   gem "activesupport", "~> 3.2.0"
   gem "mongoid", "~> 3.1.4"
@@ -18,6 +17,11 @@ group :test, :development do
   gem "pry-debugger"
 end
 
+group :test, :deploy do
+  gem "tengine_support", '~> 1.2.0'
+end
+
 group :deploy do
   gem 'capistrano'
+  gem 'whenever', :require => false
 end
