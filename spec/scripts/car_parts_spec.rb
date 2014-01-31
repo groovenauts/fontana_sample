@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
 require File.expand_path('../spec_scripts_helper', __FILE__)
 
-describe "CarParts" do
+describe "CarParts" do # ストアドスクリプトモジュール名
 
+  # ログイン
   let(:network){ new_network("1000007").tap{|n| n.login.should == true } }
   let(:request){ network.new_action_request }
 
-  fixtures "car_parts" # フィクスチャのロード
+  # fixtureのロード
+  fixtures "car_parts"
 
-  describe :stocks do
+  describe :stocks do # stocksアクションに対するテスト
 
-    context "引数なし" do
+    context "引数なし" do # テストケース1
       let(:argh){}
 
       before do
@@ -25,7 +27,7 @@ describe "CarParts" do
       end
     end
 
-    context "該当部品なし" do
+    context "該当部品なし" do # テストケース2
       let(:argh){ {"car_cd" => "1001", "category_cd" => "3"} }
 
       before do
@@ -39,8 +41,8 @@ describe "CarParts" do
       end
     end
 
-    context "該当部品あり" do
-      context "在庫数がゼロのものがある場合" do
+    context "該当部品あり" do # テストケース3
+      context "在庫数がゼロのものがある場合" do # テストケース3-1
         let(:argh){ {"car_cd" => "1005", "category_cd" => "1"} }
 
         before do
@@ -57,11 +59,11 @@ describe "CarParts" do
         end
       end
 
-      context "在庫数がゼロのものがある場合" do
+      context "在庫数がゼロのものがある場合" do # テストケース3-2
         it '車両部品関連マスタに指定した部品CDのレコードが存在しない'
       end
 
-      context "在庫数がすべてゼロ以上" do
+      context "在庫数がすべてゼロ以上" do # テストケース3-3
 
         let(:argh){ {"car_cd" => "1002", "category_cd" => "8"} }
 
