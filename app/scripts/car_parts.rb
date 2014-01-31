@@ -12,7 +12,7 @@ module CarParts
 
     if car_cd && category_cd
       parts_in_this_category = all(
-                                   name:       'CarParts',
+                                   name:       'CarPart',
                                    conditions: { 'car_cd' => car_cd, 'part_category_cd' => category_cd }
                                )
 
