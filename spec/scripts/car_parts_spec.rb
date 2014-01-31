@@ -3,9 +3,7 @@ require File.expand_path('../spec_scripts_helper', __FILE__)
 
 describe "CarParts" do
 
-  #let(:network){ new_network("1000007").tap(&:login) }
   let(:network){ new_network("1000007").tap{|n| n.login.should == true } }
-  #let(:network){ new_network.tap{|n| n.login.should == true } }
   let(:request){ network.new_action_request }
 
   fixtures "car_parts" # フィクスチャのロード
