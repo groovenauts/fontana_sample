@@ -51,7 +51,7 @@ describe "CarParts" do
 
         it do
           request.outputs.length.should == 1
-          request.outputs.first["result"].should == ['右ドアミラーB(8)']
+          request.outputs.first["result"].should == ['右ドアミラーB(8)', "左ヘッドランプC(0)"]
         end
       end
 
