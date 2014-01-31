@@ -60,3 +60,14 @@ r = n.new_action_request
 r.execute("CarParts", "stocks", {"car_cd" => car_cd, "category_cd" => 1})
 r.send_request
 write_stdout("【選択した部品カテゴリ（車検時関連品）の部品一覧と在庫数を取得】", r)
+
+### 部品CDを変数に格納
+part_cds = r.outputs.get(1)["result"]
+
+## 8
+r = n.new_action_request
+part_cds.each do |hash|
+  r.all("Stock", "part_cd" => hash["cd"])
+end
+r.send_request
+write_stdout("【選択した部品在庫一覧を取得】", r)
