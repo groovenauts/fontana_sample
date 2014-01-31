@@ -52,7 +52,10 @@ describe "CarParts" do
 
         it do
           request.outputs.length.should == 1
-          request.outputs.first["result"].should == ['右ドアミラーB(8)', "左ヘッドランプC(0)"]
+          request.outputs.first["result"].should == [
+            {'name'=>'右ドアミラーB(8)',   'cd'=>10000005},
+            {'name'=>'左ヘッドランプC(0)', 'cd'=>10000003}
+          ]
         end
       end
 
@@ -71,7 +74,10 @@ describe "CarParts" do
 
         it do
           request.outputs.length.should == 1
-          request.outputs.first["result"].should == ['スピーカーB(12)', 'A/CアンプB(53)']
+          request.outputs.first["result"].should == [
+            {'name'=>'スピーカーB(12)', 'cd'=>80000002},
+            {'name'=>'A/CアンプB(53)',  'cd'=>80000005}
+          ]
         end
       end
 
