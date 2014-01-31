@@ -22,7 +22,8 @@ describe "CarParts" do
 
       it do
         request.outputs.length.should == 1
-        request.outputs.first["result"].should == []
+        request.outputs.first["error"].nil?.should  == false
+        request.outputs.first["result"].nil?.should == true
       end
     end
 
