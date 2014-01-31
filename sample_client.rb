@@ -3,11 +3,14 @@
 require 'libgss'
 require 'pp'
 
+SLEEP_SEC = ARGV.shift.to_i if ARGV
+
 def write_stdout(msg, r)
   result = r.outputs.get(1)["result"]
   puts msg
   pp result
   puts "---"*20
+  sleep SLEEP_SEC
 end
 
 # ログイン
