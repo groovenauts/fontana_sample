@@ -1,0 +1,28 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  cd: 1
+  name: トヨタ
+- !ruby/hash:Moped::BSON::Document
+  cd: 2
+  name: 日産
+- !ruby/hash:Moped::BSON::Document
+  cd: 3
+  name: スズキ
+- !ruby/hash:Moped::BSON::Document
+  cd: 4
+  name: ダイハツ
+- !ruby/hash:Moped::BSON::Document
+  cd: 5
+  name: ホンダ
+- !ruby/hash:Moped::BSON::Document
+  cd: 6
+  name: マツダ
+- !ruby/hash:Moped::BSON::Document
+  cd: 7
+  name: 三菱
+- !ruby/hash:Moped::BSON::Document
+  cd: 8
+  name: スバル
+- !ruby/hash:Moped::BSON::Document
+  cd: 9
+  name: ローブ

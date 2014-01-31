@@ -1,0 +1,73 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  cd: 1001
+  name: カローラ
+  maker_cd: 1
+  model: CBA-ZZE124
+  type: ４ドア セダン
+- !ruby/hash:Moped::BSON::Document
+  cd: 1002
+  name: カローラ
+  maker_cd: 1
+  model: E-AE101G
+  type: ステーションワゴン
+- !ruby/hash:Moped::BSON::Document
+  cd: 1003
+  name: カローラ
+  maker_cd: 1
+  model: GG-EE103V
+  type: ボンネットバン
+- !ruby/hash:Moped::BSON::Document
+  cd: 1004
+  name: プリウス
+  maker_cd: 1
+  model: DAA-ZVW30
+  type: ステーションワゴン
+- !ruby/hash:Moped::BSON::Document
+  cd: 1005
+  name: プリウス
+  maker_cd: 1
+  model: ZA-NHW11
+  type: ４ドア セダン
+- !ruby/hash:Moped::BSON::Document
+  cd: 7001
+  name: パジェロ
+  maker_cd: 7
+  model: ABA-V77W
+  type: ５ドア SUV
+- !ruby/hash:Moped::BSON::Document
+  cd: 7002
+  name: パジェロ
+  maker_cd: 7
+  model: DBA-V83W
+  type: ３ドア SUV
+- !ruby/hash:Moped::BSON::Document
+  cd: 2001
+  name: スカイライン
+  maker_cd: 2
+  model: CBA-CPV35
+  type: ２ドア クーペ
+- !ruby/hash:Moped::BSON::Document
+  cd: 2002
+  name: スカイライン
+  maker_cd: 2
+  model: CBA-PV35
+  type: ４ドア セダン
+- !ruby/hash:Moped::BSON::Document
+  cd: 2003
+  name: スカイライン
+  maker_cd: 2
+  model: GF-HR34
+  type: ２ドア クーペ
+- !ruby/hash:Moped::BSON::Document
+  cd: 2004
+  name: スカイライン
+  maker_cd: 2
+  model: GF-HR34
+  type: ４ドア セダン
+- !ruby/hash:Moped::BSON::Document
+  cd: 2005
+  name: フーガ
+  maker_cd: 2
+  model: CBA-PY50
+  type: ４ドア セダン

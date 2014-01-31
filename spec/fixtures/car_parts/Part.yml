@@ -1,0 +1,34 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  cd: 10000001
+  name: 左ヘッドランプA
+- !ruby/hash:Moped::BSON::Document
+  cd: 10000002
+  name: 左ヘッドランプB
+- !ruby/hash:Moped::BSON::Document
+  cd: 10000003
+  name: 左ヘッドランプC
+- !ruby/hash:Moped::BSON::Document
+  cd: 10000004
+  name: 右ドアミラーA
+- !ruby/hash:Moped::BSON::Document
+  cd: 10000005
+  name: 右ドアミラーB
+- !ruby/hash:Moped::BSON::Document
+  cd: 80000001
+  name: スピーカーA
+- !ruby/hash:Moped::BSON::Document
+  cd: 80000002
+  name: スピーカーB
+- !ruby/hash:Moped::BSON::Document
+  cd: 80000003
+  name: スピーカーC
+- !ruby/hash:Moped::BSON::Document
+  cd: 80000004
+  name: A/CアンプA
+- !ruby/hash:Moped::BSON::Document
+  cd: 80000005
+  name: A/CアンプB
+- !ruby/hash:Moped::BSON::Document
+  cd: 80000006
+  name: A/CアンプC

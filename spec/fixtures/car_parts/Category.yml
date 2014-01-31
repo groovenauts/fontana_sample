@@ -1,0 +1,43 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  cd: 1
+  name: 車検時関連品
+- !ruby/hash:Moped::BSON::Document
+  cd: 2
+  name: エンジン廻り品
+- !ruby/hash:Moped::BSON::Document
+  cd: 3
+  name: ミッション廻り品
+- !ruby/hash:Moped::BSON::Document
+  cd: 4
+  name: 足回り品
+- !ruby/hash:Moped::BSON::Document
+  cd: 5
+  name: ハンドル廻り品
+- !ruby/hash:Moped::BSON::Document
+  cd: 6
+  name: ブレーキ廻り品
+- !ruby/hash:Moped::BSON::Document
+  cd: 7
+  name: エアコン／ヒーター
+- !ruby/hash:Moped::BSON::Document
+  cd: 8
+  name: オーディオ
+- !ruby/hash:Moped::BSON::Document
+  cd: 9
+  name: 室内装飾品
+- !ruby/hash:Moped::BSON::Document
+  cd: 10
+  name: 電装品
+- !ruby/hash:Moped::BSON::Document
+  cd: 11
+  name: ガラス品
+- !ruby/hash:Moped::BSON::Document
+  cd: 12
+  name: 前回り品
+- !ruby/hash:Moped::BSON::Document
+  cd: 13
+  name: 側面品
+- !ruby/hash:Moped::BSON::Document
+  cd: 14
+  name: 後ろ廻り品

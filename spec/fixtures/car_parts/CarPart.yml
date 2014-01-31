@@ -1,0 +1,81 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1001
+  part_category_cd: 1
+  part_cd: 10000001
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1002
+  part_category_cd: 1
+  part_cd: 10000001
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1003
+  part_category_cd: 1
+  part_cd: 10000002
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1004
+  part_category_cd: 1
+  part_cd: 10000002
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1005
+  part_category_cd: 1
+  part_cd: 10000003
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1001
+  part_category_cd: 1
+  part_cd: 10000004
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1002
+  part_category_cd: 1
+  part_cd: 10000004
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1003
+  part_category_cd: 1
+  part_cd: 10000004
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1004
+  part_category_cd: 1
+  part_cd: 10000005
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1005
+  part_category_cd: 1
+  part_cd: 10000005
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1001
+  part_category_cd: 8
+  part_cd: 80000003
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1002
+  part_category_cd: 8
+  part_cd: 80000002
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1003
+  part_category_cd: 8
+  part_cd: 80000003
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1004
+  part_category_cd: 8
+  part_cd: 80000002
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1005
+  part_category_cd: 8
+  part_cd: 80000001
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1001
+  part_category_cd: 8
+  part_cd: 80000004
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1002
+  part_category_cd: 8
+  part_cd: 80000005
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1003
+  part_category_cd: 8
+  part_cd: 80000006
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1004
+  part_category_cd: 8
+  part_cd: 80000004
+- !ruby/hash:Moped::BSON::Document
+  car_cd: 1005
+  part_category_cd: 8
+  part_cd: 80000004

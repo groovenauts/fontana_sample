@@ -1,0 +1,211 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000001
+  shop_region: 北海道
+  shop_cd: 101
+  num: 1
+  price: 100
+  part_cd: 10000001
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000002
+  shop_region: 北海道
+  shop_cd: 102
+  num: 2
+  price: 10
+  part_cd: 10000001
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000003
+  shop_region: 四国
+  shop_cd: 103
+  num: 0
+  price: 2000
+  part_cd: 10000001
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000004
+  shop_region: 関東
+  shop_cd: 104
+  num: 4
+  price: 60000
+  part_cd: 10000001
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000005
+  shop_region: 関西
+  shop_cd: 105
+  num: 0
+  price: 1280
+  part_cd: 10000002
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000006
+  shop_region: 関東
+  shop_cd: 106
+  num: 20
+  price: 100
+  part_cd: 10000002
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000007
+  shop_region: 九州
+  shop_cd: 107
+  num: 34
+  price: 10
+  part_cd: 10000002
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000008
+  shop_region: 北海道
+  shop_cd: 108
+  num: 50
+  price: 2000
+  part_cd: 10000002
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000009
+  shop_region: 北海道
+  shop_cd: 109
+  num: 0
+  price: 60000
+  part_cd: 10000003
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000010
+  shop_region: 九州
+  shop_cd: 110
+  num: 0
+  price: 1280
+  part_cd: 10000003
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000011
+  shop_region: 九州
+  shop_cd: 111
+  num: 0
+  price: 100
+  part_cd: 10000003
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000012
+  shop_region: 九州
+  shop_cd: 112
+  num: 0
+  price: 10
+  part_cd: 10000003
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000013
+  shop_region: 関東
+  shop_cd: 113
+  num: 0
+  price: 2000
+  part_cd: 10000003
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000014
+  shop_region: 北海道
+  shop_cd: 114
+  num: 10
+  price: 60000
+  part_cd: 10000004
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000015
+  shop_region: 北海道
+  shop_cd: 115
+  num: 2
+  price: 1280
+  part_cd: 10000004
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000016
+  shop_region: 四国
+  shop_cd: 116
+  num: 3
+  price: 100
+  part_cd: 10000004
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000017
+  shop_region: 関東
+  shop_cd: 117
+  num: 1
+  price: 10
+  part_cd: 10000004
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000018
+  shop_region: 関西
+  shop_cd: 118
+  num: 0
+  price: 2000
+  part_cd: 10000005
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000019
+  shop_region: 関東
+  shop_cd: 119
+  num: 8
+  price: 60000
+  part_cd: 10000005
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000020
+  shop_region: 九州
+  shop_cd: 120
+  num: 0
+  price: 1280
+  part_cd: 10000005
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000021
+  shop_region: 北海道
+  shop_cd: 121
+  num: 0
+  price: 100
+  part_cd: 80000001
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000022
+  shop_region: 北海道
+  shop_cd: 122
+  num: 0
+  price: 10
+  part_cd: 80000001
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000023
+  shop_region: 九州
+  shop_cd: 123
+  num: 10
+  price: 2000
+  part_cd: 80000002
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000024
+  shop_region: 九州
+  shop_cd: 124
+  num: 2
+  price: 60000
+  part_cd: 80000002
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000025
+  shop_region: 九州
+  shop_cd: 125
+  num: 3
+  price: 1280
+  part_cd: 80000003
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000026
+  shop_region: 関東
+  shop_cd: 126
+  num: 1
+  price: 100
+  part_cd: 80000003
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000027
+  shop_region: 関東
+  shop_cd: 127
+  num: 0
+  price: 10
+  part_cd: 80000004
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000028
+  shop_region: 関東
+  shop_cd: 128
+  num: 8
+  price: 2000
+  part_cd: 80000004
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000029
+  shop_region: 関東
+  shop_cd: 129
+  num: 3
+  price: 60000
+  part_cd: 80000005
+- !ruby/hash:Moped::BSON::Document
+  cd: 9000030
+  shop_region: 関東
+  shop_cd: 130
+  num: 50
+  price: 1280
+  part_cd: 80000005

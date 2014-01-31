@@ -1,0 +1,13 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  status_cd: 2
+  device_type_cd: 1
+  version: develop
+  updated_at: 2014-01-31 07:32:18.222000000 Z
+  created_at: 2014-01-31 07:32:18.222000000 Z
+- !ruby/hash:Moped::BSON::Document
+  status_cd: 2
+  device_type_cd: 2
+  version: develop
+  updated_at: 2014-01-31 07:32:18.223000000 Z
+  created_at: 2014-01-31 07:32:18.223000000 Z

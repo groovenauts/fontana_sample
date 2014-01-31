@@ -1,0 +1,7 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  account: fontana.alert
+  password: fontanaadmin1
+  smtp_address: smtp.gmail.com
+  smtp_port: 587
+  smtp_domain: gmail.com
