@@ -1,0 +1,28 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 1
+  name: ショップ購入
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 2
+  name: ログインボーナス
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 3
+  name: プレゼントコード
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 4
+  name: 運営ギフト
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 5
+  name: トレード
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 6
+  name: ガチャ
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 7
+  name: バトル
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 8
+  name: 合成
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 9
+  name: 装備進化

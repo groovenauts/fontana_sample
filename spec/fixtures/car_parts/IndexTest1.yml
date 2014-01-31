@@ -1,0 +1,21 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  'no': 1
+  name: aaa
+  value: 1
+- !ruby/hash:Moped::BSON::Document
+  'no': 2
+  name: bbb
+  value: 2
+- !ruby/hash:Moped::BSON::Document
+  'no': 3
+  name: ccc
+  value: 3
+- !ruby/hash:Moped::BSON::Document
+  'no': 4
+  name: ddd
+  value: 4
+- !ruby/hash:Moped::BSON::Document
+  'no': 5
+  name: eee
+  value: 1

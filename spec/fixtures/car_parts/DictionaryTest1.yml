@@ -1,0 +1,16 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  input: input1
+  output: output1
+- !ruby/hash:Moped::BSON::Document
+  input: input2
+  output: output2
+- !ruby/hash:Moped::BSON::Document
+  input: input3
+  output: output3
+- !ruby/hash:Moped::BSON::Document
+  input: input4
+  output: output4
+- !ruby/hash:Moped::BSON::Document
+  input: input5
+  output: output5

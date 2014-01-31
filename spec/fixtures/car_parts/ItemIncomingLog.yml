@@ -1,0 +1,29 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  player_id: '1000002'
+  created_at: 2012-08-10 10:30:00.000000000 Z
+  level: 3
+  item_cd: 20001
+  incoming_route_cd: 1
+  amount: 1
+- !ruby/hash:Moped::BSON::Document
+  player_id: '1000003'
+  created_at: 2012-08-10 10:30:00.000000000 Z
+  level: 1
+  item_cd: 20001
+  incoming_route_cd: 1
+  amount: 3
+- !ruby/hash:Moped::BSON::Document
+  player_id: '1000002'
+  created_at: 2012-08-10 11:00:00.000000000 Z
+  level: 4
+  item_cd: 20002
+  incoming_route_cd: 2
+  amount: 5
+- !ruby/hash:Moped::BSON::Document
+  player_id: '1000003'
+  created_at: 2012-08-10 12:00:00.000000000 Z
+  level: 5
+  item_cd: 20003
+  incoming_route_cd: 2
+  amount: 10

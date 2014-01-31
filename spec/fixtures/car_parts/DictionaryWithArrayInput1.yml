@@ -1,0 +1,64 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  input: '[]'
+  output: output for []
+- !ruby/hash:Moped::BSON::Document
+  input: '[null]'
+  output: output for [null]
+- !ruby/hash:Moped::BSON::Document
+  input: '[0]'
+  output: output for [0]
+- !ruby/hash:Moped::BSON::Document
+  input: '[1]'
+  output: output for [1]
+- !ruby/hash:Moped::BSON::Document
+  input: '[1000]'
+  output: output for [1000]
+- !ruby/hash:Moped::BSON::Document
+  input: '["0"]'
+  output: output for ["0"]
+- !ruby/hash:Moped::BSON::Document
+  input: '["1"]'
+  output: output for ["1"]
+- !ruby/hash:Moped::BSON::Document
+  input: '["1000"]'
+  output: output for ["1000"]
+- !ruby/hash:Moped::BSON::Document
+  input: '[null,null]'
+  output: output for [null, null]
+- !ruby/hash:Moped::BSON::Document
+  input: '[0,0]'
+  output: output for [0, 0]
+- !ruby/hash:Moped::BSON::Document
+  input: '[1,1]'
+  output: output for [1, 1]
+- !ruby/hash:Moped::BSON::Document
+  input: '[1000,1000]'
+  output: output for [1000, 1000]
+- !ruby/hash:Moped::BSON::Document
+  input: '["0","0"]'
+  output: output for ["0", "0"]
+- !ruby/hash:Moped::BSON::Document
+  input: '["1","1"]'
+  output: output for ["1", "1"]
+- !ruby/hash:Moped::BSON::Document
+  input: '["1000","1000"]'
+  output: output for ["1000", "1000"]
+- !ruby/hash:Moped::BSON::Document
+  input: '["M01A01DM01",40000100,1]'
+  output: output for ["M01A01DM01",40000100,1]
+- !ruby/hash:Moped::BSON::Document
+  input: '["M01A01DM01","40000100","2"]'
+  output: output for ["M01A01DM01","40000100","2"]
+- !ruby/hash:Moped::BSON::Document
+  input: '["M01A01DM01","40000100","3"]'
+  output: output for ["M01A01DM01",  "40000100",  "3"]
+- !ruby/hash:Moped::BSON::Document
+  input: '[''M01A01DM01'',40000100,4]'
+  output: output for ['M01A01DM01',40000100,4]
+- !ruby/hash:Moped::BSON::Document
+  input: '[''M01A01DM01'',''40000100'',''5'']'
+  output: output for ['M01A01DM01','40000100','5']
+- !ruby/hash:Moped::BSON::Document
+  input: '[''M01A01DM01'',    ''40000100'',    ''6'']'
+  output: output for ['M01A01DM01',    '40000100',    '6']

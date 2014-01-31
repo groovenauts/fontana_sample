@@ -1,0 +1,19 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 1
+  name: 使用
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 2
+  name: 合成
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 3
+  name: 売却
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 4
+  name: 廃棄
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 5
+  name: トレード
+- !ruby/hash:Moped::BSON::Document
+  route_cd: 6
+  name: 装備進化

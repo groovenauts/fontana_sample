@@ -1,0 +1,141 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10001
+  name: ナイフ
+  offence_pt: 2
+  deffence_pt: 0
+  image: assets/armor/10001.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10002
+  name: ダガー
+  offence_pt: 4
+  deffence_pt: 0
+  image: assets/armor/10002.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10003
+  name: ハチェット
+  offence_pt: 10
+  deffence_pt: 0
+  image: assets/armor/10003.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10004
+  name: レイピア
+  offence_pt: 15
+  deffence_pt: 0
+  image: assets/armor/10004.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10005
+  name: ファルシオン
+  offence_pt: 20
+  deffence_pt: 0
+  image: assets/armor/10005.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10006
+  name: まさかり
+  offence_pt: 28
+  deffence_pt: 0
+  image: assets/armor/10006.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10007
+  name: 斬鉄剣
+  offence_pt: 40
+  deffence_pt: 0
+  image: assets/armor/10007.png
+  damned: true
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10008
+  name: 人民服
+  offence_pt: 0
+  deffence_pt: 2
+  image: assets/armor/10008.png
+  damned: false
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10009
+  name: ローブ
+  offence_pt: 0
+  deffence_pt: 4
+  image: assets/armor/10009.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10010
+  name: 柔道着
+  offence_pt: 0
+  deffence_pt: 10
+  image: assets/armor/10010.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10011
+  name: レザーアーマー
+  offence_pt: 0
+  deffence_pt: 16
+  image: assets/armor/10011.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10012
+  name: くされかたびら
+  offence_pt: 0
+  deffence_pt: 24
+  image: assets/armor/10012.png
+  damned: true
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10013
+  name: プレートメイル
+  offence_pt: 0
+  deffence_pt: 24
+  image: assets/armor/10013.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10014
+  name: 魔法の鎧
+  offence_pt: 0
+  deffence_pt: 28
+  image: assets/armor/10014.png
+  damned: false
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10015
+  name: なべのふた
+  offence_pt: 0
+  deffence_pt: 4
+  image: assets/armor/10015.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10016
+  name: 木の盾
+  offence_pt: 0
+  deffence_pt: 10
+  image: assets/armor/10016.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10017
+  name: 鉄の盾
+  offence_pt: 0
+  deffence_pt: 20
+  image: assets/armor/10017.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10018
+  name: むぎわら帽子
+  offence_pt: 0
+  deffence_pt: 1
+  image: assets/armor/10018.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10019
+  name: ケトルハット
+  offence_pt: 0
+  deffence_pt: 5
+  image: assets/armor/10019.png
+  damned: 
+- !ruby/hash:Moped::BSON::Document
+  armor_id: 10020
+  name: ヘルム
+  offence_pt: 0
+  deffence_pt: 10
+  image: assets/armor/10020.png
+  damned: 

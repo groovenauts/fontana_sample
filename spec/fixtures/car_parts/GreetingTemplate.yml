@@ -1,0 +1,13 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  greeting_cd: 1
+  message: おはようございます！
+- !ruby/hash:Moped::BSON::Document
+  greeting_cd: 2
+  message: こんにちは！
+- !ruby/hash:Moped::BSON::Document
+  greeting_cd: 3
+  message: こんばんは！
+- !ruby/hash:Moped::BSON::Document
+  greeting_cd: 4
+  message: Zzzzz

@@ -1,0 +1,16 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  input: '10001'
+  output: 10002
+- !ruby/hash:Moped::BSON::Document
+  input: '10002'
+  output: 10004
+- !ruby/hash:Moped::BSON::Document
+  input: '10003'
+  output: 10006
+- !ruby/hash:Moped::BSON::Document
+  input: '10008'
+  output: 10009
+- !ruby/hash:Moped::BSON::Document
+  input: '10015'
+  output: 10016

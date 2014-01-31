@@ -1,0 +1,21 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000002'
+  receiver_cd: '1000001'
+  send_at: 2012-07-30 23:30:00.000000000 Z
+  greeting_cd: 1
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000003'
+  receiver_cd: '1000001'
+  send_at: 2012-07-31 02:30:00.000000000 Z
+  greeting_cd: 2
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000002'
+  receiver_cd: '1000003'
+  send_at: 2012-07-31 09:00:00.000000000 Z
+  greeting_cd: 3
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000003'
+  receiver_cd: '1000002'
+  send_at: 2012-07-31 16:00:00.000000000 Z
+  greeting_cd: 4

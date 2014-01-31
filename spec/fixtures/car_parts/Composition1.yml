@@ -1,0 +1,37 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  composition_no: 1
+  element: '{"10001":3}'
+  probability: 60
+  rf: 0
+  rl: 60
+  value: 10002
+- !ruby/hash:Moped::BSON::Document
+  composition_no: 2
+  element: '{"10001":3}'
+  probability: 39
+  rf: 60
+  rl: 99
+  value: 20001
+- !ruby/hash:Moped::BSON::Document
+  composition_no: 3
+  element: '{"10001":3}'
+  probability: 1
+  rf: 99
+  rl: 100
+  value: 10003
+- !ruby/hash:Moped::BSON::Document
+  composition_no: 4
+  element: '{"20002":1,"20006":1}'
+  probability: 20
+  rf: 0
+  rl: 20
+  value: 20007
+- !ruby/hash:Moped::BSON::Document
+  composition_no: 5
+  element: '{"20002":1,"20006":1}'
+  probability: 80
+  rf: 20
+  rl: 100
+  value:
+    '20002': 2

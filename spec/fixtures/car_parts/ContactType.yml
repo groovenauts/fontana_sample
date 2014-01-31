@@ -1,0 +1,4 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  contact_cd: 1
+  name: 定型あいさつ

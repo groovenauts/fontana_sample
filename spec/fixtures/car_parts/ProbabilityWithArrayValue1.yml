@@ -1,0 +1,176 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - 0
+  - 1
+  probability: 66667
+  rf: 0
+  rl: 66667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - 0
+  - 2
+  probability: 66667
+  rf: 66667
+  rl: 133333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - 0
+  - 3
+  probability: 66667
+  rf: 133333
+  rl: 200000
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - 0
+  - 4
+  probability: 66667
+  rf: 200000
+  rl: 266667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - 0
+  - 5
+  probability: 66667
+  rf: 266667
+  rl: 333333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 1
+  probability: 33333
+  rf: 333333
+  rl: 366667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 2
+  probability: 33333
+  rf: 366667
+  rl: 400000
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 3
+  probability: 33333
+  rf: 400000
+  rl: 433333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 4
+  probability: 33333
+  rf: 433333
+  rl: 466667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 5
+  probability: 33333
+  rf: 466667
+  rl: 500000
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 6
+  probability: 33333
+  rf: 500000
+  rl: 533333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 7
+  probability: 33333
+  rf: 533333
+  rl: 566667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 8
+  probability: 33333
+  rf: 566667
+  rl: 600000
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 9
+  probability: 33333
+  rf: 600000
+  rl: 633333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - 10
+  probability: 33333
+  rf: 633333
+  rl: 666667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '1'
+  probability: 33333
+  rf: 666667
+  rl: 700000
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '2'
+  probability: 33333
+  rf: 700000
+  rl: 733333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '3'
+  probability: 33333
+  rf: 733333
+  rl: 766667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '4'
+  probability: 33333
+  rf: 766667
+  rl: 800000
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '5'
+  probability: 33333
+  rf: 800000
+  rl: 833333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '6'
+  probability: 33333
+  rf: 833333
+  rl: 866667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '7'
+  probability: 33333
+  rf: 866667
+  rl: 900000
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '8'
+  probability: 33333
+  rf: 900000
+  rl: 933333
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '9'
+  probability: 33333
+  rf: 933333
+  rl: 966667
+- !ruby/hash:Moped::BSON::Document
+  value:
+  - '40000100'
+  - '10'
+  probability: 33333
+  rf: 966667
+  rl: 1000000

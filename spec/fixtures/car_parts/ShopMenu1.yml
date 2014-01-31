@@ -1,0 +1,214 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10001
+  name: ナイフ
+  items: 10001
+  price: 10
+  image_url: assets/items/10001.jpg
+  description: ナイフの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10002
+  name: ダガー
+  items: 10002
+  price: 60
+  image_url: assets/items/10002.jpg
+  description: ダガーの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10003
+  name: ハチェット
+  items: 10003
+  price: 180
+  image_url: assets/items/10003.jpg
+  description: ハチェットの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10004
+  name: レイピア
+  items: 10004
+  price: 560
+  image_url: assets/items/10004.jpg
+  description: レイピアの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10005
+  name: ファルシオン
+  items: 10005
+  price: 1500
+  image_url: assets/items/10005.jpg
+  description: ファルシオンの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10006
+  name: まさかり
+  items: 10006
+  price: 9800
+  image_url: assets/items/10006.jpg
+  description: まさかりの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10008
+  name: 人民服
+  items: 10008
+  price: 20
+  image_url: assets/items/10007.jpg
+  description: 人民服の説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10009
+  name: ローブ
+  items: 10009
+  price: 70
+  image_url: assets/items/10008.jpg
+  description: ローブの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10010
+  name: 柔道着
+  items: 10010
+  price: 100
+  image_url: assets/items/10009.jpg
+  description: 柔道着の説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10011
+  name: レザーアーマー
+  items: 10011
+  price: 500
+  image_url: assets/items/10010.jpg
+  description: レザーアーマーの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10012
+  name: くされかたびら
+  items: 10012
+  price: 1000
+  image_url: assets/items/10011.jpg
+  description: くされかたびらの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10013
+  name: プレートメイル
+  items: 10013
+  price: 5000
+  image_url: assets/items/10012.jpg
+  description: プレートメイルの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10015
+  name: なべのふた
+  items: 10015
+  price: 30
+  image_url: assets/items/10013.jpg
+  description: なべのふたの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10016
+  name: 木の盾
+  items: 10016
+  price: 100
+  image_url: assets/items/10014.jpg
+  description: 木の盾の説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10017
+  name: 鉄の盾
+  items: 10017
+  price: 1000
+  image_url: assets/items/10015.jpg
+  description: 鉄の盾の説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10018
+  name: むぎわら帽子
+  items: 10018
+  price: 20
+  image_url: assets/items/10016.jpg
+  description: むぎわら帽子の説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10021
+  name: ポーション
+  items: 20001
+  price: 10
+  image_url: assets/items/20001.jpg
+  description: ポーションの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10022
+  name: ポーションA
+  items: 20002
+  price: 20
+  image_url: assets/items/20002.jpg
+  description: ポーションAの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10023
+  name: ポーションX
+  items: 20003
+  price: 100
+  image_url: assets/items/20003.jpg
+  description: ポーションXの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10024
+  name: ポーションXXX
+  items: 20004
+  price: 500
+  image_url: assets/items/20004.jpg
+  description: ポーションXXXの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10025
+  name: エーテル
+  items: 20005
+  price: 20
+  image_url: assets/items/20005.jpg
+  description: エーテルの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10026
+  name: エーテルW
+  items: 20006
+  price: 40
+  image_url: assets/items/20006.jpg
+  description: エーテルWの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10027
+  name: エーテルZ
+  items: 20007
+  price: 200
+  image_url: assets/items/20007.jpg
+  description: エーテルZの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10028
+  name: エーテルZZ
+  items: 20008
+  price: 1000
+  image_url: assets/items/20008.jpg
+  description: エーテルZZの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10029
+  name: エリクサー
+  items: 20009
+  price: 10000
+  image_url: assets/items/20009.jpg
+  description: エリクサーの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10030
+  name: 恋の秘薬
+  items: 20010
+  price: 100000
+  image_url: assets/items/20010.jpg
+  description: 恋の秘薬の説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10036
+  name: ポーション10個パック
+  items:
+    '20001': 10
+  price: 90
+  image_url: assets/items/10022.jpg
+  description: ポーション10個パックの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10037
+  name: スターターズパック
+  items:
+  - 10001
+  - 10008
+  - 20001
+  price: 32
+  image_url: assets/items/10023.jpg
+  description: スターターズパックの説明
+- !ruby/hash:Moped::BSON::Document
+  product_cd: 10038
+  name: |-
+    ブーストパック
+    ハチェット + くされかたびら + 鉄の盾 + ポーションA10個
+  items:
+    '10003': 1
+    '10012': 1
+    '10017': 1
+    '20001': 10
+  price: 1596
+  image_url: assets/items/10024.jpg
+  description: ブーストパックの説明

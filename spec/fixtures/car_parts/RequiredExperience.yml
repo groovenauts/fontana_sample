@@ -1,0 +1,81 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 0
+  range_end: 10
+  value: 1
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 10
+  range_end: 25
+  value: 2
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 25
+  range_end: 60
+  value: 3
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 60
+  range_end: 100
+  value: 4
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 100
+  range_end: 180
+  value: 5
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 180
+  range_end: 250
+  value: 6
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 250
+  range_end: 350
+  value: 7
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 350
+  range_end: 500
+  value: 8
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 500
+  range_end: 750
+  value: 9
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 750
+  range_end: 1200
+  value: 10
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 1200
+  range_end: 2000
+  value: 11
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 2000
+  range_end: 2500
+  value: 12
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 2500
+  range_end: 3000
+  value: 13
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 3000
+  range_end: 4000
+  value: 14
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 4000
+  range_end: 5000
+  value: 15
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 5000
+  range_end: 6000
+  value: 16
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 6000
+  range_end: 7000
+  value: 17
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 7000
+  range_end: 8000
+  value: 18
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 8000
+  range_end: 9000
+  value: 19
+- !ruby/hash:Moped::BSON::Document
+  range_begin: 9000
+  range_end: 2147483647
+  value: 20

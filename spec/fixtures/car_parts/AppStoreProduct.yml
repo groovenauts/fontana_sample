@@ -1,0 +1,9 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  product_id: jp.groovenauts.libgss.cocos2dx.sample1.stone1
+- !ruby/hash:Moped::BSON::Document
+  product_id: jp.groovenauts.libgss.cocos2dx.sample1.stone2
+- !ruby/hash:Moped::BSON::Document
+  product_id: jp.groovenauts.libgss.cocos2dx.sample1.stone3
+- !ruby/hash:Moped::BSON::Document
+  product_id: jp.groovenauts.libgss.cocos2dx.sample1.old_stone

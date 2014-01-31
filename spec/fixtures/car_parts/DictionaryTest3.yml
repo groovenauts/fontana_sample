@@ -1,0 +1,16 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  input: '{"key":"value1"}'
+  output: 20001
+- !ruby/hash:Moped::BSON::Document
+  input: '{"key":"value2"}'
+  output: 20002
+- !ruby/hash:Moped::BSON::Document
+  input: '{"key":"value3"}'
+  output: 20003
+- !ruby/hash:Moped::BSON::Document
+  input: '{"key":"value4"}'
+  output: 20004
+- !ruby/hash:Moped::BSON::Document
+  input: '{"key":"value5"}'
+  output: 20005

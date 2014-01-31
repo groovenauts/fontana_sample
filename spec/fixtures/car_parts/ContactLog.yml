@@ -1,0 +1,25 @@
+---
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000002'
+  receiver_cd: '1000001'
+  created_at: 2012-08-10 10:30:00.000000000 Z
+  level: 3
+  contact_cd: 1
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000003'
+  receiver_cd: '1000001'
+  created_at: 2012-08-10 10:30:00.000000000 Z
+  level: 1
+  contact_cd: 1
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000002'
+  receiver_cd: '1000003'
+  created_at: 2012-08-10 11:00:00.000000000 Z
+  level: 4
+  contact_cd: 1
+- !ruby/hash:Moped::BSON::Document
+  sender_cd: '1000003'
+  receiver_cd: '1000002'
+  created_at: 2012-08-10 12:00:00.000000000 Z
+  level: 5
+  contact_cd: 1
