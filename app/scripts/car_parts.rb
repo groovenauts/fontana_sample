@@ -17,7 +17,7 @@ module CarParts
                                )
 
       r = parts_in_this_category.map do |p|
-        c = count(name: 'Stock', conditions: { "part_cd" => p["part_cd"] })
+        c = all(name: 'Stock', conditions: { "part_cd" => p["part_cd"] }).inject(0){|sum, stock| sum + stock[:num] }
         n = first(name: 'Part' , conditions: { 'cd'      => p['part_cd'] })[:name]
         "#{n}(#{c})"
       end
