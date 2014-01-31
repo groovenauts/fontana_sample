@@ -55,10 +55,8 @@ r.all("Category")
 r.send_request
 write_stdout("【部品カテゴリ一覧を取得】", r)
 
-__END__
 ## 7
 r = n.new_action_request
 r.execute("CarParts", "stocks", {"car_cd" => car_cd, "category_cd" => 1})
 r.send_request
 write_stdout("【選択した部品カテゴリ（車検時関連品）の部品一覧と在庫数を取得】", r)
-
