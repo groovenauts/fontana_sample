@@ -1,0 +1,5 @@
+{
+    "http_url_base": "http://10.0.2.2:4000",
+    "https_url_base": "https://10.0.2.2:4001",
+    "public_asset_url_base": "http://10.0.2.2:4000/a/"
+}
