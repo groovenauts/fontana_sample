@@ -16,14 +16,20 @@ describe "CarParts" do # ストアドスクリプトモジュール名
       let(:argh){}
 
       before do
+        err_msg = "1016: ストアドスクリプトCarParts.stocksの引数 car_cd が指定されていません"
         request.execute("CarParts", "stocks", argh)
         request.send_request
       end
 
       it do
         request.outputs.length.should == 1
-        request.outputs.first["error"].nil?.should  == false
-        request.outputs.first["result"].nil?.should == true
+        request.outputs.first["error"].nil?.should               == false
+        request.outputs.first["error"]["message"].should         == err_msg
+        request.outputs.first["error"]["input"]["id"].should     == 1
+        request.outputs.first["error"]["input"]["action"].should == "execute"
+        request.outputs.first["error"]["input"]["name"].should   == "CarParts"
+        request.outputs.first["error"]["input"]["key"].should    == "stocks"
+        request.outputs.first["result"].nil?.should              == true
       end
     end
 
