@@ -1,0 +1,7 @@
+# allowed_actionsにはコレクション毎に実行可能なアクション名の配列を指定してください
+allowed_actions:
+  get_and_first: &get_and_first
+  - get
+  - first
+  GameData: *get_and_first
+  Player: *get_and_first
