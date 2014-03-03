@@ -1,4 +1,4 @@
-compress:
+unions:
 - name: TestA
   base: TestA00000001
   caption: "テストAマスタ"
