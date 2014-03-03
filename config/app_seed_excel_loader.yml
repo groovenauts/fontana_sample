@@ -1,0 +1,6 @@
+compress:
+- name: TestA
+  base: TestA00000001
+  caption: "テストAマスタ"
+  # pattern: "^TestA\d{8}$"
+  # pattern: "^TestA\d+$"
