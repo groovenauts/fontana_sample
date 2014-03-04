@@ -1,6 +1,6 @@
 unions:
-- name: TestA
-  base: TestA00000001
-  caption: "テストAマスタ"
-  # pattern: "^TestA\d{8}$"
-  # pattern: "^TestA\d+$"
+- name: UnionTestA
+  base: UnionTestA00000001
+  caption: "結合テストAマスタ"
+  # pattern: "^UnionTestA\d{8}$"
+  # pattern: "^UnionTestA\d+$"
