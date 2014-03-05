@@ -1,0 +1,4 @@
+unions:
+- name: GameData
+  base: GameData
+  caption: "GameData"

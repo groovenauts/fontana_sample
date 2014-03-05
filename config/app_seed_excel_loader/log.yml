@@ -1,0 +1,4 @@
+unions:
+- name: ReceiptLog
+  base: ReceiptLog
+  caption: "ReceiptLog"
