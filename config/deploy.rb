@@ -19,6 +19,7 @@ set(:branch){ raise "branch (that means branch, tag and SHA for git) must be giv
 
 # deploy
 set :deploy_via,     :copy
+set :copy_exclude,   ['.git', 'vendor/bundle']
 
 # 世代管理
 set :keep_releases, 3
