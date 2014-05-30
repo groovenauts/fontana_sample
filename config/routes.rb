@@ -1,4 +1,9 @@
 FontanaSample::Application.routes.draw do
+
+  # mount FontanaApisrv::Engine => "/fontana_apisrv"
+  FontanaApisrv::OriginalRoutes.draw(self, false)
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
