@@ -1,0 +1,1561 @@
+---
+_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    U4a6hfEkRdZiAAAB
+status_cd: 1
+version: 1
+created_at: 2014-05-29 04:41:41.691000000 Z
+updated_at: 2014-05-29 04:41:53.149000000 Z
+commit_key: 5ea9e00d67a706e5af2f62840f25a4683c8a7678
+warning_messages:
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',40000100,4]'''
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',''40000100'',''5'']'''
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',    ''40000100'',    ''6'']'''
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',40000100,4]'''
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',''40000100'',''5'']'''
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',    ''40000100'',    ''6'']'''
+- |-
+  [Moped::Errors::OperationFailure] probability_with_array_value1s@1.0.indexes.create({"value"=>1}, {:unique=>true})The operation: #<Moped::Protocol::Command
+    @length=79
+    @request_id=810
+    @response_to=0
+    @op_code=2004
+    @flags=[]
+    @full_collection_name="fontana_default.$cmd"
+    @skip=0
+    @limit=-1
+    @selector={:getlasterror=>1, :safe=>true}
+    @fields=nil>
+  failed with error 11000: "E11000 duplicate key error index: fontana_default.probability_with_array_value1s@1.0.$probability_with_array_value1s_1_0_idx99  dup key: { : 0 }"
+
+  See https://github.com/mongodb/mongo/blob/master/docs/errors.md
+  for details about this error.
+created_by: fontana@groovenauts.jp
+updated_by: fontana@groovenauts.jp
+activated_by: 
+activated_at: 
+collection_unions:
+  UnionTestA00000001: UnionTestA
+  UnionTestA00000002: UnionTestA
+  UnionTestA00000003: UnionTestA
+  UnionTestA00000004: UnionTestA
+  UnionTestB00000001: UnionTestB
+  UnionTestB00000002: UnionTestB
+collection_defs:
+- collection_type_cd: p
+  name: Player
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: nickname
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 1.0
+  - name: authentication_token
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: signature_key
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: pf_player_id
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: pf_player_info
+    type_cd: 12
+    size: 
+    required: 
+    default_value: 
+  - name: first_login_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: current_login_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: last_login_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: first_paid_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: last_paid_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: login_days
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: login_count_this_day
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: continuous_login_days
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: banned
+    type_cd: 1
+    size: 
+    required: 
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: player_id
+      reverse: false
+  - name: idx_auth
+    refs:
+    - name: authentication_token
+      reverse: false
+  - name: idx_switch_login
+    refs:
+    - name: pf_player_id
+      reverse: false
+- collection_type_cd: g
+  name: GameData
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: content
+    type_cd: 12
+    size: 
+    required: 
+    default_value: 
+  - name: greeting_points
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: login_bonus
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: invitation_code
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: invite_player
+    type_cd: 15
+    size: 
+    required: 
+    default_value: 
+  - name: read_notifications
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: gender
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 0.0
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: player_id
+      reverse: false
+  - name: idx_invitation
+    refs:
+    - name: invitation_code
+      reverse: false
+- collection_type_cd: M
+  name: Armor
+  field_defs:
+  - name: armor_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: offence_pt
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: deffence_pt
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: image
+    type_cd: 11
+    size: 
+    required: 
+    default_value: 
+  - name: damned
+    type_cd: 1
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: armor_id
+      reverse: false
+- collection_type_cd: M
+  name: Item
+  field_defs:
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: stored_script_name
+    type_cd: 20
+    size: 
+    required: true
+    default_value: 
+  - name: stored_script_args
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: image
+    type_cd: 11
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: item_cd
+      reverse: false
+- collection_type_cd: M
+  name: ItemIncomingRoute
+  field_defs:
+  - name: route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: route_cd
+      reverse: false
+- collection_type_cd: M
+  name: ItemOutgoingRoute
+  field_defs:
+  - name: route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: route_cd
+      reverse: false
+- collection_type_cd: L
+  name: ItemIncomingLog
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: incoming_route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: amount
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 日時でソート
+    refs:
+    - name: created_at
+      reverse: false
+- collection_type_cd: L
+  name: ItemOutgoingLog
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: outgoing_route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: amount
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 日時でソート
+    refs:
+    - name: created_at
+      reverse: false
+- collection_type_cd: M
+  name: ShopMenu1
+  field_defs:
+  - name: product_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: items
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: price
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: image_url
+    type_cd: 11
+    size: 
+    required: true
+    default_value: 
+  - name: description
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: product_cd
+      reverse: false
+  - name: 商品CDで検索
+    refs:
+    - name: product_cd
+      reverse: false
+- collection_type_cd: H
+  name: ShopHistory
+  field_defs:
+  - name: player_id
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: product_code
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: amount
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 購入日時
+    refs:
+    - name: player_id
+      reverse: false
+    - name: created_at
+      reverse: false
+  - name: アイテムコード
+    refs:
+    - name: player_id
+      reverse: false
+    - name: product_code
+      reverse: false
+- collection_type_cd: L
+  name: ReceiptLog
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: receipt_data
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+- collection_type_cd: f
+  name: Friendship
+  field_defs:
+  - name: requester_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: accepter_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 1.0
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - name: idx_requester
+    refs:
+    - name: requester_id
+      reverse: false
+    - name: status_cd
+      reverse: false
+  - name: idx_accepter
+    refs:
+    - name: accepter_id
+      reverse: false
+    - name: status_cd
+      reverse: false
+- collection_type_cd: L
+  name: FriendshipLog
+  field_defs:
+  - name: requester_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: accepter_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: direction
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: old_status_cd
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 
+  - name: new_status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+- collection_type_cd: M
+  name: GreetingTemplate
+  field_defs:
+  - name: greeting_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: message
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: H
+  name: GreetingHistory
+  field_defs:
+  - name: sender_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: receiver_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: send_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: greeting_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 送信
+    refs:
+    - name: sender_cd
+      reverse: false
+    - name: send_at
+      reverse: false
+  - name: 受信
+    refs:
+    - name: receiver_cd
+      reverse: false
+    - name: send_at
+      reverse: false
+- collection_type_cd: M
+  name: ContactType
+  field_defs:
+  - name: contact_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: L
+  name: ContactLog
+  field_defs:
+  - name: sender_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: receiver_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: contact_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: idx_player_id
+    refs:
+    - name: sender_cd
+      reverse: false
+- collection_type_cd: P
+  name: Composition1
+  max_value: 100
+  field_defs:
+  - name: composition_no
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: element
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+  - name: idx_with_element
+    refs:
+    - name: element
+      reverse: false
+    - name: rf
+      reverse: false
+    - name: rl
+      reverse: false
+- collection_type_cd: D
+  name: ArmorUpgradeShr
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: I
+  name: RequiredExperience
+  field_defs:
+  - name: range_begin
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: range_end
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: range_begin
+      reverse: false
+  - name: idx_period
+    refs:
+    - name: range_end
+      reverse: false
+- collection_type_cd: M
+  name: ShopMenu2
+  field_defs:
+  - name: product_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: items
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: price
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: image_url
+    type_cd: 11
+    size: 
+    required: true
+    default_value: 
+  - name: description
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: D
+  name: ArmorUpgradeShared
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: S
+  name: ShopSchedule
+  default_value: ShopMenu1
+  field_defs:
+  - name: pb
+    type_cd: 9
+    required: true
+  - name: pe
+    type_cd: 10
+    required: true
+  - name: value
+    type_cd: 13
+    required: true
+  index_defs:
+  - primary: true
+    name: PK_SHOP_SCHEDULES
+    unique: true
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+  - name: idx_period
+    refs:
+    - name: pb
+      reverse: false
+    - name: pe
+      reverse: false
+- collection_type_cd: S
+  name: ArmorUpgradeSchedule
+  default_value: ArmorUpgrade1
+  field_defs:
+  - name: pb
+    type_cd: 9
+    required: true
+  - name: pe
+    type_cd: 10
+    required: true
+  - name: value
+    type_cd: 13
+    required: true
+  index_defs:
+  - primary: true
+    name: PK_ARMOR_UPGRADE_SCHEDULES
+    unique: true
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+  - name: idx_period
+    refs:
+    - name: pb
+      reverse: false
+    - name: pe
+      reverse: false
+- collection_type_cd: M
+  name: AppStoreProduct
+  field_defs:
+  - name: product_id
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: product_id
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryWithArrayInput1
+  field_defs:
+  - name: input
+    type_cd: 14
+    required: true
+  - name: output
+    type_cd: 13
+    required: true
+  index_defs:
+  - primary: true
+    name: PK_DICTIONARY_WITH_ARRAY_INPUT1S
+    unique: true
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+  - name: idx_input
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: P
+  name: ProbabilityWithArrayValue1
+  max_value: 1000000
+  field_defs:
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: P
+  name: ProbabilityWithArrayValueShr
+  max_value: 1000000
+  field_defs:
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: M
+  name: IndexTest1
+  field_defs:
+  - name: 'no'
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: true
+    dup_check: false
+    name: ユニークキーno
+    refs:
+    - name: 'no'
+      reverse: false
+  - primary: false
+    unique: true
+    dup_check: false
+    name: ユニークキーname_value
+    refs:
+    - name: name
+      reverse: false
+    - name: value
+      reverse: false
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: M
+  name: ConditionsTest
+  field_defs:
+  - name: data_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: value1
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: value2
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: data_id
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryTestShr
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryTestShared
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryTest3
+  default_value: 0
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: Z
+  name: SharedCommentHistory
+  field_defs:
+  - name: player_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: comment
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: Z
+  name: PurchaseTransaction
+  field_defs:
+  - name: player_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: count
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: P
+  max_value: 1000000
+  name: UnionTestAShr
+  field_defs:
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: P
+  max_value: 1000000
+  name: UnionTestB
+  field_defs:
+  - name: cond1
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: cond1
+      reverse: false
+    - name: value
+      reverse: false
+  - name: idx_cond1
+    refs:
+    - name: cond1
+      reverse: false
+collections:
+- generator_script_type_cd: 1
+  def_name: Player
+  name: Player
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: GameData
+  name: GameData
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Armor
+  name: Armor
+  collection_union: false
+  downloadable: true
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Item
+  name: Item
+  collection_union: false
+  downloadable: true
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemIncomingRoute
+  name: ItemIncomingRoute
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemOutgoingRoute
+  name: ItemOutgoingRoute
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemIncomingLog
+  name: ItemIncomingLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemOutgoingLog
+  name: ItemOutgoingLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopMenu1
+  name: ShopMenu1
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopHistory
+  name: ShopHistory
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ReceiptLog
+  name: ReceiptLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Friendship
+  name: Friendship
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: FriendshipLog
+  name: FriendshipLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: GreetingTemplate
+  name: GreetingTemplate
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: GreetingHistory
+  name: GreetingHistory
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ContactType
+  name: ContactType
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ContactLog
+  name: ContactLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Composition1
+  name: Composition1
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ArmorUpgradeShared
+  name: ArmorUpgrade1
+  collection_union: false
+  downloadable: true
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: RequiredExperience
+  name: RequiredExperience
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopMenu2
+  name: ShopMenu2
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ArmorUpgradeShr
+  name: ArmorUpgrade2
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopSchedule
+  name: ShopSchedule
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ArmorUpgradeSchedule
+  name: ArmorUpgradeSchedule
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: AppStoreProduct
+  name: AppStoreProduct
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryWithArrayInput1
+  name: DictionaryWithArrayInput1
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ProbabilityWithArrayValue1
+  name: ProbabilityWithArrayValue1
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: UnionTestAShr
+  name: ProbabilityWithArrayValue2
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: IndexTest1
+  name: IndexTest1
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ConditionsTest
+  name: ConditionsTest
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryTestShared
+  name: DictionaryTest1
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryTestShr
+  name: DictionaryTest2
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryTest3
+  name: DictionaryTest3
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: SharedCommentHistory
+  name: SharedCommentHistory
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+  create_options:
+    capped: true
+    size: 5242880
+    max: 5000
+- generator_script_type_cd: 1
+  def_name: PurchaseTransaction
+  name: PurchaseTransaction
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ProbabilityWithArrayValueShr
+  name: UnionTestA
+  collection_union: true
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: UnionTestB
+  name: UnionTestB
+  collection_union: true
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
