@@ -1,0 +1,46 @@
+development:
+
+  mongoid_logger: &mongoid_logger_session
+    database: fontana_sample_logs
+    hosts:
+      - localhost:27017
+    options:
+      safe: false
+      consistency: :eventual
+
+  sessions:
+    default:
+      database: fontana_sample_development
+      hosts:
+        - localhost:27017
+      capsize: <%= 64.megabytes %>
+      application_name: GO Tool
+      options:
+        safe: true
+        consistency: :eventual
+
+    mongoid_logger: *mongoid_logger_session
+
+test:
+  sessions:
+    default:
+      database: fontana_sample_test
+      hosts:
+        - localhost:27017
+      options:
+        safe: true
+        consistency: :eventual
+
+    mongoid_logger: *mongoid_logger_session
+
+production:
+  sessions:
+    default:
+      database: fontana_sample_production
+      hosts:
+        - localhost:27017
+      options:
+        safe: true
+        consistency: :eventual
+
+    mongoid_logger: *mongoid_logger_session
