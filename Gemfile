@@ -19,7 +19,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+# gem 'jquery-rails'
+
+gem "fontana_apisrv"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -35,3 +37,8 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :deploy do
+  gem 'capistrano'
+  gem 'whenever', :require => false
+end
