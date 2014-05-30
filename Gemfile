@@ -51,6 +51,12 @@ gem "moped_mapping" , "~> 0.0.3"
 # To use debugger
 # gem 'debugger'
 
+group :test, :development do
+  gem "pry"
+  gem "pry-rails"
+  gem "pry-byebug"
+end
+
 group :deploy do
   gem 'capistrano'
   gem 'whenever', :require => false
