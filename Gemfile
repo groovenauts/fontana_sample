@@ -23,6 +23,19 @@ end
 
 gem "fontana_apisrv"
 
+gem "mongoid", "~> 3.1.6"
+gem "selectable_attr", "~> 0.3.17"
+gem "oauth", "~> 0.4.7"
+gem "tengine_support", "~> 1.2.2"
+gem "mongoid_logger", "~> 0.1.0"
+gem "redis"         , "~> 3.0.7"
+gem "redis-sentinel", "~> 1.4.2"
+gem "redis_wmrs"    , "~> 0.0.3"
+gem "hiredis"       , "~> 0.4.5"
+gem "macaddr"       , "~> 1.6.1"
+gem "versionist"    , "~> 0.3.1"
+gem "moped_mapping" , "~> 0.0.3"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

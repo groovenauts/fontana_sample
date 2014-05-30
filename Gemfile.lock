@@ -164,7 +164,19 @@ DEPENDENCIES
   capistrano
   coffee-rails (~> 3.2.1)
   fontana_apisrv
+  hiredis (~> 0.4.5)
+  macaddr (~> 1.6.1)
+  mongoid (~> 3.1.6)
+  mongoid_logger (~> 0.1.0)
+  moped_mapping (~> 0.0.3)
+  oauth (~> 0.4.7)
   rails (= 3.2.16)
+  redis (~> 3.0.7)
+  redis-sentinel (~> 1.4.2)
+  redis_wmrs (~> 0.0.3)
   sass-rails (~> 3.2.3)
+  selectable_attr (~> 0.3.17)
+  tengine_support (~> 1.2.2)
   uglifier (>= 1.0.3)
+  versionist (~> 0.3.1)
   whenever
