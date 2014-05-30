@@ -69,9 +69,16 @@ GEM
     highline (1.6.20)
     hike (1.2.3)
     hiredis (0.4.5)
+    httpclient (2.3.4.1)
     i18n (0.6.9)
     journey (1.0.4)
     json (1.8.1)
+    libgss (0.10.0)
+      httpclient
+      json
+      oauth
+      tengine_support
+      uuid
     macaddr (1.6.1)
       systemu (~> 2.5.0)
     mail (2.5.4)
@@ -166,6 +173,8 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uuid (2.3.7)
+      macaddr (~> 1.0)
     versionist (0.3.1)
       rails (~> 3.0)
       yard (~> 0.7)
@@ -182,6 +191,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   fontana_apisrv
   hiredis (~> 0.4.5)
+  libgss
   macaddr (~> 1.6.1)
   mongoid (~> 3.1.6)
   mongoid_logger (~> 0.1.0)

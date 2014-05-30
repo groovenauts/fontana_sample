@@ -51,6 +51,10 @@ gem "moped_mapping" , "~> 0.0.3"
 # To use debugger
 # gem 'debugger'
 
+group :development do
+  gem "libgss"
+end
+
 group :test, :development do
   gem "pry"
   gem "pry-rails"
