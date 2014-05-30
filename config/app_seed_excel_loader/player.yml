@@ -1,4 +1,0 @@
-unions:
-- name: Player
-  base: Player
-  caption: "Player"

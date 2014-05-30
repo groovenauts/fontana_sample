@@ -1,4 +1,0 @@
-unions:
-- name: ShopHistory
-  base: ShopHistory
-  caption: "ShopHistory"

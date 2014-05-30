@@ -1,5 +1,0 @@
-unions:
-- name: UnionTest
-  base: UnionTestA00000001
-  caption: "結合テストマスタ"
-  # pattern: "^UnionTest"

@@ -1,4 +1,0 @@
-unions:
-- name: PurchaseTransaction
-  base: PurchaseTransaction
-  caption: "PurchaseTransaction"
