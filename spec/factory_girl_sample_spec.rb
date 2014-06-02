@@ -8,12 +8,12 @@ describe "factory_girl sample" do
     context "working async_action" do
 
       before do
-        ClientRelease.delete_all
-        # ClientRelease::DeviceType.delete_all
+        Fontana::ClientRelease.delete_all
+        # Fontana::ClientRelease::DeviceType.delete_all
         FactoryGirl.create(:client_release01)
 
         Player.delete_all
-        AsyncAction.delete_all
+        Fontana::Action::AsyncAction.delete_all
 
         @async_action01 = FactoryGirl.create(:async_action01)
         @player01 = @async_action01.player
@@ -32,7 +32,7 @@ describe "factory_girl sample" do
     context "executed async_action" do
       before do
         Player.delete_all
-        AsyncAction.delete_all
+        Fontana::Action::AsyncAction.delete_all
         @async_action02 = create(:async_action02)
         @player01 = @async_action02.player
         @network = new_network(@player01.player_id).login!

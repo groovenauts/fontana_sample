@@ -5,7 +5,7 @@ describe "Dictionary with Array Input" do
 
   fixtures "simple"
   before(:all) do
-    ClientRelease.delete_all
+    Fontana::ClientRelease.delete_all
     FactoryGirl.create(:client_release01)
   end
 
