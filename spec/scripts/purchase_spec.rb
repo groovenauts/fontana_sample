@@ -23,11 +23,11 @@ describe "RubyStoredScript" do
 
     describe "stone1" do
       it do
-        r = cxt.call_actions("id" => 1, "action" => "execute", "name" => "RubyStoredScript", "key" => "process_receipt", "args" => {receipt_data: receipt_data})
+        r = cxt.execute("name" => "RubyStoredScript", "key" => "process_receipt", "args" => {receipt_data: receipt_data})
         expect(r).to eq "OK"
 
         r = cxt.get("name" => "GameData")
-        expect(r["content"]["purchase_items"]).to eq({"jp.groovenauts.libgss.cocos2dx.sample1.stone1" => 1})
+        expect(r["content"]["purchase_items"]).to eq({"jp__dot__groovenauts__dot__libgss__dot__cocos2dx__dot__sample1__dot__stone1" => 1})
       end
     end
   end
@@ -46,17 +46,17 @@ describe "RubyStoredScript" do
     describe "before_purchase" do
       it do
         r = cxt.get("name" => "GameData")
-        expect(r["content"]["purchase_items"]).to eq({"jp.groovenauts.libgss.cocos2dx.sample1.stone1" => 10})
+        expect(r["content"]["purchase_items"]).to eq({"jp__dot__groovenauts__dot__libgss__dot__cocos2dx__dot__sample1__dot__stone1" => 10})
       end
     end
 
     describe "stone1" do
       it do
-        r = cxt.call_actions("id" => 1, "action" => "execute", "name" => "RubyStoredScript", "key" => "process_receipt", "args" => {receipt_data: receipt_data})
+        r = cxt.execute("name" => "RubyStoredScript", "key" => "process_receipt", "args" => {receipt_data: receipt_data})
         expect(r).to eq "OK"
 
         r = cxt.get("name" => "GameData")
-        expect(r["content"]["purchase_items"]).to eq({"jp.groovenauts.libgss.cocos2dx.sample1.stone1" => 11})
+        expect(r["content"]["purchase_items"]).to eq({"jp__dot__groovenauts__dot__libgss__dot__cocos2dx__dot__sample1__dot__stone1" => 11})
       end
     end
   end
