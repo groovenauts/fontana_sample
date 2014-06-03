@@ -41,4 +41,10 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include FactoryGirl::Syntax::Methods
+
+  I18n.locale = :ja if ENV["LANG"] =~ /^ja/
+
+  config.before(:all){ Time.zone, @original_timezone = "Tokyo", Time.zone }
+  config.after(:all){ Time.zone = @original_timezone }
+
 end
