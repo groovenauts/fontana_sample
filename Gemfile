@@ -52,7 +52,7 @@ gem "moped_mapping" , "~> 0.0.3"
 # gem 'debugger'
 
 group :development do
-  gem "libgss"
+  gem "libgss", ">= 1.0.0.alpha1"
 end
 
 group :test, :development do

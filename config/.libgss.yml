@@ -1,0 +1,6 @@
+localhost:
+  port: 3000
+  ssl_disabled: true
+  platform: fontana
+  device_type_cd: 1
+  client_version: develop
