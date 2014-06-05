@@ -57,7 +57,7 @@ GEM
     execjs (2.1.0)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
-    fontana_apisrv (1.0.0.alpha1)
+    fontana_apisrv (1.0.0.alpha2)
       hiredis (~> 0.4.5)
       macaddr (~> 1.6.1)
       mongoid (~> 3.1.6)
@@ -211,7 +211,7 @@ DEPENDENCIES
   capistrano
   coffee-rails (~> 3.2.1)
   factory_girl
-  fontana_apisrv
+  fontana_apisrv (~> 1.0.0.alpha2)
   hiredis (~> 0.4.5)
   libgss (>= 1.0.0.alpha1)
   macaddr (~> 1.6.1)
