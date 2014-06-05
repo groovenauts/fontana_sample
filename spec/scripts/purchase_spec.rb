@@ -5,7 +5,7 @@ describe "RubyStoredScript" do
 
   context "何も課金アイテムを持っていない人" do
 
-    before :all do
+    before do
       Player.delete_all
       GameData.delete_all
       @player = FactoryGirl.create :player07
@@ -34,7 +34,7 @@ describe "RubyStoredScript" do
 
   context "既に課金アイテムを持っている人" do
 
-    before :all do
+    before do
       Player.delete_all
       GameData.delete_all
       @player = FactoryGirl.create :player01
