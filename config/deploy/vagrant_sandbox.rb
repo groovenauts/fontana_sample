@@ -58,32 +58,6 @@ after "deploy:update", "deploy:cleanup"
 # 非公開リポジトリである groovegun にある gndecrypt が必要となります。
 # after "deploy:setup", "deploy:gndecrypt"
 
-namespace :deploy do
-  task :fix_permissions, :roles => [fetch(:role, :app)] do
-    run "#{try_sudo} chown -R #{user}:#{user} #{deploy_to}"
-  end
-
-  after "deploy:setup", "deploy:setup_deploy_config_file"
-  task :setup_deploy_config_file, :roles => [fetch(:role, :app)] do
-    run("mkdir -p '#{shared_path}/config/deploy'")
-    put(IO.read("config/deploy/#{stage}.yml"), "#{shared_path}/config/deploy/#{stage}.yml", :mode => 0644)
-  end
-
-  after "deploy:setup", "deploy:setup_copy_dir"
-  task :setup_copy_dir, :roles => [fetch(:role, :gotool)] do
-    run_locally("mkdir -p '#{copy_dir}'")
-  end
-  after "deploy:setup", "deploy:setup_remote_copy_dir"
-  task :setup_remote_copy_dir, :roles => [fetch(:role, :gotool)] do
-    run("mkdir -p '#{remote_copy_dir}'")
-  end
-
-  after "deploy:symlinks", "deploy:symlink_deploy_config_file"
-  task :symlink_deploy_config_file, roles: fetch(:role, :app) do
-    run "/bin/rm -f '#{release_path}/config/deploy/#{stage}.yml'"
-    run "ln -nfs '#{shared_path}/config/deploy/#{stage}.yml' '#{release_path}/config/deploy/#{stage}.yml'"
-  end
-end
 
 # roles
 domain = fetch(:domain, deploy_config["host"] || "sandbox")
