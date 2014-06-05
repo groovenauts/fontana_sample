@@ -1,4 +1,9 @@
+# -*- coding: utf-8 -*-
 source 'https://rubygems.org'
+
+# 非公開のgemであるfontana_apisrvを配布するためにgemサーバを起動する必要があります。
+# このホストは存在しないので/etc/hostsなどにgemサーバを起動したホストとして追加して下さい。
+source 'http://gems.groovenauts.jp:8808'
 
 gem 'rails', '3.2.16'
 

@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: http://gems.groovenauts.jp:8808/
   specs:
     actionmailer (3.2.16)
       actionpack (= 3.2.16)
