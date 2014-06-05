@@ -4,3 +4,9 @@ localhost:
   platform: fontana
   device_type_cd: 1
   client_version: develop
+sandbox:
+  host: "192.168.55.99"
+  port: 80
+  platform: fontana
+  device_type_cd: 1
+  client_version: develop
