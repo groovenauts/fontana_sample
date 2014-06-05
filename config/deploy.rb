@@ -124,3 +124,21 @@ namespace :deploy do
   before "bundle:install", "deploy:symlinks"
 
 end
+
+
+namespace :db do
+  desc "drop database"
+  task :drop, :roles => [:db], :only => { :primary => true } do
+    run "cd #{latest_release} && bundle exec rake RAILS_ENV=#{deploy_env} db:drop"
+  end
+end
+
+namespace :fontana do
+  namespace :mongodb do
+
+    desc "setup collections"
+    task :setup, :roles => [:db], :only => { :primary => true } do
+      run "cd #{latest_release} && bundle exec rake RAILS_ENV=#{deploy_env} fontana:mongodb:setup"
+    end
+  end
+end
