@@ -26,7 +26,7 @@ end
 
 # gem 'jquery-rails'
 
-gem "fontana_apisrv", "~> 1.0.0.alpha2"
+gem "fontana_apisrv", "~> 1.0.0.alpha3"
 
 gem "mongoid", "~> 3.1.6"
 gem "selectable_attr", "~> 0.3.17"
