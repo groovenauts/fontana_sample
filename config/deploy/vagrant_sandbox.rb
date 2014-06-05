@@ -21,11 +21,9 @@ set :application,    "fontana_sample"
 
 # scm
 # 運営ツールからデプロイする際には、gitを使用せず、workspaces/runtimeを元にデプロイします
-# set :scm, :git
-# set :repository,     "git@github.com:groovenauts/fontana_sample.git"
-# set :default_branch, "master"
-set :scm, :none
-set :repository, deploy_config["workspaces"]["runtime"]
+set :scm, :git
+set :repository,     "git@github.com:groovenauts/fontana_sample.git"
+set :default_branch, "master"
 
 set :scm_verbose,    true
 # 実行時に -s branch=xxxx でブランチ名を指定してください
@@ -36,7 +34,7 @@ set :scm_verbose,    true
 # end
 
 # deploy
-set :deploy_via,     :copy # Projectが生成するconfig/fontana.yml もコピーするので、copyが一番楽
+# set :deploy_via,     :copy # Projectが生成するconfig/fontana.yml もコピーするので、copyが一番楽
 ## :deploy_to は初期値として { "/u/apps/#{application}" } が入っているので、
 ##   -s deploy_to 指定時はオプションの値、省略時は deploy_config (yaml) の値、
 ## という指定方法ができない。-s で指定する場合は -s override_deploy_to で指定することにする
@@ -52,10 +50,6 @@ set :rails_env,      "production"
 set :config_server_path,       fetch(:config_server_path,          deploy_config['config_server']['path'])
 set :config_server_repository, fetch(:config_server_repository,    deploy_config['config_server']['repository'])
 set :config_server_branch,     fetch(:config_server_branch,        deploy_config['config_server']['branch'])
-
-# workspaces
-set :workspaces_scm    , deploy_config["workspaces"]["scm"]
-set :workspaces_runtime, deploy_config["workspaces"]["runtime"]
 
 set :keep_releases, 3
 after "deploy:update", "deploy:cleanup"

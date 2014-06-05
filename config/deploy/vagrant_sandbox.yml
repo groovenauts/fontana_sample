@@ -2,7 +2,7 @@
 user: 'gnop'
 # デプロイ先
 host: "192.168.55.99"
-deploy_to: '/mnt/resource/title_app'
+deploy_to: '/srv/fontana_sample'
 
 workspaces:
   scm: '/mnt/resource/fontana/workspaces/scm'
