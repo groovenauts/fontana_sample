@@ -9,9 +9,10 @@ set :application, "fontana_sample"
 # role :app, "your app-server here"
 
 # scm
+set :scm, :git
 set :repository,  "git@github.com:groovenauts/fontana_sample.git"
-set :scm_verbose,    true
 set :default_branch, "master"
+set :scm_verbose,    true
 
 # この変数を使うタスクを実行する際には cap -s branch=<SHA> ... という風に
 # VersionSetのdeploy_keyが指定されることになります
@@ -74,15 +75,6 @@ namespace :deploy do
   task :setup_deploy_config_file, :roles => [fetch(:role, :app)] do
     run("mkdir -p '#{shared_path}/config/deploy'")
     put(IO.read("config/deploy/#{stage}.yml"), "#{shared_path}/config/deploy/#{stage}.yml", :mode => 0644)
-  end
-
-  after "deploy:setup", "deploy:setup_copy_dir"
-  task :setup_copy_dir, :roles => [fetch(:role, :gotool)] do
-    run_locally("mkdir -p '#{copy_dir}'")
-  end
-  after "deploy:setup", "deploy:setup_remote_copy_dir"
-  task :setup_remote_copy_dir, :roles => [fetch(:role, :gotool)] do
-    run("mkdir -p '#{remote_copy_dir}'")
   end
 
   after "deploy:symlinks", "deploy:symlink_deploy_config_file"

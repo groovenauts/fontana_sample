@@ -11,7 +11,7 @@ manage:
   # ローカルPCから管理用サーバへ、ApiSrv でデプロイするときの設定
   apisrv: &manage_apisrv_dirs
     # デプロイ先
-    deploy_to: '<%= proj_disk_dir %>/fontana'
+    deploy_to: '/srv/fontana_sample'
   # ローカルPCから管理用サーバへ、GOTool でデプロイするときの設定
   gotool: &manage_gotool_dirs
     # デプロイ先
@@ -25,6 +25,7 @@ apisrv:
   servers:
     apisrv01:
       group: a
+      db_primary: true
     apisrv02:
       group: a
     apisrv03:
