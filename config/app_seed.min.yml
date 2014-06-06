@@ -1,0 +1,2927 @@
+---
+_id: !ruby/object:Moped::BSON::ObjectId
+  raw_data: !binary |-
+    U42fSvEkRbSPAAAB
+status_cd: 1
+version: 1
+created_at: 2014-06-03 10:11:23.184000000 Z
+updated_at: 2014-06-03 10:22:20.845000000 Z
+commit_key: 5ea9e00d67a706e5af2f62840f25a4683c8a7678
+warning_messages:
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',40000100,4]'''
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',''40000100'',''5'']'''
+- 'DictionaryWithArrayInput1の"inputのデータをJSONとして解釈することができませんでした(ちなみにJSONの文字列の表現にシングルクォーテーションは使用できません)。JSONとして解釈できないため、このデータは単なる文字列として扱われます。[JSON::ParserError]
+  399: unexpected token at ''''M01A01DM01'',    ''40000100'',    ''6'']'''
+- |-
+  [Moped::Errors::OperationFailure] probability_with_array_value1s@1.0.indexes.create({"value"=>1}, {:unique=>true})The operation: #<Moped::Protocol::Command
+    @length=79
+    @request_id=834
+    @response_to=0
+    @op_code=2004
+    @flags=[]
+    @full_collection_name="fontana_default.$cmd"
+    @skip=0
+    @limit=-1
+    @selector={:getlasterror=>1, :safe=>true}
+    @fields=nil>
+  failed with error 11000: "E11000 duplicate key error index: fontana_default.probability_with_array_value1s@1.0.$probability_with_array_value1s_1_0_idx99  dup key: { : 0 }"
+
+  See https://github.com/mongodb/mongo/blob/master/docs/errors.md
+  for details about this error.
+created_by: fontana@groovenauts.jp
+updated_by: fontana@groovenauts.jp
+activated_by: 
+activated_at: 
+collection_unions:
+  UnionTestA00000001: UnionTestA
+  UnionTestA00000002: UnionTestA
+  UnionTestA00000003: UnionTestA
+  UnionTestA00000004: UnionTestA
+  UnionTestB00000001: UnionTestB
+  UnionTestB00000002: UnionTestB
+collection_defs:
+- collection_type_cd: p
+  name: Player
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: nickname
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 1.0
+  - name: authentication_token
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: signature_key
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: pf_player_id
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: pf_player_info
+    type_cd: 12
+    size: 
+    required: 
+    default_value: 
+  - name: first_login_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: current_login_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: last_login_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: first_paid_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: last_paid_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: login_days
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: login_count_this_day
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: continuous_login_days
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: banned
+    type_cd: 1
+    size: 
+    required: 
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: player_id
+      reverse: false
+  - name: idx_auth
+    refs:
+    - name: authentication_token
+      reverse: false
+  - name: idx_switch_login
+    refs:
+    - name: pf_player_id
+      reverse: false
+- collection_type_cd: g
+  name: GameData
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: content
+    type_cd: 12
+    size: 
+    required: 
+    default_value: 
+  - name: greeting_points
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: login_bonus
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: invitation_code
+    type_cd: 4
+    size: 
+    required: 
+    default_value: 
+  - name: invite_player
+    type_cd: 15
+    size: 
+    required: 
+    default_value: 
+  - name: read_notifications
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: gender
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 0.0
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: player_id
+      reverse: false
+  - name: idx_invitation
+    refs:
+    - name: invitation_code
+      reverse: false
+- collection_type_cd: M
+  name: Armor
+  field_defs:
+  - name: armor_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: offence_pt
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: deffence_pt
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 0.0
+  - name: image
+    type_cd: 11
+    size: 
+    required: 
+    default_value: 
+  - name: damned
+    type_cd: 1
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: armor_id
+      reverse: false
+- collection_type_cd: M
+  name: Item
+  field_defs:
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: stored_script_name
+    type_cd: 20
+    size: 
+    required: true
+    default_value: 
+  - name: stored_script_args
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: image
+    type_cd: 11
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: item_cd
+      reverse: false
+- collection_type_cd: M
+  name: ItemIncomingRoute
+  field_defs:
+  - name: route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: route_cd
+      reverse: false
+- collection_type_cd: M
+  name: ItemOutgoingRoute
+  field_defs:
+  - name: route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: route_cd
+      reverse: false
+- collection_type_cd: L
+  name: ItemIncomingLog
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: incoming_route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: amount
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 日時でソート
+    refs:
+    - name: created_at
+      reverse: false
+- collection_type_cd: L
+  name: ItemOutgoingLog
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: outgoing_route_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: amount
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 日時でソート
+    refs:
+    - name: created_at
+      reverse: false
+- collection_type_cd: M
+  name: ShopMenu1
+  field_defs:
+  - name: product_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: items
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: price
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: image_url
+    type_cd: 11
+    size: 
+    required: true
+    default_value: 
+  - name: description
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: product_cd
+      reverse: false
+  - name: 商品CDで検索
+    refs:
+    - name: product_cd
+      reverse: false
+- collection_type_cd: H
+  name: ShopHistory
+  field_defs:
+  - name: player_id
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: product_code
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: amount
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 購入日時
+    refs:
+    - name: player_id
+      reverse: false
+    - name: created_at
+      reverse: false
+  - name: アイテムコード
+    refs:
+    - name: player_id
+      reverse: false
+    - name: product_code
+      reverse: false
+- collection_type_cd: L
+  name: ReceiptLog
+  field_defs:
+  - name: player_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: receipt_data
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+- collection_type_cd: f
+  name: Friendship
+  field_defs:
+  - name: requester_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: accepter_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 1.0
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - name: idx_requester
+    refs:
+    - name: requester_id
+      reverse: false
+    - name: status_cd
+      reverse: false
+  - name: idx_accepter
+    refs:
+    - name: accepter_id
+      reverse: false
+    - name: status_cd
+      reverse: false
+- collection_type_cd: L
+  name: FriendshipLog
+  field_defs:
+  - name: requester_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: accepter_id
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: direction
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: old_status_cd
+    type_cd: 2
+    size: 
+    required: 
+    default_value: 
+  - name: new_status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: 
+    default_value: 
+- collection_type_cd: M
+  name: GreetingTemplate
+  field_defs:
+  - name: greeting_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: message
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: H
+  name: GreetingHistory
+  field_defs:
+  - name: sender_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: receiver_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: send_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: greeting_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: 送信
+    refs:
+    - name: sender_cd
+      reverse: false
+    - name: send_at
+      reverse: false
+  - name: 受信
+    refs:
+    - name: receiver_cd
+      reverse: false
+    - name: send_at
+      reverse: false
+- collection_type_cd: M
+  name: ContactType
+  field_defs:
+  - name: contact_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: L
+  name: ContactLog
+  field_defs:
+  - name: sender_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: receiver_cd
+    type_cd: 15
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: level
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: contact_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - name: idx_player_id
+    refs:
+    - name: sender_cd
+      reverse: false
+- collection_type_cd: P
+  name: Composition1
+  max_value: 100
+  field_defs:
+  - name: composition_no
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: element
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+  - name: idx_with_element
+    refs:
+    - name: element
+      reverse: false
+    - name: rf
+      reverse: false
+    - name: rl
+      reverse: false
+- collection_type_cd: D
+  name: ArmorUpgradeShr
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: I
+  name: RequiredExperience
+  field_defs:
+  - name: range_begin
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: range_end
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: range_begin
+      reverse: false
+  - name: idx_period
+    refs:
+    - name: range_end
+      reverse: false
+- collection_type_cd: M
+  name: ShopMenu2
+  field_defs:
+  - name: product_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: items
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: price
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: image_url
+    type_cd: 11
+    size: 
+    required: true
+    default_value: 
+  - name: description
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: D
+  name: ArmorUpgradeShared
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: S
+  name: ShopSchedule
+  default_value: ShopMenu1
+  field_defs:
+  - name: pb
+    type_cd: 9
+    required: true
+  - name: pe
+    type_cd: 10
+    required: true
+  - name: value
+    type_cd: 13
+    required: true
+  index_defs:
+  - primary: true
+    name: PK_SHOP_SCHEDULES
+    unique: true
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+  - name: idx_period
+    refs:
+    - name: pb
+      reverse: false
+    - name: pe
+      reverse: false
+- collection_type_cd: S
+  name: ArmorUpgradeSchedule
+  default_value: ArmorUpgrade1
+  field_defs:
+  - name: pb
+    type_cd: 9
+    required: true
+  - name: pe
+    type_cd: 10
+    required: true
+  - name: value
+    type_cd: 13
+    required: true
+  index_defs:
+  - primary: true
+    name: PK_ARMOR_UPGRADE_SCHEDULES
+    unique: true
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+  - name: idx_period
+    refs:
+    - name: pb
+      reverse: false
+    - name: pe
+      reverse: false
+- collection_type_cd: M
+  name: AppStoreProduct
+  field_defs:
+  - name: product_id
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: product_id
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryWithArrayInput1
+  field_defs:
+  - name: input
+    type_cd: 14
+    required: true
+  - name: output
+    type_cd: 13
+    required: true
+  index_defs:
+  - primary: true
+    name: PK_DICTIONARY_WITH_ARRAY_INPUT1S
+    unique: true
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+  - name: idx_input
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: P
+  name: ProbabilityWithArrayValue1
+  max_value: 1000000
+  field_defs:
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: P
+  name: ProbabilityWithArrayValueShr
+  max_value: 1000000
+  field_defs:
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: M
+  name: IndexTest1
+  field_defs:
+  - name: 'no'
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: name
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: true
+    dup_check: false
+    name: ユニークキーno
+    refs:
+    - name: 'no'
+      reverse: false
+  - primary: false
+    unique: true
+    dup_check: false
+    name: ユニークキーname_value
+    refs:
+    - name: name
+      reverse: false
+    - name: value
+      reverse: false
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: M
+  name: ConditionsTest
+  field_defs:
+  - name: data_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: value1
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  - name: value2
+    type_cd: 13
+    size: 
+    required: 
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: data_id
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryTestShr
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryTestShared
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: D
+  name: DictionaryTest3
+  default_value: 0
+  field_defs:
+  - name: input
+    type_cd: 14
+    size: 
+    required: true
+    default_value: 
+  - name: output
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: true
+    unique: true
+    dup_check: false
+    name: 主キー
+    sparse: false
+    background: false
+    refs:
+    - name: input
+      reverse: false
+- collection_type_cd: Z
+  name: SharedCommentHistory
+  field_defs:
+  - name: player_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: comment
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: Z
+  name: PurchaseTransaction
+  field_defs:
+  - name: player_id
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: status_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: item_cd
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: count
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: created_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+  - name: updated_at
+    type_cd: 5
+    size: 
+    required: true
+    default_value: 
+- collection_type_cd: P
+  max_value: 1000000
+  name: UnionTestAShr
+  field_defs:
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: value
+      reverse: false
+- collection_type_cd: P
+  max_value: 1000000
+  name: UnionTestB
+  field_defs:
+  - name: cond1
+    type_cd: 4
+    size: 
+    required: true
+    default_value: 
+  - name: value
+    type_cd: 13
+    size: 
+    required: true
+    default_value: 
+  - name: probability
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rf
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  - name: rl
+    type_cd: 2
+    size: 
+    required: true
+    default_value: 
+  index_defs:
+  - primary: false
+    unique: false
+    dup_check: true
+    name: 重複チェック
+    refs:
+    - name: cond1
+      reverse: false
+    - name: value
+      reverse: false
+  - name: idx_cond1
+    refs:
+    - name: cond1
+      reverse: false
+collections:
+- generator_script_type_cd: 1
+  def_name: Player
+  name: Player
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: GameData
+  name: GameData
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Armor
+  name: Armor
+  data:
+  - armor_id: 10001
+    name: ナイフ
+    offence_pt: 2
+    deffence_pt: 0.0
+    image: assets/armor/10001.png
+    damned: false
+  - armor_id: 10002
+    name: ダガー
+    offence_pt: 4
+    deffence_pt: 0.0
+    image: assets/armor/10002.png
+    damned: false
+  - armor_id: 10003
+    name: ハチェット
+    offence_pt: 10
+    deffence_pt: 0.0
+    image: assets/armor/10003.png
+    damned: false
+  - armor_id: 10004
+    name: レイピア
+    offence_pt: 15
+    deffence_pt: 0.0
+    image: assets/armor/10004.png
+    damned: false
+  - armor_id: 10005
+    name: ファルシオン
+    offence_pt: 20
+    deffence_pt: 0.0
+    image: assets/armor/10005.png
+    damned: false
+  - armor_id: 10006
+    name: まさかり
+    offence_pt: 28
+    deffence_pt: 0.0
+    image: assets/armor/10006.png
+    damned: false
+  - armor_id: 10007
+    name: 斬鉄剣
+    offence_pt: 40
+    deffence_pt: 0.0
+    image: assets/armor/10007.png
+    damned: true
+  - armor_id: 10008
+    name: 人民服
+    offence_pt: 0.0
+    deffence_pt: 2
+    image: assets/armor/10008.png
+    damned: false
+  - armor_id: 10009
+    name: ローブ
+    offence_pt: 0.0
+    deffence_pt: 4
+    image: assets/armor/10009.png
+    damned: false
+  - armor_id: 10010
+    name: 柔道着
+    offence_pt: 0.0
+    deffence_pt: 10
+    image: assets/armor/10010.png
+    damned: false
+  - armor_id: 10011
+    name: レザーアーマー
+    offence_pt: 0.0
+    deffence_pt: 16
+    image: assets/armor/10011.png
+    damned: false
+  - armor_id: 10012
+    name: くされかたびら
+    offence_pt: 0.0
+    deffence_pt: 24
+    image: assets/armor/10012.png
+    damned: true
+  - armor_id: 10013
+    name: プレートメイル
+    offence_pt: 0.0
+    deffence_pt: 24
+    image: assets/armor/10013.png
+    damned: false
+  - armor_id: 10014
+    name: 魔法の鎧
+    offence_pt: 0.0
+    deffence_pt: 28
+    image: assets/armor/10014.png
+    damned: false
+  - armor_id: 10015
+    name: なべのふた
+    offence_pt: 0.0
+    deffence_pt: 4
+    image: assets/armor/10015.png
+    damned: false
+  - armor_id: 10016
+    name: 木の盾
+    offence_pt: 0.0
+    deffence_pt: 10
+    image: assets/armor/10016.png
+    damned: false
+  - armor_id: 10017
+    name: 鉄の盾
+    offence_pt: 0.0
+    deffence_pt: 20
+    image: assets/armor/10017.png
+    damned: false
+  - armor_id: 10018
+    name: むぎわら帽子
+    offence_pt: 0.0
+    deffence_pt: 1
+    image: assets/armor/10018.png
+    damned: false
+  - armor_id: 10019
+    name: ケトルハット
+    offence_pt: 0.0
+    deffence_pt: 5
+    image: assets/armor/10019.png
+    damned: false
+  - armor_id: 10020
+    name: ヘルム
+    offence_pt: 0.0
+    deffence_pt: 10
+    image: assets/armor/10020.png
+    damned: false
+  collection_union: false
+  downloadable: true
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Item
+  name: Item
+  data:
+  - item_cd: 20001
+    name: ポーション
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: hp
+      percent: false
+      value: 30
+    image: assets/item/20001.png
+  - item_cd: 20002
+    name: ポーションA
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: hp
+      percent: false
+      value: 100
+    image: assets/item/20002.png
+  - item_cd: 20003
+    name: ポーションX
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: hp
+      percent: true
+      value: 70
+    image: assets/item/20003.png
+  - item_cd: 20004
+    name: ポーションXXX
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: hp
+      percent: true
+      value: 100
+    image: assets/item/20004.png
+  - item_cd: 20005
+    name: エーテル
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: mp
+      percent: false
+      value: 30
+    image: assets/item/20005.png
+  - item_cd: 20006
+    name: エーテルW
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: mp
+      percent: false
+      value: 60
+    image: assets/item/20006.png
+  - item_cd: 20007
+    name: エーテルZ
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: mp
+      percent: true
+      value: 60
+    image: assets/item/20007.png
+  - item_cd: 20008
+    name: エーテルZZ
+    stored_script_name: ItemRubyStoredScript.recovery
+    stored_script_args:
+      target: mp
+      percent: true
+      value: 100
+    image: assets/item/20008.png
+  - item_cd: 20009
+    name: エリクサー
+    stored_script_name: ItemRubyStoredScript.recovery_all
+    stored_script_args: 
+    image: assets/item/20009.png
+  - item_cd: 20010
+    name: 恋の秘薬
+    stored_script_name: ItemRubyStoredScript.love_portion
+    stored_script_args: 
+    image: assets/item/20010.png
+  - item_cd: 20011
+    name: 賢者の石
+    stored_script_name: ItemRubyStoredScript.philosophers_stone
+    stored_script_args: 
+    image: assets/item/20011.png
+  - item_cd: 20012
+    name: たいまつ
+    stored_script_name: ItemRubyStoredScript.torch
+    stored_script_args: 
+    image: assets/item/20012.png
+  collection_union: false
+  downloadable: true
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemIncomingRoute
+  name: ItemIncomingRoute
+  data:
+  - route_cd: 1
+    name: ショップ購入
+  - route_cd: 2
+    name: ログインボーナス
+  - route_cd: 3
+    name: プレゼントコード
+  - route_cd: 4
+    name: 運営ギフト
+  - route_cd: 5
+    name: トレード
+  - route_cd: 6
+    name: ガチャ
+  - route_cd: 7
+    name: バトル
+  - route_cd: 8
+    name: 合成
+  - route_cd: 9
+    name: 装備進化
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemOutgoingRoute
+  name: ItemOutgoingRoute
+  data:
+  - route_cd: 1
+    name: 使用
+  - route_cd: 2
+    name: 合成
+  - route_cd: 3
+    name: 売却
+  - route_cd: 4
+    name: 廃棄
+  - route_cd: 5
+    name: トレード
+  - route_cd: 6
+    name: 装備進化
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemIncomingLog
+  name: ItemIncomingLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ItemOutgoingLog
+  name: ItemOutgoingLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopMenu1
+  name: ShopMenu1
+  data:
+  - product_cd: 10001
+    name: ナイフ
+    items: 10001
+    price: 10
+    image_url: assets/items/10001.jpg
+    description: ナイフの説明
+  - product_cd: 10002
+    name: ダガー
+    items: 10002
+    price: 60
+    image_url: assets/items/10002.jpg
+    description: ダガーの説明
+  - product_cd: 10003
+    name: ハチェット
+    items: 10003
+    price: 180
+    image_url: assets/items/10003.jpg
+    description: ハチェットの説明
+  - product_cd: 10004
+    name: レイピア
+    items: 10004
+    price: 560
+    image_url: assets/items/10004.jpg
+    description: レイピアの説明
+  - product_cd: 10005
+    name: ファルシオン
+    items: 10005
+    price: 1500
+    image_url: assets/items/10005.jpg
+    description: ファルシオンの説明
+  - product_cd: 10006
+    name: まさかり
+    items: 10006
+    price: 9800
+    image_url: assets/items/10006.jpg
+    description: まさかりの説明
+  - product_cd: 10008
+    name: 人民服
+    items: 10008
+    price: 20
+    image_url: assets/items/10007.jpg
+    description: 人民服の説明
+  - product_cd: 10009
+    name: ローブ
+    items: 10009
+    price: 70
+    image_url: assets/items/10008.jpg
+    description: ローブの説明
+  - product_cd: 10010
+    name: 柔道着
+    items: 10010
+    price: 100
+    image_url: assets/items/10009.jpg
+    description: 柔道着の説明
+  - product_cd: 10011
+    name: レザーアーマー
+    items: 10011
+    price: 500
+    image_url: assets/items/10010.jpg
+    description: レザーアーマーの説明
+  - product_cd: 10012
+    name: くされかたびら
+    items: 10012
+    price: 1000
+    image_url: assets/items/10011.jpg
+    description: くされかたびらの説明
+  - product_cd: 10013
+    name: プレートメイル
+    items: 10013
+    price: 5000
+    image_url: assets/items/10012.jpg
+    description: プレートメイルの説明
+  - product_cd: 10015
+    name: なべのふた
+    items: 10015
+    price: 30
+    image_url: assets/items/10013.jpg
+    description: なべのふたの説明
+  - product_cd: 10016
+    name: 木の盾
+    items: 10016
+    price: 100
+    image_url: assets/items/10014.jpg
+    description: 木の盾の説明
+  - product_cd: 10017
+    name: 鉄の盾
+    items: 10017
+    price: 1000
+    image_url: assets/items/10015.jpg
+    description: 鉄の盾の説明
+  - product_cd: 10018
+    name: むぎわら帽子
+    items: 10018
+    price: 20
+    image_url: assets/items/10016.jpg
+    description: むぎわら帽子の説明
+  - product_cd: 10021
+    name: ポーション
+    items: 20001
+    price: 10
+    image_url: assets/items/20001.jpg
+    description: ポーションの説明
+  - product_cd: 10022
+    name: ポーションA
+    items: 20002
+    price: 20
+    image_url: assets/items/20002.jpg
+    description: ポーションAの説明
+  - product_cd: 10023
+    name: ポーションX
+    items: 20003
+    price: 100
+    image_url: assets/items/20003.jpg
+    description: ポーションXの説明
+  - product_cd: 10024
+    name: ポーションXXX
+    items: 20004
+    price: 500
+    image_url: assets/items/20004.jpg
+    description: ポーションXXXの説明
+  - product_cd: 10025
+    name: エーテル
+    items: 20005
+    price: 20
+    image_url: assets/items/20005.jpg
+    description: エーテルの説明
+  - product_cd: 10026
+    name: エーテルW
+    items: 20006
+    price: 40
+    image_url: assets/items/20006.jpg
+    description: エーテルWの説明
+  - product_cd: 10027
+    name: エーテルZ
+    items: 20007
+    price: 200
+    image_url: assets/items/20007.jpg
+    description: エーテルZの説明
+  - product_cd: 10028
+    name: エーテルZZ
+    items: 20008
+    price: 1000
+    image_url: assets/items/20008.jpg
+    description: エーテルZZの説明
+  - product_cd: 10029
+    name: エリクサー
+    items: 20009
+    price: 10000
+    image_url: assets/items/20009.jpg
+    description: エリクサーの説明
+  - product_cd: 10030
+    name: 恋の秘薬
+    items: 20010
+    price: 100000
+    image_url: assets/items/20010.jpg
+    description: 恋の秘薬の説明
+  - product_cd: 10036
+    name: ポーション10個パック
+    items:
+      '20001': 10
+    price: 90
+    image_url: assets/items/10022.jpg
+    description: ポーション10個パックの説明
+  - product_cd: 10037
+    name: スターターズパック
+    items:
+    - 10001
+    - 10008
+    - 20001
+    price: 32
+    image_url: assets/items/10023.jpg
+    description: スターターズパックの説明
+  - product_cd: 10038
+    name: |-
+      ブーストパック
+      ハチェット + くされかたびら + 鉄の盾 + ポーションA10個
+    items:
+      '10003': 1
+      '10012': 1
+      '10017': 1
+      '20001': 10
+    price: 1596
+    image_url: assets/items/10024.jpg
+    description: ブーストパックの説明
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopHistory
+  name: ShopHistory
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ReceiptLog
+  name: ReceiptLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Friendship
+  name: Friendship
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: FriendshipLog
+  name: FriendshipLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: GreetingTemplate
+  name: GreetingTemplate
+  data:
+  - greeting_cd: 1
+    message: おはようございます！
+  - greeting_cd: 2
+    message: こんにちは！
+  - greeting_cd: 3
+    message: こんばんは！
+  - greeting_cd: 4
+    message: Zzzzz
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: GreetingHistory
+  name: GreetingHistory
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ContactType
+  name: ContactType
+  data:
+  - contact_cd: 1
+    name: 定型あいさつ
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ContactLog
+  name: ContactLog
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: Composition1
+  name: Composition1
+  data:
+  - composition_no: 1
+    element: '{"10001":3}'
+    probability: 60
+    rf: 0
+    rl: 60
+    value: 10002
+  - composition_no: 2
+    element: '{"10001":3}'
+    probability: 39
+    rf: 60
+    rl: 99
+    value: 20001
+  - composition_no: 3
+    element: '{"10001":3}'
+    probability: 1
+    rf: 99
+    rl: 100
+    value: 10003
+  - composition_no: 4
+    element: '{"20002":1,"20006":1}'
+    probability: 20
+    rf: 0
+    rl: 20
+    value: 20007
+  - composition_no: 5
+    element: '{"20002":1,"20006":1}'
+    probability: 80
+    rf: 20
+    rl: 100
+    value:
+      '20002': 2
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ArmorUpgradeShared
+  name: ArmorUpgrade1
+  data:
+  - input: '10001'
+    output: 10002
+  - input: '10002'
+    output: 10004
+  - input: '10003'
+    output: 10006
+  - input: '10008'
+    output: 10009
+  - input: '10015'
+    output: 10016
+  collection_union: false
+  downloadable: true
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: RequiredExperience
+  name: RequiredExperience
+  data:
+  - range_begin: 0
+    range_end: 10
+    value: 1
+  - range_begin: 10
+    range_end: 25
+    value: 2
+  - range_begin: 25
+    range_end: 60
+    value: 3
+  - range_begin: 60
+    range_end: 100
+    value: 4
+  - range_begin: 100
+    range_end: 180
+    value: 5
+  - range_begin: 180
+    range_end: 250
+    value: 6
+  - range_begin: 250
+    range_end: 350
+    value: 7
+  - range_begin: 350
+    range_end: 500
+    value: 8
+  - range_begin: 500
+    range_end: 750
+    value: 9
+  - range_begin: 750
+    range_end: 1200
+    value: 10
+  - range_begin: 1200
+    range_end: 2000
+    value: 11
+  - range_begin: 2000
+    range_end: 2500
+    value: 12
+  - range_begin: 2500
+    range_end: 3000
+    value: 13
+  - range_begin: 3000
+    range_end: 4000
+    value: 14
+  - range_begin: 4000
+    range_end: 5000
+    value: 15
+  - range_begin: 5000
+    range_end: 6000
+    value: 16
+  - range_begin: 6000
+    range_end: 7000
+    value: 17
+  - range_begin: 7000
+    range_end: 8000
+    value: 18
+  - range_begin: 8000
+    range_end: 9000
+    value: 19
+  - range_begin: 9000
+    range_end: 2147483647
+    value: 20
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopMenu2
+  name: ShopMenu2
+  data:
+  - product_cd: 10001
+    name: ナイフ
+    items: 10001
+    price: 5
+    image_url: assets/items/10001.jpg
+    description: ナイフの説明
+  - product_cd: 10002
+    name: ダガー
+    items: 10002
+    price: 30
+    image_url: assets/items/10002.jpg
+    description: ダガーの説明
+  - product_cd: 10003
+    name: ハチェット
+    items: 10003
+    price: 90
+    image_url: assets/items/10003.jpg
+    description: ハチェットの説明
+  - product_cd: 10004
+    name: レイピア
+    items: 10004
+    price: 280
+    image_url: assets/items/10004.jpg
+    description: レイピアの説明
+  - product_cd: 10005
+    name: ファルシオン
+    items: 10005
+    price: 750
+    image_url: assets/items/10005.jpg
+    description: ファルシオンの説明
+  - product_cd: 10006
+    name: まさかり
+    items: 10006
+    price: 4900
+    image_url: assets/items/10006.jpg
+    description: まさかりの説明
+  - product_cd: 10008
+    name: 人民服
+    items: 10008
+    price: 10
+    image_url: assets/items/10007.jpg
+    description: 人民服の説明
+  - product_cd: 10009
+    name: ローブ
+    items: 10009
+    price: 35
+    image_url: assets/items/10008.jpg
+    description: ローブの説明
+  - product_cd: 10010
+    name: 柔道着
+    items: 10010
+    price: 50
+    image_url: assets/items/10009.jpg
+    description: 柔道着の説明
+  - product_cd: 10011
+    name: レザーアーマー
+    items: 10011
+    price: 250
+    image_url: assets/items/10010.jpg
+    description: レザーアーマーの説明
+  - product_cd: 10012
+    name: くされかたびら
+    items: 10012
+    price: 500
+    image_url: assets/items/10011.jpg
+    description: くされかたびらの説明
+  - product_cd: 10013
+    name: プレートメイル
+    items: 10013
+    price: 2500
+    image_url: assets/items/10012.jpg
+    description: プレートメイルの説明
+  - product_cd: 10015
+    name: なべのふた
+    items: 10015
+    price: 15
+    image_url: assets/items/10013.jpg
+    description: なべのふたの説明
+  - product_cd: 10016
+    name: 木の盾
+    items: 10016
+    price: 50
+    image_url: assets/items/10014.jpg
+    description: 木の盾の説明
+  - product_cd: 10017
+    name: 鉄の盾
+    items: 10017
+    price: 500
+    image_url: assets/items/10015.jpg
+    description: 鉄の盾の説明
+  - product_cd: 10018
+    name: むぎわら帽子
+    items: 10018
+    price: 10
+    image_url: assets/items/10016.jpg
+    description: むぎわら帽子の説明
+  - product_cd: 10021
+    name: ポーション
+    items: 20001
+    price: 10
+    image_url: assets/items/20001.jpg
+    description: ポーションの説明
+  - product_cd: 10022
+    name: ポーションA
+    items: 20002
+    price: 20
+    image_url: assets/items/20002.jpg
+    description: ポーションAの説明
+  - product_cd: 10023
+    name: ポーションX
+    items: 20003
+    price: 100
+    image_url: assets/items/20003.jpg
+    description: ポーションXの説明
+  - product_cd: 10024
+    name: ポーションXXX
+    items: 20004
+    price: 500
+    image_url: assets/items/20004.jpg
+    description: ポーションXXXの説明
+  - product_cd: 10025
+    name: エーテル
+    items: 20005
+    price: 20
+    image_url: assets/items/20005.jpg
+    description: エーテルの説明
+  - product_cd: 10026
+    name: エーテルW
+    items: 20006
+    price: 40
+    image_url: assets/items/20006.jpg
+    description: エーテルWの説明
+  - product_cd: 10027
+    name: エーテルZ
+    items: 20007
+    price: 200
+    image_url: assets/items/20007.jpg
+    description: エーテルZの説明
+  - product_cd: 10028
+    name: エーテルZZ
+    items: 20008
+    price: 1000
+    image_url: assets/items/20008.jpg
+    description: エーテルZZの説明
+  - product_cd: 10029
+    name: エリクサー
+    items: 20009
+    price: 10000
+    image_url: assets/items/20009.jpg
+    description: エリクサーの説明
+  - product_cd: 10030
+    name: 恋の秘薬
+    items: 20010
+    price: 100000
+    image_url: assets/items/20010.jpg
+    description: 恋の秘薬の説明
+  - product_cd: 10036
+    name: ポーション10個パック
+    items:
+      '20001': 10
+    price: 90
+    image_url: assets/items/10022.jpg
+    description: ポーション10個パックの説明
+  - product_cd: 10037
+    name: スターターズパック
+    items:
+    - 10001
+    - 10008
+    - 20001
+    price: 20
+    image_url: assets/items/10023.jpg
+    description: スターターズパックの説明
+  - product_cd: 10038
+    name: |-
+      ブーストパック
+      ハチェット + くされかたびら + 鉄の盾 + ポーションA5個
+    items:
+      '10003': 1
+      '10012': 1
+      '10017': 1
+      '20001': 10
+    price: 833
+    image_url: assets/items/10024.jpg
+    description: ブーストパックの説明
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ArmorUpgradeShr
+  name: ArmorUpgrade2
+  data:
+  - input: '10001'
+    output: 10002
+  - input: '10002'
+    output: 10004
+  - input: '10003'
+    output: 10006
+  - input: '10008'
+    output: 10009
+  - input: '10015'
+    output: 10016
+  - input: '10006'
+    output: 10007
+  - input: '10013'
+    output: 10014
+  - input: '10018'
+    output: 10019
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ShopSchedule
+  name: ShopSchedule
+  data:
+  - pb: 2012-07-10 03:00:00.000000000 Z
+    pe: 2012-07-20 04:00:00.000000000 Z
+    value: ShopMenu2
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ArmorUpgradeSchedule
+  name: ArmorUpgradeSchedule
+  data:
+  - pb: 2012-07-10 03:00:00.000000000 Z
+    pe: 2012-07-20 04:00:00.000000000 Z
+    value: ArmorUpgrade2
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: AppStoreProduct
+  name: AppStoreProduct
+  data:
+  - product_id: jp.groovenauts.libgss.cocos2dx.sample1.stone1
+  - product_id: jp.groovenauts.libgss.cocos2dx.sample1.stone2
+  - product_id: jp.groovenauts.libgss.cocos2dx.sample1.stone3
+  - product_id: jp.groovenauts.libgss.cocos2dx.sample1.old_stone
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryWithArrayInput1
+  name: DictionaryWithArrayInput1
+  data:
+  - input: '[]'
+    output: output for []
+  - input: '[null]'
+    output: output for [null]
+  - input: '[0]'
+    output: output for [0]
+  - input: '[1]'
+    output: output for [1]
+  - input: '[1000]'
+    output: output for [1000]
+  - input: '["0"]'
+    output: output for ["0"]
+  - input: '["1"]'
+    output: output for ["1"]
+  - input: '["1000"]'
+    output: output for ["1000"]
+  - input: '[null,null]'
+    output: output for [null, null]
+  - input: '[0,0]'
+    output: output for [0, 0]
+  - input: '[1,1]'
+    output: output for [1, 1]
+  - input: '[1000,1000]'
+    output: output for [1000, 1000]
+  - input: '["0","0"]'
+    output: output for ["0", "0"]
+  - input: '["1","1"]'
+    output: output for ["1", "1"]
+  - input: '["1000","1000"]'
+    output: output for ["1000", "1000"]
+  - input: '["M01A01DM01",40000100,1]'
+    output: output for ["M01A01DM01",40000100,1]
+  - input: '["M01A01DM01","40000100","2"]'
+    output: output for ["M01A01DM01","40000100","2"]
+  - input: '["M01A01DM01","40000100","3"]'
+    output: output for ["M01A01DM01",  "40000100",  "3"]
+  - input: '[''M01A01DM01'',40000100,4]'
+    output: output for ['M01A01DM01',40000100,4]
+  - input: '[''M01A01DM01'',''40000100'',''5'']'
+    output: output for ['M01A01DM01','40000100','5']
+  - input: '[''M01A01DM01'',    ''40000100'',    ''6'']'
+    output: output for ['M01A01DM01',    '40000100',    '6']
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ProbabilityWithArrayValue1
+  name: ProbabilityWithArrayValue1
+  data:
+  - value:
+    - 0
+    - 1
+    probability: 66667
+    rf: 0
+    rl: 66667
+  - value:
+    - 0
+    - 2
+    probability: 66667
+    rf: 66667
+    rl: 133333
+  - value:
+    - 0
+    - 3
+    probability: 66667
+    rf: 133333
+    rl: 200000
+  - value:
+    - 0
+    - 4
+    probability: 66667
+    rf: 200000
+    rl: 266667
+  - value:
+    - 0
+    - 5
+    probability: 66667
+    rf: 266667
+    rl: 333333
+  - value:
+    - '40000100'
+    - 1
+    probability: 33333
+    rf: 333333
+    rl: 366667
+  - value:
+    - '40000100'
+    - 2
+    probability: 33333
+    rf: 366667
+    rl: 400000
+  - value:
+    - '40000100'
+    - 3
+    probability: 33333
+    rf: 400000
+    rl: 433333
+  - value:
+    - '40000100'
+    - 4
+    probability: 33333
+    rf: 433333
+    rl: 466667
+  - value:
+    - '40000100'
+    - 5
+    probability: 33333
+    rf: 466667
+    rl: 500000
+  - value:
+    - '40000100'
+    - 6
+    probability: 33333
+    rf: 500000
+    rl: 533333
+  - value:
+    - '40000100'
+    - 7
+    probability: 33333
+    rf: 533333
+    rl: 566667
+  - value:
+    - '40000100'
+    - 8
+    probability: 33333
+    rf: 566667
+    rl: 600000
+  - value:
+    - '40000100'
+    - 9
+    probability: 33333
+    rf: 600000
+    rl: 633333
+  - value:
+    - '40000100'
+    - 10
+    probability: 33333
+    rf: 633333
+    rl: 666667
+  - value:
+    - '40000100'
+    - '1'
+    probability: 33333
+    rf: 666667
+    rl: 700000
+  - value:
+    - '40000100'
+    - '2'
+    probability: 33333
+    rf: 700000
+    rl: 733333
+  - value:
+    - '40000100'
+    - '3'
+    probability: 33333
+    rf: 733333
+    rl: 766667
+  - value:
+    - '40000100'
+    - '4'
+    probability: 33333
+    rf: 766667
+    rl: 800000
+  - value:
+    - '40000100'
+    - '5'
+    probability: 33333
+    rf: 800000
+    rl: 833333
+  - value:
+    - '40000100'
+    - '6'
+    probability: 33333
+    rf: 833333
+    rl: 866667
+  - value:
+    - '40000100'
+    - '7'
+    probability: 33333
+    rf: 866667
+    rl: 900000
+  - value:
+    - '40000100'
+    - '8'
+    probability: 33333
+    rf: 900000
+    rl: 933333
+  - value:
+    - '40000100'
+    - '9'
+    probability: 33333
+    rf: 933333
+    rl: 966667
+  - value:
+    - '40000100'
+    - '10'
+    probability: 33333
+    rf: 966667
+    rl: 1000000
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: UnionTestAShr
+  name: ProbabilityWithArrayValue2
+  data:
+  - value:
+    - 0
+    - 1
+    probability: 66667
+    rf: 0
+    rl: 66667
+  - value:
+    - 0
+    - 2
+    probability: 66667
+    rf: 66667
+    rl: 133333
+  - value:
+    - 0
+    - 3
+    probability: 66667
+    rf: 133333
+    rl: 200000
+  - value:
+    - 0
+    - 4
+    probability: 66667
+    rf: 200000
+    rl: 266667
+  - value:
+    - 0
+    - 5
+    probability: 66667
+    rf: 266667
+    rl: 333333
+  - value:
+    - '40000100'
+    - 1
+    probability: 33333
+    rf: 333333
+    rl: 366667
+  - value:
+    - '40000100'
+    - 2
+    probability: 33333
+    rf: 366667
+    rl: 400000
+  - value:
+    - '40000100'
+    - 3
+    probability: 33333
+    rf: 400000
+    rl: 433333
+  - value:
+    - '40000100'
+    - 4
+    probability: 33333
+    rf: 433333
+    rl: 466667
+  - value:
+    - '40000100'
+    - 5
+    probability: 33333
+    rf: 466667
+    rl: 500000
+  - value:
+    - '40000100'
+    - 6
+    probability: 33333
+    rf: 500000
+    rl: 533333
+  - value:
+    - '40000100'
+    - 7
+    probability: 33333
+    rf: 533333
+    rl: 566667
+  - value:
+    - '40000100'
+    - 8
+    probability: 33333
+    rf: 566667
+    rl: 600000
+  - value:
+    - '40000100'
+    - 9
+    probability: 33333
+    rf: 600000
+    rl: 633333
+  - value:
+    - '40000100'
+    - 10
+    probability: 33333
+    rf: 633333
+    rl: 666667
+  - value:
+    - '40000100'
+    - '1'
+    probability: 33333
+    rf: 666667
+    rl: 700000
+  - value:
+    - '40000100'
+    - '2'
+    probability: 33333
+    rf: 700000
+    rl: 733333
+  - value:
+    - '40000100'
+    - '3'
+    probability: 33333
+    rf: 733333
+    rl: 766667
+  - value:
+    - '40000100'
+    - '4'
+    probability: 33333
+    rf: 766667
+    rl: 800000
+  - value:
+    - '40000100'
+    - '5'
+    probability: 33333
+    rf: 800000
+    rl: 833333
+  - value:
+    - '40000100'
+    - '6'
+    probability: 33333
+    rf: 833333
+    rl: 866667
+  - value:
+    - '40000100'
+    - '7'
+    probability: 33333
+    rf: 866667
+    rl: 900000
+  - value:
+    - '40000100'
+    - '8'
+    probability: 33333
+    rf: 900000
+    rl: 933333
+  - value:
+    - '40000100'
+    - '9'
+    probability: 33333
+    rf: 933333
+    rl: 966667
+  - value:
+    - '40000100'
+    - '10'
+    probability: 33333
+    rf: 966667
+    rl: 1000000
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: IndexTest1
+  name: IndexTest1
+  data:
+  - 'no': 1
+    name: aaa
+    value: 1
+  - 'no': 2
+    name: bbb
+    value: 2
+  - 'no': 3
+    name: ccc
+    value: 3
+  - 'no': 4
+    name: ddd
+    value: 4
+  - 'no': 5
+    name: eee
+    value: 1
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ConditionsTest
+  name: ConditionsTest
+  data:
+  - data_id: 1
+    value1: 1
+    value2:
+    - aa
+    - bb
+    - cc
+  - data_id: 2
+    value1: aaa
+    value2:
+    - aa
+    - bb
+    - dd
+  - data_id: 3
+    value1: 123
+    value2:
+    - aa
+    - bb
+    - cc
+    - dd
+  - data_id: 4
+    value1: 
+    value2:
+    - aa
+    - bb
+    - cc
+    - dd
+    - ee
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryTestShared
+  name: DictionaryTest1
+  data:
+  - input: input1
+    output: output1
+  - input: input2
+    output: output2
+  - input: input3
+    output: output3
+  - input: input4
+    output: output4
+  - input: input5
+    output: output5
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryTestShr
+  name: DictionaryTest2
+  data:
+  - input: '{"key":"value1"}'
+    output: 20001
+  - input: '{"key":"value2"}'
+    output: 20002
+  - input: '{"key":"value3"}'
+    output: 20003
+  - input: '{"key":"value4"}'
+    output: 20004
+  - input: '{"key":"value5"}'
+    output: 20005
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: DictionaryTest3
+  name: DictionaryTest3
+  data:
+  - input: '{"key":"value1"}'
+    output: 20001
+  - input: '{"key":"value2"}'
+    output: 20002
+  - input: '{"key":"value3"}'
+    output: 20003
+  - input: '{"key":"value4"}'
+    output: 20004
+  - input: '{"key":"value5"}'
+    output: 20005
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: SharedCommentHistory
+  name: SharedCommentHistory
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+  create_options:
+    capped: true
+    size: 5242880
+    max: 5000
+- generator_script_type_cd: 1
+  def_name: PurchaseTransaction
+  name: PurchaseTransaction
+  collection_union: false
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: ProbabilityWithArrayValueShr
+  name: UnionTestA
+  data:
+  - value:
+      test_a_cd: 20016000
+      lv: 1
+    probability: 3906
+    rf: 0
+    rl: 3906
+    _original_name: UnionTestA00000001
+  - value:
+      test_a_cd: 20020000
+      lv: 1
+    probability: 249023
+    rf: 3906
+    rl: 252929
+    _original_name: UnionTestA00000001
+  - value:
+      test_a_cd: 20030000
+      lv: 1
+    probability: 249023
+    rf: 252929
+    rl: 501952
+    _original_name: UnionTestA00000001
+  - value:
+      test_a_cd: 20110000
+      lv: 1
+    probability: 249023
+    rf: 501952
+    rl: 750975
+    _original_name: UnionTestA00000001
+  - value:
+      test_a_cd: 20230000
+      lv: 1
+    probability: 249025
+    rf: 750975
+    rl: 1000000
+    _original_name: UnionTestA00000001
+  - value:
+      test_a_cd: 20016000
+      lv: 1
+    probability: 250000
+    rf: 0
+    rl: 250000
+    _original_name: UnionTestA00000002
+  - value:
+      test_a_cd: 20020000
+      lv: 1
+    probability: 250000
+    rf: 250000
+    rl: 500000
+    _original_name: UnionTestA00000002
+  - value:
+      test_a_cd: 20030000
+      lv: 1
+    probability: 250000
+    rf: 500000
+    rl: 750000
+    _original_name: UnionTestA00000002
+  - value:
+      test_a_cd: 20110000
+      lv: 1
+    probability: 250000
+    rf: 750000
+    rl: 1000000
+    _original_name: UnionTestA00000002
+  - value:
+      test_a_cd: 20016000
+      lv: 1
+    probability: 333333
+    rf: 0
+    rl: 333333
+    _original_name: UnionTestA00000003
+  - value:
+      test_a_cd: 20020000
+      lv: 1
+    probability: 333333
+    rf: 333333
+    rl: 666666
+    _original_name: UnionTestA00000003
+  - value:
+      test_a_cd: 20030000
+      lv: 1
+    probability: 333334
+    rf: 666666
+    rl: 1000000
+    _original_name: UnionTestA00000003
+  - value:
+      test_a_cd: 20016000
+      lv: 1
+    probability: 500000
+    rf: 0
+    rl: 500000
+    _original_name: UnionTestA00000004
+  - value:
+      test_a_cd: 20020000
+      lv: 1
+    probability: 500000
+    rf: 500000
+    rl: 1000000
+    _original_name: UnionTestA00000004
+  collection_union: true
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false
+- generator_script_type_cd: 1
+  def_name: UnionTestB
+  name: UnionTestB
+  data:
+  - cond1: foo
+    value:
+      test_a_cd: 20016000
+      lv: 1
+    probability: 3906
+    rf: 0
+    rl: 3906
+    _original_name: UnionTestB00000001
+  - cond1: foo
+    value:
+      test_a_cd: 20020000
+      lv: 1
+    probability: 249023
+    rf: 3906
+    rl: 252929
+    _original_name: UnionTestB00000001
+  - cond1: foo
+    value:
+      test_a_cd: 20030000
+      lv: 1
+    probability: 249023
+    rf: 252929
+    rl: 501952
+    _original_name: UnionTestB00000001
+  - cond1: foo
+    value:
+      test_a_cd: 20110000
+      lv: 1
+    probability: 249023
+    rf: 501952
+    rl: 750975
+    _original_name: UnionTestB00000001
+  - cond1: foo
+    value:
+      test_a_cd: 20230000
+      lv: 1
+    probability: 249025
+    rf: 750975
+    rl: 1000000
+    _original_name: UnionTestB00000001
+  - cond1: bar
+    value:
+      test_a_cd: 20230100
+      lv: 2
+    probability: 1000000
+    rf: 0
+    rl: 1000000
+    _original_name: UnionTestB00000001
+  - cond1: baz
+    value:
+      test_a_cd: 20230101
+      lv: 3
+    probability: 1000000
+    rf: 0
+    rl: 1000000
+    _original_name: UnionTestB00000001
+  - cond1: foo
+    value:
+      test_a_cd: 20016000
+      lv: 1
+    probability: 250000
+    rf: 0
+    rl: 250000
+    _original_name: UnionTestB00000002
+  - cond1: foo
+    value:
+      test_a_cd: 20020000
+      lv: 1
+    probability: 250000
+    rf: 250000
+    rl: 500000
+    _original_name: UnionTestB00000002
+  - cond1: foo
+    value:
+      test_a_cd: 20030000
+      lv: 1
+    probability: 250000
+    rf: 500000
+    rl: 750000
+    _original_name: UnionTestB00000002
+  - cond1: foo
+    value:
+      test_a_cd: 20110000
+      lv: 1
+    probability: 250000
+    rf: 750000
+    rl: 1000000
+    _original_name: UnionTestB00000002
+  - cond1: bar
+    value:
+      test_a_cd: 20230100
+      lv: 2
+    probability: 1000000
+    rf: 0
+    rl: 1000000
+    _original_name: UnionTestB00000002
+  collection_union: true
+  downloadable: false
+  force_download: false
+  keep_data_on_aggr: false

@@ -1,0 +1,18 @@
+localhost:
+  port: 3000
+  ssl_disabled: true
+  platform: fontana
+  device_type_cd: 1
+  client_version: develop
+sandbox:
+  host: "192.168.55.99"
+  port: 80
+  platform: fontana
+  device_type_cd: 1
+  client_version: develop
+vagrant_apisrv01:
+  host: "192.168.55.101"
+  port: 80
+  platform: fontana
+  device_type_cd: 1
+  client_version: develop

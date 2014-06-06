@@ -5,12 +5,15 @@ describe "Dictionary with Array Input" do
 
   fixtures "simple"
   before(:all) do
-    ClientRelease.delete_all
+    Fontana::Cache::Redis.instance.flushdb
+    Fontana::ClientRelease.delete_all
     FactoryGirl.create(:client_release01)
+    Player.delete_all
+    @player = FactoryGirl.create :player01
+    DictionaryWithArrayInput1.app_seed_collection.create
   end
 
-  let(:network){ new_network.tap(&:login!) } # HPが1の人
-  let(:request){ network.new_action_request }
+  let(:cxt){ Fontana::Action::Context.new("test"){ @player } }
 
   inputs = [
     []                                   , '[]',
@@ -44,18 +47,30 @@ describe "Dictionary with Array Input" do
   Hash[*inputs].each do |input, expect|
     raw_expect, str_expect = *(expect.is_a?(Array) ? expect : [expect, expect])
 
-    it("raw #{input.inspect}") do
-      request.execute("AppSeedTestScript", "get_dictionary_with_array_input1", input: input)
-      request.send_request
-      request.outputs.length.should == 1
-      request.outputs.first["result"].should == (raw_expect ? "output for #{raw_expect}" : nil)
+    if raw_expect
+      it("raw #{input.inspect}") do
+        r = cxt.execute("name" => "AppSeedTestScript", "key" => "get_dictionary_with_array_input1", "args" => {input: input})
+        expect(r).to eq "output for #{raw_expect}"
+      end
+    else
+      it("raw #{input.inspect} causes action error 1018") do
+        expect{
+          cxt.execute("name" => "AppSeedTestScript", "key" => "get_dictionary_with_array_input1", "args" => {input: input})
+        }.to raise_error(Fontana::Action::Errors::ActionsError, /\A1018:/)
+      end
     end
 
-    it("string #{input.inspect}") do
-      request.execute("AppSeedTestScript", "get_dictionary_with_array_input1", input: input.to_json)
-      request.send_request
-      request.outputs.length.should == 1
-      request.outputs.first["result"].should == (str_expect ? "output for #{str_expect}" : nil)
+    if str_expect
+      it("string #{input.inspect}") do
+        r = cxt.execute("name" => "AppSeedTestScript", "key" => "get_dictionary_with_array_input1", "args" => {input: input.to_json} )
+        expect(r).to eq (str_expect ? "output for #{str_expect}" : nil)
+      end
+    else
+      it("string #{input.inspect} causes action error 1018") do
+        expect{
+          cxt.execute("name" => "AppSeedTestScript", "key" => "get_dictionary_with_array_input1", "args" => {input: input.to_json} )
+        }.to raise_error(Fontana::Action::Errors::ActionsError, /\A1018:/)
+      end
     end
   end
 

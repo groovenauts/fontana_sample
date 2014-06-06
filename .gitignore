@@ -1,2 +1,4 @@
 /tmp
 /coverage
+/log/*.log
+/.ruby-version

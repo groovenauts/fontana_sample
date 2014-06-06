@@ -559,7 +559,8 @@ module RubyStoredScript
 
     # logger.debug("receipt: #{receipt.inspect}")
 
-    purchase_item_incoming(:item => {receipt["product_id"] => receipt["quantity"].to_i}) # このメソッドの戻り値を返す
+    product_id = receipt["product_id"].gsub(/\./, "__dot__").gsub(/\$/, "__dollar__")
+    purchase_item_incoming(:item => {product_id => receipt["quantity"].to_i}) # このメソッドの戻り値を返す
   end
 
   # argh: Hash

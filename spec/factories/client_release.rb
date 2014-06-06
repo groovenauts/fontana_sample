@@ -3,7 +3,7 @@ require 'factory_girl'
 
 FactoryGirl.define do
 
-  factory :client_release01, class: ClientRelease do
+  factory :client_release01, class: Fontana::ClientRelease do
     status_cd      2
     device_type_cd 1
     version        '2013073101'

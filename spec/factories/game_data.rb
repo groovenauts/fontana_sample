@@ -12,7 +12,7 @@ FactoryGirl.define do
 
   factory :game_data01, class: GameData do
     player_id          "1000001"
-    content            ({"hp"=>15, "max_hp"=>15, "mp"=>5, "max_mp"=>5, "exp"=>100, "money"=>200, "items"=>{"20001"=>3, "20005"=>1}, "equipments"=>{"head"=>10018, "body"=>10012, "right_hand"=>10001, "left_hand"=>nil}})
+    content            ({"hp"=>15, "max_hp"=>15, "mp"=>5, "max_mp"=>5, "exp"=>100, "money"=>200, "items"=>{"20001"=>3, "20005"=>1}, "equipments"=>{"head"=>10018, "body"=>10012, "right_hand"=>10001, "left_hand"=>nil}, "purchase_items" => {"jp__dot__groovenauts__dot__libgss__dot__cocos2dx__dot__sample1__dot__stone1" => 10}})
     login_bonus        [[10001, 1]]
     read_notifications []
     created_at         Time.zone.parse("2012-08-15T18:50:00+09:00")

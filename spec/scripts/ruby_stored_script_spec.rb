@@ -3,46 +3,34 @@ require File.expand_path('../spec_scripts_helper', __FILE__)
 
 describe "RubyStoredScript" do
 
-  let(:network){ new_network("1000007").tap{|n| n.login.should == true } } # HPが1の人
-  let(:request){ network.new_action_request }
+  before do
+    Player.delete_all
+    GameData.delete_all
+    @player = FactoryGirl.create(:player07)
+    @game_data = FactoryGirl.create(:game_data07)
+  end
+
+  let(:cxt){ Fontana::Action::Context.new("test"){ @player } }
 
   describe :echo do
     let(:argh){ {"foo" => {"bar" => "baz"} } }
-    before do
-      request.execute("RubyStoredScript", "echo", argh)
-      request.send_request
-    end
     it do
-      request.outputs.length.should == 1
-      request.outputs.first["result"].should == {"echo" => argh}
+      r = cxt.execute("name" => "RubyStoredScript", "key" => "echo", "args" => argh)
+      expect(r).to eq({:echo => argh})
     end
   end
 
   describe :use_item do
 
-    # ディレクトリを指定したフィクスチャのロード
-    fixtures "simple"
-
     # ファイルを単独で指定したフィクスチャのロード（v0.3.0では未サポート）
     # fixtures "simple/GameData.yml"
-
-    before do
-      request.execute("ItemRubyStoredScript", "use_item", item_cd: "20001")
-      request.get_by_game_data
-      request.send_request
-    end
     it do
-      request.outputs.length.should == 2
-      request.outputs.first.tap do |o|
-        o["error"].should == nil
-        o["result"].should == "recovery hp 14points"
-      end
-      request.outputs.last.tap do |o|
-        o["error"].should == nil
-        o["result"].should_not == nil
-        o["result"]["content"]["hp"].should == 15 # HPが回復している
-        o["result"]["content"]["items"]["20001"].should == 2 # 一つ減っている
-      end
+      r = cxt.execute("name" => "ItemRubyStoredScript", "key" => "use_item", "args" => {item_cd: "20001"})
+      expect(r).to eq "recovery hp 14points"
+
+      r = cxt.get("name" => "GameData")
+      expect(r["content"]["hp"]).to eq 15 # HPが回復している
+      expect(r["content"]["items"]["20001"]).to eq 2 # 一つ減っている
     end
   end
 

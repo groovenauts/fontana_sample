@@ -1,0 +1,15 @@
+production:
+  master_name: "sentinel_apisrv"
+  driver: hiredis
+  sentinels:
+  - host: "apisrv01"
+    port: 26379
+  - host: "apisrv02"
+    port: 26379
+  - host: "apisrv03"
+    port: 26379
+test:
+  host: "127.0.0.1"
+  port: 6379
+  driver: hiredis
+  db: <%= ENV['REDIS_DB'] || 4 %>

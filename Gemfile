@@ -1,24 +1,72 @@
+# -*- coding: utf-8 -*-
 source 'https://rubygems.org'
 
-group :test do
-  gem "rake"
-  gem "rspec"
+# 非公開のgemであるfontana_apisrvを配布するためにgemサーバを起動する必要があります。
+# このホストは存在しないので/etc/hostsなどにgemサーバを起動したホストとして追加して下さい。
+source 'http://gems.groovenauts.jp:8808'
 
-  gem 'fontana_client_support', '~> 0.8.4'
-  gem 'libgss', '~> 0.9.0'
+gem 'rails', '3.2.16'
 
-  gem "activesupport", "~> 3.2.0"
-  gem "mongoid", "~> 3.1.4"
-  gem "factory_girl"
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platforms => :ruby
+
+  gem 'uglifier', '>= 1.0.3'
+end
+
+# gem 'jquery-rails'
+
+gem "fontana_apisrv", "~> 1.0.0.alpha3"
+
+gem "mongoid", "~> 3.1.6"
+gem "selectable_attr", "~> 0.3.17"
+gem "oauth", "~> 0.4.7"
+gem "tengine_support", "~> 1.2.2"
+gem "mongoid_logger", "~> 0.1.0"
+gem "redis"         , "~> 3.0.7"
+gem "redis-sentinel", "~> 1.4.2"
+gem "redis_wmrs"    , "~> 0.0.3"
+gem "hiredis"       , "~> 0.4.5"
+gem "macaddr"       , "~> 1.6.1"
+gem "versionist"    , "~> 0.3.1"
+gem "moped_mapping" , "~> 0.0.3"
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger
+# gem 'debugger'
+
+group :development do
+  gem "libgss", ">= 1.0.0.alpha1"
 end
 
 group :test, :development do
+  gem "factory_girl"
+  gem "rspec-rails"
+  gem "simplecov"
   gem "pry"
-  gem "pry-debugger"
-end
-
-group :test, :deploy do
-  gem "tengine_support", '~> 1.2.0'
+  gem "pry-rails"
+  gem "pry-byebug"
 end
 
 group :deploy do
