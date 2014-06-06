@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-# Nifty cloud 向けのデプロイファイルです。主に(お客様)開発環境の構築に用います。
-#
 # サービスを動かすユーザ名等を別の設定ファイルから読み込むようにしてします。
 # これは、タイトルによって、ユーザ名、deploy_toが異なるため、
 # このファイルに記述するべきものではないためです。
@@ -17,21 +15,6 @@ set :ssh_options, {
   #:port          => 58123,
 }
 
-set :application,    "fontana_sample"
-
-# scm
-# 運営ツールからデプロイする際には、gitを使用せず、workspaces/runtimeを元にデプロイします
-set :scm, :git
-set :repository,     "git@github.com:groovenauts/fontana_sample.git"
-set :default_branch, "master"
-
-set :scm_verbose,    true
-# 実行時に -s branch=xxxx でブランチ名を指定してください
-# set :branch do
-#   tag = Capistrano::CLI.ui.ask "branch or tag : [#{default_branch}] "
-#   tag = default_branch if tag.empty?
-#   tag
-# end
 
 # deploy
 # set :deploy_via,     :copy # Projectが生成するconfig/fontana.yml もコピーするので、copyが一番楽
@@ -54,14 +37,8 @@ set :config_server_branch,     fetch(:config_server_branch,        deploy_config
 set :keep_releases, 3
 after "deploy:update", "deploy:cleanup"
 
-# BRIDGE との接続する環境の場合、接続のためのキーの復号のため、
-# 非公開リポジトリである groovegun にある gndecrypt が必要となります。
-# after "deploy:setup", "deploy:gndecrypt"
-
-
 # roles
 domain = fetch(:domain, deploy_config["host"] || "sandbox")
 role :web, domain
 role :app, domain
 role :db , domain, :primary => true
-role :gotool, domain
