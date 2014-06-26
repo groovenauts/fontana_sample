@@ -4,6 +4,11 @@ require 'net/http'
 
 module LoginRubyStoredScript
 
+  def login_filter(argh)
+    return nil if player.nil? # 新規プレイヤーはOK
+    return [507, "Too many players"] if argh["device_type"] == NG_DEVICE_TYPE
+  end
+
   def login_hook(argh)
     # GameDataにplayer_id以外の必須フィールドが設定されている場合、
     # 事前にGameDataを作成することができないため、ログインフックの中で作成する必要がある。

@@ -17,6 +17,9 @@ login_url: "/api/1.0.0/actions.html"
 # このコンシューマシークレットは、このサンプルアプリのためだけに生成されたものです。
 consumer_secret: "4cb5b62cb95e52a1d523ca832e590d94"
 
+# ログインの前に呼び出され、ログインの制御を行うフィルタのストアドスクリプト名
+login_filter_stored_script_name: "LoginRubyStoredScript.login_filter"
+
 # ログインの際に呼び出されるフック名
 login_hook_stored_script_name: "LoginRubyStoredScript.login_hook"
 
