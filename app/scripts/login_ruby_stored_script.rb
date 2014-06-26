@@ -4,6 +4,8 @@ require 'net/http'
 
 module LoginRubyStoredScript
 
+  NG_DEVICE_TYPE = "2"
+
   def login_filter(argh)
     return nil if player.nil? # 新規プレイヤーはOK
     return [507, "Too many players"] if argh["device_type"] == NG_DEVICE_TYPE
