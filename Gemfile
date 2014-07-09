@@ -4,7 +4,7 @@ group :test do
   gem "rake"
   gem "rspec"
 
-  gem 'fontana_client_support', '~> 0.8.4'
+  gem 'fontana_client_support', '~> 0.19.1'
   gem 'libgss', '~> 0.9.0'
 
   gem "activesupport", "~> 3.2.0"
