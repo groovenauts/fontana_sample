@@ -20,6 +20,7 @@ FileUtils.mkdir_p(File.dirname(log_path))
 logger = Logger.new(log_path)
 logger.level = Logger::DEBUG
 Mongoid.logger = logger
+Moped.logger = logger
 
 
 Mongoid.load!(File.expand_path("../../config/fontana_mongoid.yml", __FILE__), :development)
