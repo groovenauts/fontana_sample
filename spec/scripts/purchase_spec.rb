@@ -41,7 +41,7 @@ describe "RubyStoredScript" do
         request.outputs.last.tap do |o|
           o["error"].should == nil
           o["result"].should_not == nil
-          o["result"]["content"]["purchase_items"].should == {"jp.groovenauts.libgss.cocos2dx.sample1.stone1" => 1}
+          o["result"]["content"]["purchase_items"].should == {"jp.groovenauts.libgss.cocos2dx.sample1.stone1".gsub(/\./, "_dot_") => 1}
         end
       end
     end
@@ -85,7 +85,7 @@ describe "RubyStoredScript" do
         request.outputs.last.tap do |o|
           o["error"].should == nil
           o["result"].should_not == nil
-          o["result"]["content"]["purchase_items"].should == {"jp.groovenauts.libgss.cocos2dx.sample1.stone1" => 11}
+          o["result"]["content"]["purchase_items"].should == {"jp.groovenauts.libgss.cocos2dx.sample1.stone1".gsub(/\./, "_dot_") => 11}
         end
       end
     end
