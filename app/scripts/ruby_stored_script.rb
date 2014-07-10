@@ -570,9 +570,15 @@ module RubyStoredScript
 
     items = content["purchase_items"] ||= {}
     item_hash.each do |item_code, amount|
-      items[item_code.to_s] ||= 0
-      items[item_code.to_s] += amount
+      key = item_code.to_s
+      items[key] ||= 0
+      items[key] += amount
       # create(name: "ItemIncomingLog", attrs: { "player_id" => player.player_id, "created_at" => server_time, "level" => player.level, "item_cd" => item_code, "incoming_route_cd" => argh[:route_cd], "amount" => amount })
+    end
+    keys = items.keys
+    keys.each do |key|
+      v = items.delete(key)
+      items[key.gsub(/\./, '_dot_')] = v
     end
 
     # logger.debug("item_hash: #{item_hash.inspect}")
