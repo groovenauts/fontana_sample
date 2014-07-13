@@ -1,0 +1,11 @@
+unions:
+- name: UnionTestA
+  base: UnionTestA00000001
+  caption: "結合テストAマスタ"
+  # pattern: "^UnionTestA\d{8}$"
+  # pattern: "^UnionTestA\d+$"
+- name: UnionTestB
+  base: UnionTestB00000001
+  caption: "結合テストBマスタ"
+  # pattern: "^UnionTestB\d{8}$"
+  # pattern: "^UnionTestB\d+$"
